@@ -1,3 +1,15 @@
+#### 👥 Attendees
+
+- Navya Nittala, Kundana Dongala, Katie Nordberg, Christina Sorensen, Vivian Lara
+
+### 📒 Notes
+- Complete Architecture Diagrams
+- Complete Architect Document
+- Decided game name (Interstellar)
+- Consider how the game map should be organized 
+
+
+---
 
 ## **Meeting Title:** TA Meeting
 ### **Date:** Thursday, October 16th, 2025
