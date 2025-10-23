@@ -17,7 +17,7 @@
   - [ ] Sprint 1 and 2 Requirements Artifacts (25%, team-based)
     - look at the stack to see what is assigned to sprint 1 and 2
     - the document will have each of these tasks along with an elaborate description.
-- [ ] Reorganize github to keep all the artifacts documents seperated by name in a folder
+- [X] Reorganize github to keep all the artifacts documents seperated by name in a folder
   
 ---
 ## **Meeting Title:** Team Meeting
