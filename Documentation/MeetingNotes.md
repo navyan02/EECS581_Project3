@@ -7,13 +7,13 @@
 
 ### 📒 Notes/ToDo
 - [ ] Explain more on diagrams (specifically the map one)
-- [ ] Fix word count on the requirements document
+- [X] Fix word count on the requirements document
 - Sprint 1 and Sprint 2 artifacts are both due on Sunday.
   - with every sprint release: need the guthub for that past sprint release, update the requirements stack by adding sprint numbers/rearranging.
 -  Due Sunday:
   - [ ] Initial Architecture Document (40%, team-based)
-  - [ ] Updated Agile Reference Stories spreadsheet (10%, team-based)
-  - [ ] Updated Requirements Stack spreadsheet (25%, team-based)
+  - [X] Updated Agile Reference Stories spreadsheet (10%, team-based)
+  - [X] Updated Requirements Stack spreadsheet (25%, team-based)
   - [ ] Sprint 1 and 2 Requirements Artifacts (25%, team-based)
     - look at the stack to see what is assigned to sprint 1 and 2
     - the document will have each of these tasks along with an elaborate description.
