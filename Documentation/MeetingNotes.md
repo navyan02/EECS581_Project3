@@ -1,3 +1,35 @@
+## **Meeting Title:** Team Meeting
+### **Date:** Wednesday, October 29th, 2025
+---
+#### 👥 Attendees
+
+- Navya Nittala, Kundana Dongala, Katie Nordberg, Christina Sorensen, Vivian Lara
+
+### 📒 Notes
+- Christina: create dialouges for starting scene
+- Vi: found music/sound effects, will create logo 
+- Katie: working on the room layout mockups and point and click functionality 
+- Navya: make title screen in Godot
+- Kundana: work on placeholder assets/work on title screen with Navya 
+Current storyline idea:
+- team uncovers an incoming alien invasion. they find out how to avoid it, but they are taken by a small group of aliens which they didnt see. - the intern is the only one left on the team and they have to figure out how to get the team back.
+- there should be dialogs at the end of the level.
+- level 1 is get intern into space and to space station
+  - intern gets to office, click on remaining team members to find out what happened.
+  -  intern goes to lab
+  -  goal: get password to the computer
+    -  step 1: intern finds the security guard and gets the camera footage --> learn that team was abducted by aliens
+    -  step 2: degree/certificate on the wall, click --> specialty in extraterrestrial life
+    -  step 3: check the drawers, one is locked so intern has to open it (dialog says "this is locked, I should find the key"
+    -  step 4: find the key to the drawer
+      - point and click: have to arrange the books in the bookshelves color order, key shows up in inventory --> has confidential files about the alien invasion
+    -  Step 5: click on computer, get hint about the password being on the whiteboard
+    -  Step 6: Get chair to climb up to shelf. Get uninvisible ink
+    -  Step 7: Put uninvisible ink on whiteboard to reveal equation
+    -  Step 8: Solve equation
+    -  Step 9: Put equation into compter password prompt.
+
+---
 ## **Meeting Title:** TA Meeting
 ### **Date:** Thursday, October 23rd, 2025
 ---
