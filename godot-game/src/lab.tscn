@@ -16,9 +16,6 @@ position = Vector2(763.7589, 349.5)
 scale = Vector2(2.4821427, 2.482143)
 texture = ExtResource("1_114jd")
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("2_fadfy")]
-position = Vector2(370, 528)
-
 [node name="Bookshelf" type="Sprite2D" parent="."]
 position = Vector2(98, 292.76273)
 scale = Vector2(2.474576, 2.474576)
@@ -48,3 +45,7 @@ texture = ExtResource("7_0hvuw")
 position = Vector2(1141, 212)
 scale = Vector2(2.5113635, 2.5113635)
 texture = ExtResource("8_eohh7")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_fadfy")]
+position = Vector2(1346.0001, 479)
+scale = Vector2(1.6000001, 1.6000001)
