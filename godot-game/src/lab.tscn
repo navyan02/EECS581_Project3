@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://s4mcjpxlgk0u"]
+[gd_scene load_steps=13 format=3 uid="uid://s4mcjpxlgk0u"]
 
 [ext_resource type="Texture2D" uid="uid://58jqcm6jellw" path="res://assets/rooms/labBackground.webp" id="1_114jd"]
 [ext_resource type="PackedScene" uid="uid://dpux7mjnmklvb" path="res://src/player.tscn" id="2_fadfy"]
@@ -9,28 +9,34 @@
 [ext_resource type="Texture2D" uid="uid://r41fy43hmu5e" path="res://assets/rooms/scanner.png" id="7_0hvuw"]
 [ext_resource type="Texture2D" uid="uid://q2b8n3qcoyu3" path="res://assets/rooms/whiteboard.png" id="8_eohh7"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ic0bi"]
+size = Vector2(423.13855, 59.62592)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_udwgg"]
 size = Vector2(615.19434, 180.08633)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ic0bi"]
-size = Vector2(423.13855, 60.697853)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f0omo"]
+size = Vector2(787.25, 39)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eetg4"]
+size = Vector2(1551, 39)
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Area2D" type="Area2D" parent="."]
-
-[node name="LabBackground" type="Sprite2D" parent="Area2D"]
+[node name="LabBackground" type="Sprite2D" parent="."]
 position = Vector2(763.7589, 349.5)
 scale = Vector2(2.4821427, 2.482143)
 texture = ExtResource("1_114jd")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D/LabBackground"]
+[node name="StaticBody2D" type="StaticBody2D" parent="LabBackground"]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="LabBackground/StaticBody2D"]
+position = Vector2(-18.896545, 69.89928)
+shape = SubResource("RectangleShape2D_ic0bi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LabBackground/StaticBody2D"]
 position = Vector2(-0.10430908, -48.748215)
 shape = SubResource("RectangleShape2D_udwgg")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D/LabBackground"]
-position = Vector2(-18.896545, 70.43523)
-shape = SubResource("RectangleShape2D_ic0bi")
 
 [node name="Bookshelf" type="Sprite2D" parent="."]
 position = Vector2(98, 292.76273)
@@ -76,3 +82,23 @@ limit_left = 0
 limit_top = 1
 limit_right = 1524
 limit_bottom = 699
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-17, 347)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_f0omo")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D/CollisionShape2D3"]
+position = Vector2(-6.000061, -1564)
+rotation = 3.1415927
+shape = SubResource("RectangleShape2D_f0omo")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(766, 714)
+shape = SubResource("RectangleShape2D_eetg4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(765.5, -14.5)
+shape = SubResource("RectangleShape2D_eetg4")
