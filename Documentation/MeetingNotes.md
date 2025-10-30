@@ -1,3 +1,16 @@
+## **Meeting Title:** TA Meeting
+### **Date:** Thursday, October 30th, 2025
+---
+#### 👥 Attendees
+
+- Navya Nittala, Kundana Dongala, Katie Nordberg, Christina Sorensen, Vivian Lara, Kevin Likcani(TA)
+
+### 📒 Notes/ToDo
+- Sprint 1 is actually due this Sunday, we submitted early. We are going to stay on this schedule though (2 weeks per sprint)
+- [ ] Explain more on Sprint 1 Artifacts and resubmit
+
+  
+---
 ## **Meeting Title:** Team Meeting
 ### **Date:** Wednesday, October 29th, 2025
 ---
