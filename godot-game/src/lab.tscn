@@ -1,7 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://s4mcjpxlgk0u"]
+[gd_scene load_steps=9 format=3 uid="uid://s4mcjpxlgk0u"]
 
 [ext_resource type="Texture2D" uid="uid://58jqcm6jellw" path="res://assets/rooms/labBackground.webp" id="1_114jd"]
 [ext_resource type="PackedScene" uid="uid://dpux7mjnmklvb" path="res://src/player.tscn" id="2_fadfy"]
+[ext_resource type="Texture2D" uid="uid://c7mnngtoltt14" path="res://assets/rooms/bookshelf.png" id="3_udwgg"]
+[ext_resource type="Texture2D" uid="uid://cjfducwxh8l6h" path="res://assets/rooms/computer.png" id="4_ic0bi"]
+[ext_resource type="Texture2D" uid="uid://dyunyb7i4erfa" path="res://assets/rooms/diploma.png" id="5_f0omo"]
+[ext_resource type="Texture2D" uid="uid://dln2y87bf81bc" path="res://assets/rooms/floor.png" id="6_eetg4"]
+[ext_resource type="Texture2D" uid="uid://r41fy43hmu5e" path="res://assets/rooms/scanner.png" id="7_0hvuw"]
+[ext_resource type="Texture2D" uid="uid://q2b8n3qcoyu3" path="res://assets/rooms/whiteboard.png" id="8_eohh7"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -11,4 +17,34 @@ scale = Vector2(2.4821427, 2.482143)
 texture = ExtResource("1_114jd")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_fadfy")]
-position = Vector2(-77, 188)
+position = Vector2(370, 528)
+
+[node name="Bookshelf" type="Sprite2D" parent="."]
+position = Vector2(98, 292.76273)
+scale = Vector2(2.474576, 2.474576)
+texture = ExtResource("3_udwgg")
+
+[node name="Computer" type="Sprite2D" parent="."]
+position = Vector2(563.54, 386.125)
+scale = Vector2(2.6499996, 2.6499991)
+texture = ExtResource("4_ic0bi")
+
+[node name="Diploma" type="Sprite2D" parent="."]
+position = Vector2(1310.25, 162.70001)
+scale = Vector2(2.4750001, 2.4750004)
+texture = ExtResource("5_f0omo")
+
+[node name="Floor" type="Sprite2D" parent="."]
+position = Vector2(764.00006, 557.00006)
+scale = Vector2(2.4805198, 2.4805198)
+texture = ExtResource("6_eetg4")
+
+[node name="Scanner" type="Sprite2D" parent="."]
+position = Vector2(1364, 364)
+scale = Vector2(2.4661016, 2.4661016)
+texture = ExtResource("7_0hvuw")
+
+[node name="Whiteboard" type="Sprite2D" parent="."]
+position = Vector2(1141, 212)
+scale = Vector2(2.5113635, 2.5113635)
+texture = ExtResource("8_eohh7")
