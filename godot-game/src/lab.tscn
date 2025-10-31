@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://s4mcjpxlgk0u"]
+[gd_scene load_steps=15 format=3 uid="uid://s4mcjpxlgk0u"]
 
 [ext_resource type="Texture2D" uid="uid://58jqcm6jellw" path="res://assets/rooms/labBackground.webp" id="1_114jd"]
 [ext_resource type="PackedScene" uid="uid://dpux7mjnmklvb" path="res://src/player.tscn" id="2_fadfy"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://r41fy43hmu5e" path="res://assets/rooms/scanner.png" id="7_0hvuw"]
 [ext_resource type="Texture2D" uid="uid://q2b8n3qcoyu3" path="res://assets/rooms/whiteboard.png" id="8_eohh7"]
 [ext_resource type="PackedScene" uid="uid://c2ov45ll3r7n0" path="res://src/interact.tscn" id="8_ic0bi"]
+[ext_resource type="Texture2D" uid="uid://b0m7xaom4qmef" path="res://assets/rooms/desk.png" id="9_f0omo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ic0bi"]
 size = Vector2(423.13855, 59.62592)
@@ -98,6 +99,17 @@ texture = ExtResource("8_eohh7")
 [node name="InteractArea" parent="Whiteboard" node_paths=PackedStringArray("player") instance=ExtResource("8_ic0bi")]
 player = NodePath("../../Player")
 
+[node name="Desk" type="Sprite2D" parent="."]
+position = Vector2(718, 508)
+scale = Vector2(2.44, 2.44)
+texture = ExtResource("9_f0omo")
+
+[node name="InteractArea" parent="Desk" node_paths=PackedStringArray("player") instance=ExtResource("8_ic0bi")]
+position = Vector2(105.73773, 1.2295074)
+scale = Vector2(2.5100126, 1.7003194)
+userDialog = "The drawers are locked..."
+player = NodePath("../../Player")
+
 [node name="Player" parent="." instance=ExtResource("2_fadfy")]
 position = Vector2(1346.0001, 479)
 scale = Vector2(1.6000001, 1.6000001)
@@ -113,22 +125,22 @@ limit_top = 1
 limit_right = 1524
 limit_bottom = 699
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="Level Border" type="StaticBody2D" parent="."]
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Level Border"]
 position = Vector2(-17, 347)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_f0omo")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Level Border"]
 position = Vector2(766, 714)
 shape = SubResource("RectangleShape2D_eetg4")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level Border"]
 position = Vector2(765.5, -14.5)
 shape = SubResource("RectangleShape2D_eetg4")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Level Border"]
 position = Vector2(1547, 341)
 rotation = -1.5707963
 shape = SubResource("RectangleShape2D_f0omo")
