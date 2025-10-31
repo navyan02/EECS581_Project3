@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://c2ov45ll3r7n0"]
+
+[ext_resource type="Script" uid="uid://begenhblqy6hp" path="res://src/interact.gd" id="1_kmujg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0hvuw"]
+size = Vector2(82.8236, 40.61539)
+
+[node name="Area2D" type="Area2D" node_paths=PackedStringArray("player")]
+script = ExtResource("1_kmujg")
+minDistToInteract = 1400.0
+userDialog = "This is a whiteboard"
+player = NodePath("")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.39813232, -0.39819336)
+shape = SubResource("RectangleShape2D_0hvuw")
+
+[connection signal="input_event" from="." to="." method="_on_area_2d_input_event"]
+[connection signal="mouse_entered" from="." to="." method="change_cursor_hand"]
+[connection signal="mouse_exited" from="." to="." method="change_cursor_back"]

@@ -15,17 +15,17 @@ func _physics_process(delta: float) -> void:
 	
 	if position.distance_to(posToGoTo) > 5:
 		move_and_slide()
-		print(velocity)
+		#print(velocity)
 		if abs(velocity[0]) < 1 and abs(velocity[1]) < 1:
-			print("Not Moving")
+			#print("Not Moving")
 			$AnimationPlayer.play("player_idle")
 		else:
 			if position.direction_to(posToGoTo)[0] > 0.00:
-				print("right")
+				#print("right")
 				$AnimationPlayer.play("player_walk_right")
 			elif position.direction_to(posToGoTo)[0] <= 0.00:
-				print("left")
+				#print("left")
 				$AnimationPlayer.play("player_walk_left")
 	else: 
-		print("Not moving")
+		#print("Not moving")
 		$AnimationPlayer.play("player_idle")
