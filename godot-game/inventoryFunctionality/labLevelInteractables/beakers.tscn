@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://1ue7qfecucme"]
 
-[ext_resource type="Script" uid="uid://dupb4b4lokyau" path="res://inventoryFunctionality/beakers.gd" id="1_j8ioc"]
+[ext_resource type="Script" uid="uid://dupb4b4lokyau" path="res://inventoryFunctionality/labLevelInteractables/beakers.gd" id="1_j8ioc"]
 [ext_resource type="Texture2D" uid="uid://dx8ek6r27ywno" path="res://assets/inventoryItems/beakersInventoryIcon.png" id="2_jbs0j"]
-[ext_resource type="Resource" uid="uid://dosog63no7l1p" path="res://inventoryFunctionality/beakers.tres" id="2_yu0gq"]
+[ext_resource type="Resource" uid="uid://dosog63no7l1p" path="res://inventoryFunctionality/labLevelInteractables/beakers.tres" id="2_yu0gq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yu0gq"]
 size = Vector2(20, 23.832245)

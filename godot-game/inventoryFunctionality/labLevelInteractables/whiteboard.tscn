@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cxcu67n3jlwte"]
 
-[ext_resource type="Script" uid="uid://2p82ptcnlhbn" path="res://inventoryFunctionality/whiteboard.gd" id="1_tfo54"]
+[ext_resource type="Script" uid="uid://2p82ptcnlhbn" path="res://inventoryFunctionality/labLevelInteractables/whiteboard.gd" id="1_tfo54"]
 [ext_resource type="Texture2D" uid="uid://q2b8n3qcoyu3" path="res://assets/rooms/whiteboard.png" id="2_tfo54"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0dqhk"]

@@ -59,7 +59,7 @@ func _default_interaction(dropped_item: ItemData, _inventory: InventorySystem):
 
 func _on_mouse_entered():
 	# Visual feedback - could add outline or highlight
-	modulate = Color(1.2, 1.2, 1.2)
+	modulate = Color(1.1, 1.1, 1.1)
 
 func _on_mouse_exited():
 	modulate = Color(1, 1, 1)

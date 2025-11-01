@@ -6,7 +6,7 @@ var controlMode = "mouse"
 # In the future, implement controlMode = "keyboard" for wasd controls.
 	
 # Get input
-func _input(event: InputEvent) -> void:
+func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("left_click") && controlMode == "mouse":
 		posToGoTo = get_global_mouse_position()
 
