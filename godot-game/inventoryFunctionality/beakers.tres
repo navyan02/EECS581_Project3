@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://dosog63no7l1p"]
+
+[ext_resource type="Texture2D" uid="uid://dx8ek6r27ywno" path="res://assets/inventoryItems/beakersInventoryIcon.png" id="1_0s5aa"]
+[ext_resource type="Script" uid="uid://c8mhqbeib7aj4" path="res://inventoryFunctionality/item_data.gd" id="1_5vwp0"]
+
+[resource]
+script = ExtResource("1_5vwp0")
+item_id = "beakers"
+item_name = "Beakers"
+icon = ExtResource("1_0s5aa")
+pickup_dialog = "These are some interesting chemicals..."
+metadata/_custom_type_script = "uid://c8mhqbeib7aj4"

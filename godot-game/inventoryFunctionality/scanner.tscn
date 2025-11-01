@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://dywb1e1j8cx08"]
+
+[ext_resource type="Script" uid="uid://cnsaesvidbjpi" path="res://inventoryFunctionality/scanner.gd" id="1_urrwr"]
+[ext_resource type="Texture2D" uid="uid://r41fy43hmu5e" path="res://assets/rooms/scanner.png" id="2_urrwr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0dqhk"]
+size = Vector2(52, 92)
+
+[node name="Scanner" type="Area2D"]
+script = ExtResource("1_urrwr")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_urrwr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_0dqhk")

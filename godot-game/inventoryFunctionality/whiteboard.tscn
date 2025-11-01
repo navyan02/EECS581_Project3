@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://cxcu67n3jlwte"]
+
+[ext_resource type="Script" uid="uid://2p82ptcnlhbn" path="res://inventoryFunctionality/whiteboard.gd" id="1_tfo54"]
+[ext_resource type="Texture2D" uid="uid://q2b8n3qcoyu3" path="res://assets/rooms/whiteboard.png" id="2_tfo54"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0dqhk"]
+size = Vector2(52, 92)
+
+[node name="Whiteboard" type="Area2D"]
+script = ExtResource("1_tfo54")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_tfo54")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1.6245992, 0.4473684)
+shape = SubResource("RectangleShape2D_0dqhk")

@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://brj8a03wrw7sf"]
+
+[ext_resource type="Script" uid="uid://dxueag57vmea" path="res://item.gd" id="1_iblef"]
+[ext_resource type="Texture2D" uid="uid://dx8ek6r27ywno" path="res://assets/inventoryItems/beakersInventoryIcon.png" id="2_8g6as"]
+
+[node name="beakers" type="Node2D"]
+script = ExtResource("1_iblef")
+
+[node name="BeakersInventoryIcon" type="Sprite2D" parent="."]
+position = Vector2(0, -5)
+texture = ExtResource("2_8g6as")
