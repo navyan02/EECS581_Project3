@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://bga7ujpnoswdc"]
+
+[ext_resource type="Script" uid="uid://d0mk3dc5bl31j" path="res://inventoryFunctionality/inventory_system.gd" id="1_wmpc6"]
+[ext_resource type="PackedScene" uid="uid://d20q7y361u17u" path="res://inventoryFunctionality/inventory_slot.tscn" id="2_7d0aq"]
+
+[node name="Control" type="Control" groups=["inventory"]]
+layout_mode = 3
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("1_wmpc6")
+slot_scene = ExtResource("2_7d0aq")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SlotsContainer" type="HBoxContainer" parent="Panel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+alignment = 1

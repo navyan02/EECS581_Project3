@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://s4mcjpxlgk0u"]
+[gd_scene load_steps=19 format=3 uid="uid://s4mcjpxlgk0u"]
 
 [ext_resource type="Texture2D" uid="uid://58jqcm6jellw" path="res://assets/rooms/labBackground.webp" id="1_114jd"]
 [ext_resource type="PackedScene" uid="uid://dpux7mjnmklvb" path="res://src/player.tscn" id="2_fadfy"]
@@ -6,10 +6,14 @@
 [ext_resource type="Texture2D" uid="uid://cjfducwxh8l6h" path="res://assets/rooms/computer.png" id="4_ic0bi"]
 [ext_resource type="Texture2D" uid="uid://dyunyb7i4erfa" path="res://assets/rooms/diploma.png" id="5_f0omo"]
 [ext_resource type="Texture2D" uid="uid://dln2y87bf81bc" path="res://assets/rooms/floor.png" id="6_eetg4"]
-[ext_resource type="Texture2D" uid="uid://r41fy43hmu5e" path="res://assets/rooms/scanner.png" id="7_0hvuw"]
-[ext_resource type="Texture2D" uid="uid://q2b8n3qcoyu3" path="res://assets/rooms/whiteboard.png" id="8_eohh7"]
 [ext_resource type="PackedScene" uid="uid://c2ov45ll3r7n0" path="res://src/interact.tscn" id="8_ic0bi"]
 [ext_resource type="Texture2D" uid="uid://b0m7xaom4qmef" path="res://assets/rooms/desk.png" id="9_f0omo"]
+[ext_resource type="PackedScene" uid="uid://daegyiygjpfmj" path="res://inventoryFunctionality/dialog_system.tscn" id="15_yki8q"]
+[ext_resource type="PackedScene" uid="uid://1ue7qfecucme" path="res://inventoryFunctionality/labLevelInteractables/beakers.tscn" id="16_ftuwx"]
+[ext_resource type="PackedScene" uid="uid://dywb1e1j8cx08" path="res://inventoryFunctionality/labLevelInteractables/scanner.tscn" id="17_rh3ni"]
+[ext_resource type="PackedScene" uid="uid://bb35sl6mr5dca" path="res://inventoryFunctionality/labLevelInteractables/shelf.tscn" id="18_huwru"]
+[ext_resource type="PackedScene" uid="uid://cxcu67n3jlwte" path="res://inventoryFunctionality/labLevelInteractables/whiteboard.tscn" id="19_mmc43"]
+[ext_resource type="PackedScene" uid="uid://bga7ujpnoswdc" path="res://inventoryFunctionality/inventory_ui.tscn" id="20_mlblw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ic0bi"]
 size = Vector2(423.13855, 59.62592)
@@ -23,101 +27,90 @@ size = Vector2(787.25, 39)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eetg4"]
 size = Vector2(1551, 39)
 
-[node name="Node2D" type="Node2D"]
+[node name="Node" type="Node"]
 
-[node name="LabBackground" type="Sprite2D" parent="."]
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="LabBackground" type="Sprite2D" parent="Node2D"]
 position = Vector2(763.7589, 349.5)
 scale = Vector2(2.4821427, 2.482143)
 texture = ExtResource("1_114jd")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="LabBackground"]
+[node name="BlockPlayer" type="StaticBody2D" parent="Node2D/LabBackground"]
+show_behind_parent = true
 
-[node name="Block desk" type="CollisionShape2D" parent="LabBackground/StaticBody2D"]
+[node name="Block desk" type="CollisionShape2D" parent="Node2D/LabBackground/BlockPlayer"]
 position = Vector2(-18.896545, 69.89928)
 shape = SubResource("RectangleShape2D_ic0bi")
 
-[node name="Block wall" type="CollisionShape2D" parent="LabBackground/StaticBody2D"]
+[node name="Block wall" type="CollisionShape2D" parent="Node2D/LabBackground/BlockPlayer"]
 position = Vector2(-0.10430908, -48.748215)
 shape = SubResource("RectangleShape2D_udwgg")
 
-[node name="Bookshelf" type="Sprite2D" parent="."]
+[node name="Container" type="Control" parent="Node2D"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(38.228214, 17.361126)
+
+[node name="Bookshelf" type="Sprite2D" parent="Node2D"]
+visible = false
 position = Vector2(98, 292.76273)
 scale = Vector2(2.474576, 2.474576)
 texture = ExtResource("3_udwgg")
 
-[node name="InteractArea" parent="Bookshelf" node_paths=PackedStringArray("player") instance=ExtResource("8_ic0bi")]
+[node name="InteractArea" parent="Node2D/Bookshelf" node_paths=PackedStringArray("player") instance=ExtResource("8_ic0bi")]
 position = Vector2(-1.2123299, 24.746574)
 scale = Vector2(0.48893905, 0.5900643)
 userDialog = "This is a bookshelf. It's kind of disorganized"
 player = NodePath("../../Player")
 
-[node name="Computer" type="Sprite2D" parent="."]
+[node name="Computer" type="Sprite2D" parent="Node2D"]
+visible = false
 position = Vector2(563.54, 386.125)
 scale = Vector2(2.6499996, 2.6499991)
 texture = ExtResource("4_ic0bi")
 
-[node name="InteractArea" parent="Computer" node_paths=PackedStringArray("player") instance=ExtResource("8_ic0bi")]
+[node name="InteractArea" parent="Node2D/Computer" node_paths=PackedStringArray("player") instance=ExtResource("8_ic0bi")]
 position = Vector2(0.70708025, -0.28283513)
 scale = Vector2(0.48893905, 0.5900643)
 userDialog = "This is a computer. It seems to be locked. The password hint just says \"whiteboard\""
 player = NodePath("../../Player")
 
-[node name="Diploma" type="Sprite2D" parent="."]
+[node name="Diploma" type="Sprite2D" parent="Node2D"]
+visible = false
 position = Vector2(1310.25, 162.70001)
 scale = Vector2(2.4750001, 2.4750004)
 texture = ExtResource("5_f0omo")
 
-[node name="InteractArea" parent="Diploma" node_paths=PackedStringArray("player") instance=ExtResource("8_ic0bi")]
+[node name="InteractArea" parent="Node2D/Diploma" node_paths=PackedStringArray("player") instance=ExtResource("8_ic0bi")]
 position = Vector2(0.70708025, -0.28283513)
 scale = Vector2(0.23233521, 0.5900643)
 userDialog = "This is a diploma. It says \"Dr. so and so went to KU and got a doctorate in Aerospace with a focus in extraterrestrial studies\"... Weird."
 player = NodePath("../../Player")
 addToInventory = true
-hideAfterInteracting = true
 
-[node name="Floor" type="Sprite2D" parent="."]
+[node name="Floor" type="Sprite2D" parent="Node2D"]
+visible = false
 position = Vector2(764.00006, 557.00006)
 scale = Vector2(2.4805198, 2.4805198)
 texture = ExtResource("6_eetg4")
 
-[node name="Scanner" type="Sprite2D" parent="."]
-position = Vector2(1364, 364)
-scale = Vector2(2.4661016, 2.4661016)
-texture = ExtResource("7_0hvuw")
-
-[node name="InteractArea" parent="Scanner" node_paths=PackedStringArray("player") instance=ExtResource("8_ic0bi")]
-position = Vector2(-0.40560913, -0.8109741)
-scale = Vector2(0.7101749, 2.1050892)
-userDialog = "This is a scanner"
-player = NodePath("../../Player")
-
-[node name="Whiteboard" type="Sprite2D" parent="."]
-position = Vector2(1141, 212)
-scale = Vector2(2.5113635, 2.5113635)
-texture = ExtResource("8_eohh7")
-
-[node name="InteractArea" parent="Whiteboard" node_paths=PackedStringArray("player") instance=ExtResource("8_ic0bi")]
-player = NodePath("../../Player")
-
-[node name="Desk" type="Sprite2D" parent="."]
+[node name="Desk" type="Sprite2D" parent="Node2D"]
+visible = false
 position = Vector2(718, 508)
 scale = Vector2(2.44, 2.44)
 texture = ExtResource("9_f0omo")
 
-[node name="InteractArea" parent="Desk" node_paths=PackedStringArray("player") instance=ExtResource("8_ic0bi")]
+[node name="InteractArea" parent="Node2D/Desk" node_paths=PackedStringArray("player") instance=ExtResource("8_ic0bi")]
 position = Vector2(105.73773, 1.2295074)
 scale = Vector2(2.5100126, 1.7003194)
 userDialog = "The drawers are locked..."
 player = NodePath("../../Player")
 
-[node name="Player" parent="." instance=ExtResource("2_fadfy")]
-position = Vector2(1346.0001, 479)
-scale = Vector2(1.6000001, 1.6000001)
-
-[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
-remote_path = NodePath("../../Camera2D")
-
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="Node2D"]
 position = Vector2(1346.0001, 479)
 scale = Vector2(1.6000001, 1.6000001)
 limit_left = 0
@@ -125,22 +118,59 @@ limit_top = 1
 limit_right = 1524
 limit_bottom = 699
 
-[node name="Level Border" type="StaticBody2D" parent="."]
+[node name="Level Border" type="StaticBody2D" parent="Node2D"]
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Level Border"]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Node2D/Level Border"]
 position = Vector2(-17, 347)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_f0omo")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Level Border"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Node2D/Level Border"]
 position = Vector2(766, 714)
 shape = SubResource("RectangleShape2D_eetg4")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Level Border"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Level Border"]
 position = Vector2(765.5, -14.5)
 shape = SubResource("RectangleShape2D_eetg4")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Level Border"]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Node2D/Level Border"]
 position = Vector2(1547, 341)
 rotation = -1.5707963
 shape = SubResource("RectangleShape2D_f0omo")
+
+[node name="Dialog System" parent="Node2D" instance=ExtResource("15_yki8q")]
+
+[node name="Interactables" type="Node" parent="Node2D"]
+
+[node name="Scanner" parent="Node2D/Interactables" instance=ExtResource("17_rh3ni")]
+position = Vector2(1363.0001, 355.00003)
+scale = Vector2(2.6721609, 2.6721609)
+
+[node name="Shelf" parent="Node2D/Interactables" instance=ExtResource("18_huwru")]
+position = Vector2(668.00006, 185)
+scale = Vector2(2.4399998, 2.4399998)
+
+[node name="Beakers" parent="Node2D/Interactables" instance=ExtResource("16_ftuwx")]
+position = Vector2(717.99994, 138.99998)
+scale = Vector2(3.593772, 3.593772)
+
+[node name="Whiteboard" parent="Node2D/Interactables" instance=ExtResource("19_mmc43")]
+position = Vector2(1138, 211)
+scale = Vector2(2.4399986, 2.4399986)
+
+[node name="Player" parent="Node2D" instance=ExtResource("2_fadfy")]
+z_index = 1
+position = Vector2(1346.0001, 479)
+scale = Vector2(1.6000001, 1.6000001)
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Node2D/Player"]
+remote_path = NodePath("../../Camera2D")
+
+[node name="Inventory UI" parent="." instance=ExtResource("20_mlblw")]
+z_index = 10
+offset_left = 619.0
+offset_top = -65.0
+offset_right = 659.0
+offset_bottom = -25.0
+
+[connection signal="gui_input" from="Node2D/Container" to="Node2D/Player" method="_on_container_gui_input"]
