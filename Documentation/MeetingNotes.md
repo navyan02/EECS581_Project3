@@ -107,3 +107,31 @@
 - Will get it checked by Kevin (TA) on Thursday during our weekly meeting
   
 ---
+
+
+---
+## **Meeting Title:** Team Meeting
+### **Date:** Wednesday, November 5th, 2025
+---
+#### 👥 Attendees
+
+- Katie Nordberg, Vivian Lara
+
+### 📒 Notes
+- Reviewed progress since previous team meeting
+  - Katie:
+    - Made laboratory level with placeholder assets.
+    - Implemented better physics so movement feels more natural.
+    - Added limits to camera to prevent out of bounds views.
+    - Added inventory system and implemented it with the beakers puzzle.
+    - Made character sprite options.
+  - Vi:
+    - Found sound effect assets
+    - Created spreadsheet for the sound effects and added it to the GitHub.
+- Assigned tasks to be completed by next meeting:
+  - [ ] Katie: Create pixel art for laboratory room.
+  - [ ] Katie: Create pixel art for laboratory room interactables (beakers, bookshelf, scanner, computer, desk, whiteboard, diploma)
+  - [ ] Vi: Create potential main character (32x32 or 64x64).
+  - [ ] Vi: Create/source music theme/melody. 
+
+---
