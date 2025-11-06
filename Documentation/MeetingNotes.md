@@ -1,3 +1,13 @@
+## **Meeting Title:** TA Meeting
+### **Date:** Thursday, November 6th, 2025
+---
+#### 👥 Attendees
+
+- Katie Nordberg, Vivian Lara
+
+### 📒 Notes/ToDo
+- This was a short meeting. We reported our updates to Kevin regarding sound effects, programming updates, and sprite artwork. We also informed him of our plans for the following week (more main character artwork, developing the main music, and creating artwork for the lab and its components).
+
 ---
 ## **Meeting Title:** Team Meeting
 ### **Date:** Wednesday, November 5th, 2025
