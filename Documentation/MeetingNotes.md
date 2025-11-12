@@ -1,3 +1,27 @@
+## **Meeting Title:** Team Meeting
+### **Date:** Wednesday, November 12th, 2025
+---
+#### 👥 Attendees
+
+- Navya Nittala, Kundana Dongala, Katie Nordberg, Christina Sorensen, Vivian Lara
+
+### 📒 Notes
+- Vi:
+  - created main character mockup
+  - main melody draft
+- Katie:
+  - created pixle art for the lab setup
+- Christina, Navya, Kundana: catching up.
+- H.io for placeholder assets 
+- Assigned tasks:
+  - [ ] Christina: create cut scene with placeholder assets. submit makeup report 
+  - [ ] Vi: create final main character (morph both versions) and pixelated version of logo. adjust main melody. 
+  - [ ] Katie: will start implementing dialogs
+  - [ ] Kundana: find placeholder assets and help with main character 
+  - [ ] Navya: create title screen (include logo, buttons: play, view map)
+  - [ ] Need to be done: bookcase puzzle 
+__
+
 ## **Meeting Title:** TA Meeting
 ### **Date:** Thursday, November 6th, 2025
 ---
