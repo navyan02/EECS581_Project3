@@ -7,6 +7,7 @@
 
 ### 📒 Notes/ToDo
 - We reported our updates to Kevin regarding the main melody, character design, and lab art. We also informed him of our plans for the following week (more main character artwork, finalizing the main music, and making the dialogs show up in the UI).
+- [ ] Add sprint 3 artifacts and update requirements and reference sheet
 
 ---
 ## **Meeting Title:** Team Meeting
