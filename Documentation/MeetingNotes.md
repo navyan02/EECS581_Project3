@@ -1,3 +1,14 @@
+## **Meeting Title:** TA Meeting
+### **Date:** Thursday, November 13th, 2025
+---
+#### 👥 Attendees
+
+- Navya Nittala, Kundana Dongala, Katie Nordberg, Christina Sorensen, Vivian Lara, Kevin Likcani(TA)
+
+### 📒 Notes/ToDo
+- We reported our updates to Kevin regarding the main melody, character design, and lab art. We also informed him of our plans for the following week (more main character artwork, finalizing the main music, and making the dialogs show up in the UI).
+
+---
 ## **Meeting Title:** Team Meeting
 ### **Date:** Wednesday, November 12th, 2025
 ---
