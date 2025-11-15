@@ -13,10 +13,16 @@ var slots: Array[InventorySlot] = []
 var dragging_item: ItemData = null
 var dragging_slot: InventorySlot = null
 
-#@onready var slots_container = $SlotsContainer
-@onready var slots_container = $Panel/SlotsContainer 
+var slots_container: HBoxContainer
 
 func _ready():
+	add_to_group("inventory")
+	
+	# Create slots container programmatically
+	slots_container = HBoxContainer.new()
+	slots_container.alignment = BoxContainer.ALIGNMENT_CENTER
+	add_child(slots_container)
+	
 	_create_slots()
 
 func _create_slots():
@@ -72,13 +78,31 @@ func _input(event):
 
 func _handle_drop():
 	if dragging_item:
-		var mouse_pos = get_global_mouse_position()
-		var dropped_on = _get_interactable_at_position(mouse_pos)
+		# Get mouse position in world coordinates (not screen coordinates)
+		var mouse_pos = get_viewport().get_mouse_position()
+		var camera = get_viewport().get_camera_2d()
+		
+		# Convert screen position to world position
+		var world_pos = mouse_pos
+		if camera:
+			world_pos = mouse_pos + camera.get_screen_center_position() - get_viewport_rect().size / 2
+		
+		var dropped_on = _get_interactable_at_position(world_pos)
 		
 		if dropped_on and dropped_on.has_method("handle_item_drop"):
+			# Let the object handle the interaction
 			dropped_on.handle_item_drop(dragging_item, self)
-		#	Note that inventory_slot.gd handles returning the item to the inventory when dropped
+		elif _is_over_inventory(mouse_pos):
+			# Dropped back into inventory - item never left, just reset visuals
+			pass
+		else:
+			# Dropped into void - item stays in inventory, just reset visuals
+			# Optionally show feedback
+			var dialog = get_tree().get_first_node_in_group("dialog")
+			if dialog and dialog.has_method("show_message"):
+				dialog.show_message("I'll hold onto this.")
 		
+		# Always reset the dragging visuals
 		if dragging_slot:
 			dragging_slot.set_dragging(false)
 		
@@ -98,9 +122,10 @@ func _get_interactable_at_position(pos: Vector2) -> Node:
 			return collider
 	return null
 
-func _is_over_inventory(pos: Vector2) -> bool:
+func _is_over_inventory(screen_pos: Vector2) -> bool:
+	# This uses screen position, not world position
 	var rect = get_global_rect()
-	return rect.has_point(pos)
+	return rect.has_point(screen_pos)
 
 func get_dragging_item() -> ItemData:
 	return dragging_item
