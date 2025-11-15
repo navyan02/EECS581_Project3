@@ -1,11 +1,13 @@
-[gd_scene load_steps=19 format=3 uid="uid://s4mcjpxlgk0u"]
+[gd_scene load_steps=22 format=3 uid="uid://s4mcjpxlgk0u"]
 
-[ext_resource type="Texture2D" uid="uid://58jqcm6jellw" path="res://assets/rooms/labBackground.webp" id="1_114jd"]
+[ext_resource type="Texture2D" uid="uid://ddqfhwa8xxth5" path="res://assets/rooms/labBackground.png" id="1_eohh7"]
 [ext_resource type="PackedScene" uid="uid://dpux7mjnmklvb" path="res://src/player.tscn" id="2_fadfy"]
+[ext_resource type="Texture2D" uid="uid://rmt2efj3jrjp" path="res://assets/rooms/bookPuzzle.png" id="3_7ojfn"]
 [ext_resource type="Texture2D" uid="uid://c7mnngtoltt14" path="res://assets/rooms/bookshelf.png" id="3_udwgg"]
 [ext_resource type="Texture2D" uid="uid://cjfducwxh8l6h" path="res://assets/rooms/computer.png" id="4_ic0bi"]
 [ext_resource type="Texture2D" uid="uid://dyunyb7i4erfa" path="res://assets/rooms/diploma.png" id="5_f0omo"]
-[ext_resource type="Texture2D" uid="uid://dln2y87bf81bc" path="res://assets/rooms/floor.png" id="6_eetg4"]
+[ext_resource type="Texture2D" uid="uid://cxux1mpl50qb4" path="res://assets/rooms/chair.png" id="7_40yeu"]
+[ext_resource type="Texture2D" uid="uid://cq8yaxsspdip5" path="res://assets/rooms/trashcan.png" id="8_gs5y5"]
 [ext_resource type="PackedScene" uid="uid://c2ov45ll3r7n0" path="res://src/interact.tscn" id="8_ic0bi"]
 [ext_resource type="Texture2D" uid="uid://b0m7xaom4qmef" path="res://assets/rooms/desk.png" id="9_f0omo"]
 [ext_resource type="PackedScene" uid="uid://daegyiygjpfmj" path="res://inventoryFunctionality/dialog_system.tscn" id="15_yki8q"]
@@ -15,62 +17,65 @@
 [ext_resource type="PackedScene" uid="uid://cxcu67n3jlwte" path="res://inventoryFunctionality/labLevelInteractables/whiteboard.tscn" id="19_mmc43"]
 [ext_resource type="PackedScene" uid="uid://bga7ujpnoswdc" path="res://inventoryFunctionality/inventory_ui.tscn" id="20_mlblw"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ic0bi"]
-size = Vector2(423.13855, 59.62592)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_udwgg"]
-size = Vector2(615.19434, 180.08633)
+size = Vector2(662.33105, 180.08633)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ic0bi"]
+size = Vector2(356.94965, 66.93161)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gs5y5"]
+size = Vector2(14.698494, 18.291473)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f0omo"]
 size = Vector2(787.25, 39)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eetg4"]
-size = Vector2(1551, 39)
+size = Vector2(1723.5, 39)
 
 [node name="Node" type="Node"]
 
 [node name="Node2D" type="Node2D" parent="."]
 
 [node name="LabBackground" type="Sprite2D" parent="Node2D"]
-position = Vector2(763.7589, 349.5)
-scale = Vector2(2.4821427, 2.482143)
-texture = ExtResource("1_114jd")
+texture_filter = 1
+position = Vector2(704.3838, 349.50006)
+scale = Vector2(8.6375, 8.637501)
+texture = ExtResource("1_eohh7")
 
-[node name="BlockPlayer" type="StaticBody2D" parent="Node2D/LabBackground"]
+[node name="BlockPlayerMovement" type="StaticBody2D" parent="Node2D/LabBackground"]
 show_behind_parent = true
+z_index = 1
+position = Vector2(6.874115, -7.6293945e-06)
+scale = Vector2(0.28736818, 0.28736818)
 
-[node name="Block desk" type="CollisionShape2D" parent="Node2D/LabBackground/BlockPlayer"]
-position = Vector2(-18.896545, 69.89928)
-shape = SubResource("RectangleShape2D_ic0bi")
-
-[node name="Block wall" type="CollisionShape2D" parent="Node2D/LabBackground/BlockPlayer"]
-position = Vector2(-0.10430908, -48.748215)
+[node name="Block wall" type="CollisionShape2D" parent="Node2D/LabBackground/BlockPlayerMovement"]
+z_index = -1
+position = Vector2(-23.67273, -48.748215)
 shape = SubResource("RectangleShape2D_udwgg")
 
-[node name="Container" type="Control" parent="Node2D"]
-visible = false
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-scale = Vector2(38.228214, 17.361126)
-
 [node name="Bookshelf" type="Sprite2D" parent="Node2D"]
-visible = false
-position = Vector2(98, 292.76273)
-scale = Vector2(2.474576, 2.474576)
+texture_filter = 1
+position = Vector2(4.794503, 328.1977)
+scale = Vector2(8.6575365, 8.6575365)
 texture = ExtResource("3_udwgg")
 
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/Bookshelf"]
+texture_filter = 1
+position = Vector2(-0.86181206, 8.293619)
+scale = Vector2(1.1550626, 1.1550626)
+texture = ExtResource("3_7ojfn")
+
 [node name="InteractArea" parent="Node2D/Bookshelf" node_paths=PackedStringArray("player") instance=ExtResource("8_ic0bi")]
-position = Vector2(-1.2123299, 24.746574)
-scale = Vector2(0.48893905, 0.5900643)
+position = Vector2(-0.6693016, 8.640137)
+scale = Vector2(0.3362826, 0.40583453)
 userDialog = "This is a bookshelf. It's kind of disorganized"
 player = NodePath("../../Player")
 
 [node name="Computer" type="Sprite2D" parent="Node2D"]
-visible = false
-position = Vector2(563.54, 386.125)
-scale = Vector2(2.6499996, 2.6499991)
+z_index = 3
+texture_filter = 1
+position = Vector2(707.54, 395.125)
+scale = Vector2(6.729999, 6.7299976)
 texture = ExtResource("4_ic0bi")
 
 [node name="InteractArea" parent="Node2D/Computer" node_paths=PackedStringArray("player") instance=ExtResource("8_ic0bi")]
@@ -80,40 +85,63 @@ userDialog = "This is a computer. It seems to be locked. The password hint just 
 player = NodePath("../../Player")
 
 [node name="Diploma" type="Sprite2D" parent="Node2D"]
-visible = false
-position = Vector2(1310.25, 162.70001)
-scale = Vector2(2.4750001, 2.4750004)
+texture_filter = 1
+position = Vector2(1348.1654, 131.89377)
+scale = Vector2(7.2144227, 7.2144237)
 texture = ExtResource("5_f0omo")
 
 [node name="InteractArea" parent="Node2D/Diploma" node_paths=PackedStringArray("player") instance=ExtResource("8_ic0bi")]
-position = Vector2(0.70708025, -0.28283513)
-scale = Vector2(0.23233521, 0.5900643)
+position = Vector2(0.53151506, -0.26249692)
+scale = Vector2(0.20461296, 0.31838635)
 userDialog = "This is a diploma. It says \"Dr. so and so went to KU and got a doctorate in Aerospace with a focus in extraterrestrial studies\"... Weird."
 player = NodePath("../../Player")
 addToInventory = true
 
-[node name="Floor" type="Sprite2D" parent="Node2D"]
-visible = false
-position = Vector2(764.00006, 557.00006)
-scale = Vector2(2.4805198, 2.4805198)
-texture = ExtResource("6_eetg4")
+[node name="Chair" type="Sprite2D" parent="Node2D"]
+texture_filter = 1
+position = Vector2(613.5, 420.58334)
+scale = Vector2(8.194444, 8.194445)
+texture = ExtResource("7_40yeu")
 
-[node name="Desk" type="Sprite2D" parent="Node2D"]
-visible = false
-position = Vector2(718, 508)
-scale = Vector2(2.44, 2.44)
+[node name="Desk" type="StaticBody2D" parent="Node2D"]
+z_index = 2
+position = Vector2(679, 532)
+scale = Vector2(8.111116, 8.111115)
+
+[node name="Block desk" type="CollisionShape2D" parent="Node2D/Desk"]
+z_index = 1
+position = Vector2(0.36494446, -0.37313843)
+scale = Vector2(0.30198923, 0.30198926)
+shape = SubResource("RectangleShape2D_ic0bi")
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/Desk"]
+texture_filter = 1
+scale = Vector2(1.0000001, 1.0000001)
 texture = ExtResource("9_f0omo")
 
-[node name="InteractArea" parent="Node2D/Desk" node_paths=PackedStringArray("player") instance=ExtResource("8_ic0bi")]
-position = Vector2(105.73773, 1.2295074)
-scale = Vector2(2.5100126, 1.7003194)
+[node name="InteractArea" parent="Node2D/Desk/Sprite2D" node_paths=PackedStringArray("player") instance=ExtResource("8_ic0bi")]
+position = Vector2(32.484467, -1.7033119)
+scale = Vector2(-0.55689615, 0.5608738)
 userDialog = "The drawers are locked..."
-player = NodePath("../../Player")
+player = NodePath("../../../Player")
+
+[node name="Trash" type="StaticBody2D" parent="Node2D"]
+z_index = 2
+position = Vector2(1205, 552)
+scale = Vector2(7.96, 7.96)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Trash"]
+position = Vector2(-0.06283569, 0.85427856)
+shape = SubResource("RectangleShape2D_gs5y5")
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/Trash"]
+texture_filter = 1
+texture = ExtResource("8_gs5y5")
 
 [node name="Camera2D" type="Camera2D" parent="Node2D"]
 position = Vector2(1346.0001, 479)
 scale = Vector2(1.6000001, 1.6000001)
-limit_left = 0
+limit_left = -118
 limit_top = 1
 limit_right = 1524
 limit_bottom = 699
@@ -121,16 +149,16 @@ limit_bottom = 699
 [node name="Level Border" type="StaticBody2D" parent="Node2D"]
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Node2D/Level Border"]
-position = Vector2(-17, 347)
+position = Vector2(-135, 353)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_f0omo")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Node2D/Level Border"]
-position = Vector2(766, 714)
+position = Vector2(736.75, 714)
 shape = SubResource("RectangleShape2D_eetg4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Level Border"]
-position = Vector2(765.5, -14.5)
+position = Vector2(708.5, -14.5)
 shape = SubResource("RectangleShape2D_eetg4")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Node2D/Level Border"]
@@ -151,26 +179,32 @@ position = Vector2(668.00006, 185)
 scale = Vector2(2.4399998, 2.4399998)
 
 [node name="Beakers" parent="Node2D/Interactables" instance=ExtResource("16_ftuwx")]
-position = Vector2(717.99994, 138.99998)
-scale = Vector2(3.593772, 3.593772)
+position = Vector2(688.00006, 139.00002)
+scale = Vector2(8.113771, 8.113771)
 
 [node name="Whiteboard" parent="Node2D/Interactables" instance=ExtResource("19_mmc43")]
-position = Vector2(1138, 211)
-scale = Vector2(2.4399986, 2.4399986)
+texture_filter = 1
+position = Vector2(1049, 213)
+scale = Vector2(8.039998, 8.039998)
 
 [node name="Player" parent="Node2D" instance=ExtResource("2_fadfy")]
-z_index = 1
+z_index = 4
 position = Vector2(1346.0001, 479)
 scale = Vector2(1.6000001, 1.6000001)
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Node2D/Player"]
 remote_path = NodePath("../../Camera2D")
 
-[node name="Inventory UI" parent="." instance=ExtResource("20_mlblw")]
-z_index = 10
-offset_left = 619.0
-offset_top = -65.0
-offset_right = 659.0
-offset_bottom = -25.0
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[connection signal="gui_input" from="Node2D/Container" to="Node2D/Player" method="_on_container_gui_input"]
+[node name="Inventory UI" parent="CanvasLayer" instance=ExtResource("20_mlblw")]
+z_index = 10
+anchors_preset = -1
+anchor_left = 0.51900005
+anchor_top = 0.95400006
+anchor_right = 0.51900005
+anchor_bottom = 0.95400006
+offset_left = -21.888062
+offset_top = -22.192017
+offset_right = -21.888062
+offset_bottom = -22.192017

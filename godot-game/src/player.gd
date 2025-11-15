@@ -6,6 +6,8 @@ var controlMode = "mouse"
 # In the future, implement controlMode = "keyboard" for wasd controls.
 	
 # Get input
+# I used _unhandled_input() instead of just _input() so that the inventory has a chance to handle inventory clicks
+# This way, only clicks outside of the UI will trigger movement!
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("left_click") && controlMode == "mouse":
 		posToGoTo = get_global_mouse_position()

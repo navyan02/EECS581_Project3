@@ -1,16 +1,18 @@
 [gd_scene load_steps=4 format=3 uid="uid://bb35sl6mr5dca"]
 
 [ext_resource type="Script" uid="uid://d3m0h8fgi2c4y" path="res://inventoryFunctionality/labLevelInteractables/shelf.gd" id="1_vvivp"]
-[ext_resource type="Texture2D" uid="uid://ln1iejqk4ylg" path="res://assets/rooms/shelfWithBeakers.png" id="2_mm267"]
+[ext_resource type="Texture2D" uid="uid://bmqg3gqhxkxch" path="res://assets/rooms/shelf.png" id="2_l0r0d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0dqhk"]
-size = Vector2(116, 60)
+size = Vector2(116, 22)
 
 [node name="Shelf" type="Area2D"]
 script = ExtResource("1_vvivp")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_mm267")
+texture_filter = 1
+scale = Vector2(3.333333, 3.3333333)
+texture = ExtResource("2_l0r0d")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_0dqhk")

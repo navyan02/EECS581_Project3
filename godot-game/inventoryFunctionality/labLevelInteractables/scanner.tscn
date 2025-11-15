@@ -1,16 +1,99 @@
-[gd_scene load_steps=4 format=3 uid="uid://dywb1e1j8cx08"]
+[gd_scene load_steps=9 format=3 uid="uid://dywb1e1j8cx08"]
 
 [ext_resource type="Script" uid="uid://cnsaesvidbjpi" path="res://inventoryFunctionality/labLevelInteractables/scanner.gd" id="1_urrwr"]
-[ext_resource type="Texture2D" uid="uid://r41fy43hmu5e" path="res://assets/rooms/scanner.png" id="2_urrwr"]
+[ext_resource type="Texture2D" uid="uid://dmftluad7rxpy" path="res://assets/rooms/Scanner Spritesheet Scanning 32x50.png" id="2_0cbqx"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0dqhk"]
-size = Vector2(52, 92)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rls6k"]
+radius = 24.0
+height = 94.0
+
+[sub_resource type="Animation" id="Animation_v56k2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_0cbqx")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_vdbal"]
+resource_name = "idle"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_0cbqx")]
+}
+
+[sub_resource type="Animation" id="Animation_y2kys"]
+resource_name = "openGlass"
+
+[sub_resource type="Animation" id="Animation_4pudk"]
+resource_name = "scanUp"
+length = 1.5
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.050000004, 0.10000001, 0.15, 0.20000002, 0.25, 0.3, 0.35, 0.4, 0.45000002, 0.5, 0.55, 0.6, 0.65000004, 0.7, 0.75, 0.8, 0.85, 0.90000004, 0.95, 1, 1.0500001, 1.1, 1.15, 1.2, 1.25, 1.3000001, 1.35, 1.4, 1.45),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_u6qvs"]
+_data = {
+&"RESET": SubResource("Animation_v56k2"),
+&"idle": SubResource("Animation_vdbal"),
+&"openGlass": SubResource("Animation_y2kys"),
+&"scanUp": SubResource("Animation_4pudk")
+}
 
 [node name="Scanner" type="Area2D"]
 script = ExtResource("1_urrwr")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_urrwr")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_0dqhk")
+visible = false
+z_index = 1
+shape = SubResource("CapsuleShape2D_rls6k")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1, -1)
+scale = Vector2(2.109375, 2.109375)
+texture = ExtResource("2_0cbqx")
+hframes = 5
+vframes = 6
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="Sprite2D"]
+libraries = {
+&"": SubResource("AnimationLibrary_u6qvs")
+}

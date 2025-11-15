@@ -1,11 +1,11 @@
 [gd_scene load_steps=5 format=3 uid="uid://1ue7qfecucme"]
 
 [ext_resource type="Script" uid="uid://dupb4b4lokyau" path="res://inventoryFunctionality/labLevelInteractables/beakers.gd" id="1_j8ioc"]
-[ext_resource type="Texture2D" uid="uid://dx8ek6r27ywno" path="res://assets/inventoryItems/beakersInventoryIcon.png" id="2_jbs0j"]
 [ext_resource type="Resource" uid="uid://dosog63no7l1p" path="res://inventoryFunctionality/labLevelInteractables/beakers.tres" id="2_yu0gq"]
+[ext_resource type="Texture2D" uid="uid://ovtcflkeusfe" path="res://assets/rooms/beakers.png" id="3_chekm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yu0gq"]
-size = Vector2(20, 23.832245)
+size = Vector2(18.0567, 6.063521)
 
 [node name="Beakers" type="Area2D"]
 scale = Vector2(0.43376905, 0.43376905)
@@ -13,9 +13,10 @@ script = ExtResource("1_j8ioc")
 item_data = ExtResource("2_yu0gq")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_jbs0j")
+texture_filter = 1
+texture = ExtResource("3_chekm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 1.9161222)
-scale = Vector2(1.2767421, 1.1406118)
+position = Vector2(-3.435275e-07, 1.1526868)
+scale = Vector2(1.2767417, 1.1406118)
 shape = SubResource("RectangleShape2D_yu0gq")
