@@ -4,14 +4,16 @@
 [ext_resource type="Texture2D" uid="uid://q2b8n3qcoyu3" path="res://assets/rooms/whiteboard.png" id="2_tfo54"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0dqhk"]
-size = Vector2(52, 92)
+size = Vector2(19.697166, 40.2353)
 
 [node name="Whiteboard" type="Area2D"]
 script = ExtResource("1_tfo54")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
 texture = ExtResource("2_tfo54")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(5.9604645e-07, 0)
 scale = Vector2(1.6245992, 0.4473684)
 shape = SubResource("RectangleShape2D_0dqhk")

@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bgwk7gnv6oct2" path="res://assets/characters/Alien.png" id="2_gmfve"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_onrkg"]
-size = Vector2(57.5, 42)
+size = Vector2(57.5, 33)
 
 [sub_resource type="Animation" id="Animation_bktlc"]
 length = 0.001
@@ -123,7 +123,7 @@ _data = {
 script = ExtResource("1_gmfve")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1.25, 66)
+position = Vector2(1.25, 70.5)
 shape = SubResource("RectangleShape2D_onrkg")
 
 [node name="Alien" type="Sprite2D" parent="."]
