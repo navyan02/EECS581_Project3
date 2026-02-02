@@ -1,3 +1,22 @@
+## **Meeting Title:** TA Meeting
+### **Date:** Monday, February 2nd, 2026
+---
+#### 👥 Attendees
+
+- Navya Nittala, Kundana Dongala, Katie Nordberg, Christina Sorensen, Vivian Lara, Kevin Likcani(TA)
+
+### 📒 Notes/ToDo
+- Sprint 1 (due Sunday, February 8th):
+  - [ ] Inital Architectire Document (can reuse old one, keep in mind word limit(1500) and constraints) 
+  - [ ] Updated Agile Reference Stories (if not given 100%)
+  - [ ] Updated Requirements Stack (70 is current max)
+  - [ ] Sprint 1 Requirements Artifacts (doc with elaborations from last semester)
+  - [ ] Team Peer Evaluations 2
+ - Github URL is due on Sunday, February 15th
+  
+
+---
+
 ## **Meeting Title:** Team Meeting
 ### **Date:** Thursday, January 29th, 2026
 ---
