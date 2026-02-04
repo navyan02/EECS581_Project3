@@ -13,15 +13,15 @@ func _ready():
 
 func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int):
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		var dialog = get_tree().get_first_node_in_group("dialog")
 		if metWithNPC1 and metWithNPC2:
 			_show_dialog("Alright, let's go introduce you")
-			await get_tree().create_timer(6.0).timeout
+			await dialog.dialog_finished
 			get_tree().change_scene_to_file("res://src//OpenLvl1/openlvl1.tscn")
 		else:
 			_show_dialog("Oh Hey! Its weird, your team is normally here by now for coffee.")
-			await get_tree().create_timer(5.0).timeout
+			await dialog.dialog_finished
 			_show_dialog("When you're done meeting everyone here in the office, I'll go introduce you!")
-			
 func _show_dialog(text: String):
 	var dialog = get_tree().get_first_node_in_group("dialog")
 	if dialog and dialog.has_method("show_message"):
