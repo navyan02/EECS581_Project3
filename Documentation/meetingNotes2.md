@@ -1,3 +1,36 @@
+## **Meeting Title:** Team Meeting
+### **Date:** Thursday, January 29th, 2026
+---
+#### 👥 Attendees
+
+- Katie Nordberg, Vivian Lara, Christina Sorensen, Kundana Dongala, Navya Nittala
+
+### 📒 Notes
+- talked about everything that's due on Sunday
+- planning chapter 2 
+
+- Deliverables Due by Sunday:
+  - [ ] Initial Architecture Document (can reuse old one, keep in mind word limit(1500) and constraints) 
+  - [ ] Updated Agile Reference Stories 
+  - [ ] Updated Requirements Stack
+  - [ ] Sprint 1 Requirements Artifacts (doc with elaborations from last semester)
+  - [ ] Team Peer Evaluations 2
+  
+To Dos:
+  - [ ]  work on sprint 1 artifacts and the initial architecture document
+  - [ ]  Cristina and Vi: art for level 2 
+  - [ ]  others: Artifacts document and architecture document
+  - [ ]  Navya and kundana: cut scenes and dialogues for level 2 
+  - [ ]  Cristina: star game for level 2 
+  - [ ]  Katie: nanogram game for level 2
+
+Next Meeting 
+- TA Meeting: Monday, February 9th @ 11:30AM
+- Team Meeting: Thursday, February 12th @ 3PM
+
+---
+
+
 ## **Meeting Title:** TA Meeting
 ### **Date:** Monday, February 2nd, 2026
 ---
