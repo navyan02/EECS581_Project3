@@ -20,6 +20,7 @@ var grid_state: Array = []
 @export var blank_button: TextureButton
 @export var x_button: TextureButton
 @export var fill_button: TextureButton
+@export var zoomedAccessButtons: AnimatedSprite2D
 
 # Grid sprite reference (assign in the editor)
 @export var grid_sprite: Sprite2D
@@ -42,6 +43,7 @@ var grid_offset: Vector2
 var cell_sprites: Array = []
 
 func _ready():
+	zoomedAccessButtons.play("Access Denied")
 	# Calculate grid dimensions based on the grid sprite
 	calculate_grid_dimensions()
 	
@@ -131,7 +133,8 @@ func _input(event):
 		
 		if cell != null and cell.x >= 0:
 			fill_cell(cell.x, cell.y, current_tool)
-			if (check_solution(rocket_solution)):
+			if (check_solution(rocket_solution)):				
+				zoomedAccessButtons.play("Access Granted")
 				print("Solved!")
 
 func get_cell_from_position(pos: Vector2) -> Vector2i:
