@@ -1,8 +1,8 @@
-[gd_scene load_steps=18 format=3 uid="uid://c6pxm0ep2vc1w"]
+[gd_scene load_steps=21 format=3 uid="uid://c6pxm0ep2vc1w"]
 
 [ext_resource type="Texture2D" uid="uid://c1i4j7fcgb1hc" path="res://assets/level2/spaceship door.png" id="1_s325m"]
 [ext_resource type="Texture2D" uid="uid://m72s3ous5nnt" path="res://assets/level2/small grid.png" id="2_qhiu7"]
-[ext_resource type="Texture2D" uid="uid://lhlaflmvg3dd" path="res://assets/level2/access denied.png" id="3_up4tt"]
+[ext_resource type="Script" uid="uid://bcjvnl17fpqs4" path="res://src/Level2/small_grid.gd" id="2_y3wyr"]
 [ext_resource type="Script" uid="uid://drvtiymkovb2k" path="res://src/Level2/nonogram.gd" id="4_3faby"]
 [ext_resource type="Texture2D" uid="uid://74u37i6vqxgi" path="res://assets/level2/blankOnBG.png" id="5_3faby"]
 [ext_resource type="Texture2D" uid="uid://dosbu7xpnc156" path="res://assets/level2/xOnBG.png" id="6_jhs75"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://bkepyrqysc62y" path="res://assets/level2/access denied frame 2.png" id="14_6mcwn"]
 [ext_resource type="Texture2D" uid="uid://cr4btimik2rsc" path="res://assets/level2/access granted frame 1.png" id="15_7ojio"]
 [ext_resource type="Texture2D" uid="uid://2gbim3rwxvpw" path="res://assets/level2/access granted frame 2.png" id="16_2ph8k"]
+[ext_resource type="Script" uid="uid://c5seqx5ydbha2" path="res://src/Level2/smallNonogram.gd" id="17_6mcwn"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_b03au"]
 animations = [{
@@ -42,6 +43,11 @@ animations = [{
 "speed": 2.5
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6mcwn"]
+size = Vector2(200.5, 198)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7ojio"]
+
 [node name="Spaceship Door" type="Node2D"]
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -50,21 +56,36 @@ offset_top = -1.0
 offset_right = 624.5
 offset_bottom = 134.5
 scale = Vector2(8, 8)
+mouse_filter = 2
 color = Color(0.8784314, 0.8784314, 0.8784314, 1)
 
 [node name="SpaceshipDoor" type="Sprite2D" parent="."]
-position = Vector2(9, -24)
+position = Vector2(1678, 534.00006)
+scale = Vector2(8.296875, 8.296875)
 texture = ExtResource("1_s325m")
 
-[node name="SmallGrid" type="Sprite2D" parent="."]
-position = Vector2(2, -30)
+[node name="SmallAccessButtons" type="AnimatedSprite2D" parent="."]
+position = Vector2(1211.0001, 353)
+scale = Vector2(8, 8.000002)
+sprite_frames = SubResource("SpriteFrames_b03au")
+animation = &"Access Denied"
+frame_progress = 0.5848749
+
+[node name="SmallGrid" type="Area2D" parent="." node_paths=PackedStringArray("nonogramPuzzle")]
+script = ExtResource("2_y3wyr")
+nonogramPuzzle = NodePath("../NonogramPuzzle")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SmallGrid"]
+position = Vector2(1209.75, 524)
+shape = SubResource("RectangleShape2D_6mcwn")
+
+[node name="SmallGrid" type="Sprite2D" parent="SmallGrid"]
+position = Vector2(1211, 524)
+scale = Vector2(10.526308, 10.526308)
 texture = ExtResource("2_qhiu7")
 
-[node name="AccessDenied" type="Sprite2D" parent="."]
-position = Vector2(2, -45)
-texture = ExtResource("3_up4tt")
-
-[node name="Node2D" type="Node2D" parent="." node_paths=PackedStringArray("blank_button", "x_button", "fill_button", "zoomedAccessButtons", "grid_sprite")]
+[node name="NonogramPuzzle" type="Node2D" parent="." node_paths=PackedStringArray("blank_button", "x_button", "fill_button", "zoomedAccessButtons", "grid_sprite")]
+visible = false
 script = ExtResource("4_3faby")
 blank_button = NodePath("BlankOption2")
 x_button = NodePath("XOption")
@@ -76,55 +97,56 @@ blank_texture = ExtResource("5_3faby")
 x_texture = ExtResource("6_jhs75")
 fill_texture = ExtResource("7_do1hi")
 
-[node name="ColorRect" type="ColorRect" parent="Node2D"]
+[node name="ColorRect" type="ColorRect" parent="NonogramPuzzle"]
 offset_left = 384.0
 offset_top = -1.0
 offset_right = 624.5
 offset_bottom = 134.5
 scale = Vector2(8, 8)
+mouse_filter = 2
 color = Color(0.8784314, 0.8784314, 0.8784314, 1)
 
-[node name="NonogramNumbers2" type="Sprite2D" parent="Node2D"]
-position = Vector2(1200.5, 571)
+[node name="NonogramNumbers2" type="Sprite2D" parent="NonogramPuzzle"]
+position = Vector2(1296.5, 571)
 scale = Vector2(13, 13)
 texture = ExtResource("11_do1hi")
 
-[node name="NonogramGrid" type="Sprite2D" parent="Node2D"]
-position = Vector2(1254, 628)
+[node name="NonogramGrid" type="Sprite2D" parent="NonogramPuzzle"]
+position = Vector2(1350, 628)
 scale = Vector2(13, 13)
 texture = ExtResource("7_xl36j")
 
-[node name="ColorOption" type="TextureButton" parent="Node2D"]
-offset_left = 1700.0001
+[node name="ColorOption" type="TextureButton" parent="NonogramPuzzle"]
+offset_left = 1796.0
 offset_top = 381.0
-offset_right = 1709.0001
+offset_right = 1805.0
 offset_bottom = 390.0
 scale = Vector2(13, 13)
 texture_normal = ExtResource("8_b1c8y")
 stretch_mode = 0
 
-[node name="XOption" type="TextureButton" parent="Node2D"]
-offset_left = 1701.0
+[node name="XOption" type="TextureButton" parent="NonogramPuzzle"]
+offset_left = 1797.0
 offset_top = 561.00006
-offset_right = 1710.0
+offset_right = 1806.0
 offset_bottom = 570.00006
 scale = Vector2(13, 13)
 texture_normal = ExtResource("10_xl36j")
 
-[node name="BlankOption2" type="TextureButton" parent="Node2D"]
-offset_left = 1700.0001
+[node name="BlankOption2" type="TextureButton" parent="NonogramPuzzle"]
+offset_left = 1796.0
 offset_top = 768.0
-offset_right = 1709.0001
+offset_right = 1805.0
 offset_bottom = 777.0
 scale = Vector2(13, 13)
 texture_normal = ExtResource("9_jhs75")
 
-[node name="ZoomedAccessButtons" type="AnimatedSprite2D" parent="Node2D"]
-position = Vector2(686, 142)
+[node name="ZoomedAccessButtons" type="AnimatedSprite2D" parent="NonogramPuzzle"]
+position = Vector2(782, 142)
 scale = Vector2(13.333333, 13.333333)
 sprite_frames = SubResource("SpriteFrames_b03au")
 animation = &"Access Denied"
-frame_progress = 0.7790664
+frame_progress = 0.47491938
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(1346.0001, 479)
@@ -133,3 +155,19 @@ limit_left = 1
 limit_top = 1
 limit_right = 2562
 limit_bottom = 1078
+
+[node name="Area2D" type="Area2D" parent="."]
+visible = false
+script = ExtResource("17_6mcwn")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+position = Vector2(1210.4039, 526.40393)
+scale = Vector2(10.779363, 10.779363)
+texture = ExtResource("2_qhiu7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1210.4039, 526.40393)
+scale = Vector2(10.779363, 10.779363)
+shape = SubResource("RectangleShape2D_7ojio")
+
+[connection signal="input_event" from="SmallGrid" to="SmallGrid" method="_on_input_event"]

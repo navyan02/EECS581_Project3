@@ -127,6 +127,9 @@ func create_grid_sprites():
 			cell_sprites[row].append(sprite)
 
 func _input(event):
+	if not visible:
+		return
+	
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		var mouse_pos = get_global_mouse_position()
 		var cell = get_cell_from_position(mouse_pos)
