@@ -15,12 +15,14 @@ const GRID_SIZE = 5
 
 # Store the state of each cell
 var grid_state: Array = []
+var still_playing = true
 
 # References to UI elements (assign these in the editor)
 @export var blank_button: TextureButton
 @export var x_button: TextureButton
 @export var fill_button: TextureButton
 @export var zoomedAccessButtons: AnimatedSprite2D
+@export var accessGrantedMessage: Node2D
 
 # Grid sprite reference (assign in the editor)
 @export var grid_sprite: Sprite2D
@@ -129,6 +131,8 @@ func create_grid_sprites():
 func _input(event):
 	if not visible:
 		return
+	if not still_playing:
+		return
 	
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		var mouse_pos = get_global_mouse_position()
@@ -136,9 +140,19 @@ func _input(event):
 		
 		if cell != null and cell.x >= 0:
 			fill_cell(cell.x, cell.y, current_tool)
-			if (check_solution(rocket_solution)):				
+			if (check_solution(rocket_solution)):
+#				Prevent the player from continuing to play
+				still_playing = false
+				
+#				Wait a moment for the player to see their finished nonogram
+				await get_tree().create_timer(0.25).timeout
+				
+#				Start the access granted animation
 				zoomedAccessButtons.play("Access Granted")
-				print("Solved!")
+				accessGrantedMessage.visible = true
+#				Wait a couple more seconds before showing the rocket ship animation
+				await get_tree().create_timer(2).timeout
+				accessGrantedMessage.get_node("AnimationPlayer").play("fly to top")
 
 func get_cell_from_position(pos: Vector2) -> Vector2i:
 	"""Convert mouse position to grid coordinates"""
