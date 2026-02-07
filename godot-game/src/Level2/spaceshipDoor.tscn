@@ -1,5 +1,6 @@
-[gd_scene load_steps=29 format=3 uid="uid://c6pxm0ep2vc1w"]
+[gd_scene load_steps=30 format=3 uid="uid://c6pxm0ep2vc1w"]
 
+[ext_resource type="Script" uid="uid://cnwf8pgn0cq16" path="res://src/Level2/spaceship_door_level.gd" id="1_gey61"]
 [ext_resource type="Texture2D" uid="uid://c1i4j7fcgb1hc" path="res://assets/level2/spaceship door.png" id="1_s325m"]
 [ext_resource type="Texture2D" uid="uid://m72s3ous5nnt" path="res://assets/level2/small grid.png" id="2_qhiu7"]
 [ext_resource type="Script" uid="uid://bcjvnl17fpqs4" path="res://src/Level2/small_grid.gd" id="2_y3wyr"]
@@ -100,17 +101,19 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector2(1352, 1321), Vector2(1352, -239.00002)]
 }
-tracks/1/type = "value"
+tracks/1/type = "method"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("AnimatedSprite2D:animation")
+tracks/1/path = NodePath("AnimatedSprite2D")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"Fire"]
+"values": [{
+"args": [&"Fire", 1.0, false],
+"method": &"play"
+}]
 }
 
 [sub_resource type="Animation" id="Animation_6mxeh"]
@@ -127,18 +130,6 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector2(1352, 1338)]
 }
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AnimatedSprite2D:animation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"Fire"]
-}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6tbog"]
 _data = {
@@ -147,6 +138,7 @@ _data = {
 }
 
 [node name="Spaceship Door" type="Node2D"]
+script = ExtResource("1_gey61")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = 384.0
@@ -162,16 +154,16 @@ position = Vector2(1678, 534.00006)
 scale = Vector2(8.296875, 8.296875)
 texture = ExtResource("1_s325m")
 
-[node name="SmallGrid" type="Area2D" parent="." node_paths=PackedStringArray("nonogramPuzzle")]
-script = ExtResource("2_y3wyr")
-nonogramPuzzle = NodePath("../NonogramPuzzle")
-
-[node name="SmallAccessButtons" type="AnimatedSprite2D" parent="SmallGrid"]
+[node name="SmallAccessButtons" type="AnimatedSprite2D" parent="."]
 position = Vector2(1211.0001, 353)
 scale = Vector2(8, 8.000002)
 sprite_frames = SubResource("SpriteFrames_b03au")
 animation = &"Access Denied"
 frame_progress = 0.5848749
+
+[node name="SmallGrid" type="Area2D" parent="." node_paths=PackedStringArray("nonogramPuzzle")]
+script = ExtResource("2_y3wyr")
+nonogramPuzzle = NodePath("../NonogramPuzzle")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SmallGrid"]
 position = Vector2(1209.75, 524)
@@ -289,7 +281,7 @@ position = Vector2(1352, 1338)
 scale = Vector2(7.401961, 7.401961)
 sprite_frames = SubResource("SpriteFrames_eqo1a")
 animation = &"Fire"
-frame_progress = 0.6401185
+frame_progress = 0.040126316
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="NonogramPuzzle/AccessGrantedMessage"]
 libraries = {
@@ -313,3 +305,5 @@ limit_right = 2562
 limit_bottom = 1078
 
 [connection signal="input_event" from="SmallGrid" to="SmallGrid" method="_on_input_event"]
+[connection signal="nonogram_solved" from="NonogramPuzzle" to="." method="_on_nonogram_puzzle_nonogram_solved"]
+[connection signal="nonogram_solved" from="NonogramPuzzle" to="SmallGrid" method="_on_nonogram_puzzle_nonogram_solved"]

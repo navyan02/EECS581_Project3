@@ -44,6 +44,8 @@ var grid_offset: Vector2
 # Array to store sprite nodes for each cell
 var cell_sprites: Array = []
 
+signal nonogram_solved()
+
 func _ready():
 	zoomedAccessButtons.play("Access Denied")
 	# Calculate grid dimensions based on the grid sprite
@@ -143,6 +145,7 @@ func _input(event):
 			if (check_solution(rocket_solution)):
 #				Prevent the player from continuing to play
 				still_playing = false
+				nonogram_solved.emit()
 				
 #				Wait a moment for the player to see their finished nonogram
 				await get_tree().create_timer(0.25).timeout
@@ -153,7 +156,13 @@ func _input(event):
 #				Wait a couple more seconds before showing the rocket ship animation
 				await get_tree().create_timer(2).timeout
 				accessGrantedMessage.get_node("AnimationPlayer").play("fly to top")
-
+				await accessGrantedMessage.get_node("AnimationPlayer").animation_finished
+				
+#				Now we can hide the nonogram puzzle and go back to the space ship door
+				await get_tree().create_timer(1).timeout
+				visible = false
+				
+				
 func get_cell_from_position(pos: Vector2) -> Vector2i:
 	"""Convert mouse position to grid coordinates"""
 	var relative_pos = pos - grid_offset
