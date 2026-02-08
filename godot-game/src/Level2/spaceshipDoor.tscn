@@ -1,0 +1,317 @@
+[gd_scene load_steps=31 format=3 uid="uid://c6pxm0ep2vc1w"]
+
+[ext_resource type="Script" uid="uid://cnwf8pgn0cq16" path="res://src/Level2/spaceship_door_level.gd" id="1_gey61"]
+[ext_resource type="Texture2D" uid="uid://c1i4j7fcgb1hc" path="res://assets/level2/spaceship door.png" id="1_s325m"]
+[ext_resource type="Texture2D" uid="uid://m72s3ous5nnt" path="res://assets/level2/small grid.png" id="2_qhiu7"]
+[ext_resource type="Script" uid="uid://bcjvnl17fpqs4" path="res://src/Level2/small_grid.gd" id="2_y3wyr"]
+[ext_resource type="Script" uid="uid://drvtiymkovb2k" path="res://src/Level2/nonogram.gd" id="4_3faby"]
+[ext_resource type="Texture2D" uid="uid://74u37i6vqxgi" path="res://assets/level2/blankOnBG.png" id="5_3faby"]
+[ext_resource type="Texture2D" uid="uid://dosbu7xpnc156" path="res://assets/level2/xOnBG.png" id="6_jhs75"]
+[ext_resource type="Texture2D" uid="uid://c887524jx6nng" path="res://assets/level2/colorOnBG.png" id="7_do1hi"]
+[ext_resource type="Texture2D" uid="uid://b3vtbyjq3ymgq" path="res://assets/level2/nonogram grid.png" id="7_xl36j"]
+[ext_resource type="Texture2D" uid="uid://rxqbjpe027cj" path="res://assets/level2/colorOption.png" id="8_b1c8y"]
+[ext_resource type="Texture2D" uid="uid://qi2xv7dq2jbd" path="res://assets/level2/blankOption.png" id="9_jhs75"]
+[ext_resource type="Texture2D" uid="uid://cxogju8cprkcj" path="res://assets/level2/xOption.png" id="10_xl36j"]
+[ext_resource type="Texture2D" uid="uid://b231gvhmj4jxx" path="res://assets/level2/nonogram numbers.png" id="11_do1hi"]
+[ext_resource type="Texture2D" uid="uid://dut2lqqpuicna" path="res://assets/level2/access denied frame 1.png" id="13_y3wyr"]
+[ext_resource type="Texture2D" uid="uid://bkepyrqysc62y" path="res://assets/level2/access denied frame 2.png" id="14_6mcwn"]
+[ext_resource type="Texture2D" uid="uid://cr4btimik2rsc" path="res://assets/level2/access granted frame 1.png" id="15_7ojio"]
+[ext_resource type="Texture2D" uid="uid://2gbim3rwxvpw" path="res://assets/level2/access granted frame 2.png" id="16_2ph8k"]
+[ext_resource type="FontFile" uid="uid://bywhyuf8rbomy" path="res://assets/fonts/madspixel/madspixel.ttf" id="17_r1esm"]
+[ext_resource type="Texture2D" uid="uid://dlw2qcupmj024" path="res://assets/level2/rocket ship frame 1.png" id="18_gey61"]
+[ext_resource type="Texture2D" uid="uid://h02vhdkdcbad" path="res://assets/level2/rocket ship frame 2.png" id="19_v8032"]
+[ext_resource type="Texture2D" uid="uid://7vpk8kboit1" path="res://assets/level2/rocket ship no fire.png" id="20_7cerk"]
+[ext_resource type="Texture2D" uid="uid://cheyun3atk6ij" path="res://assets/level2/rocket ship fire.png" id="21_j623o"]
+[ext_resource type="PackedScene" uid="uid://dpux7mjnmklvb" path="res://src/player.tscn" id="23_v8032"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_b03au"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_y3wyr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_6mcwn")
+}],
+"loop": true,
+"name": &"Access Denied",
+"speed": 2.5
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_7ojio")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_2ph8k")
+}],
+"loop": true,
+"name": &"Access Granted",
+"speed": 2.5
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6mcwn"]
+size = Vector2(200.5, 198)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_eqo1a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_gey61")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_v8032")
+}],
+"loop": true,
+"name": &"Blinking",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_7cerk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_j623o")
+}],
+"loop": true,
+"name": &"Fire",
+"speed": 2.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Theme" id="Theme_us3c6"]
+Label/colors/font_color = Color(1, 1, 1, 1)
+Label/font_sizes/font_size = 150
+Label/fonts/font = ExtResource("17_r1esm")
+
+[sub_resource type="Animation" id="Animation_6mxeh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1352, 1338)]
+}
+
+[sub_resource type="Animation" id="Animation_bg3b2"]
+resource_name = "fly to top"
+length = 1.75
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.7333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1352, 1321), Vector2(1352, -239.00002)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"Fire", 1.0, false],
+"method": &"play"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6tbog"]
+_data = {
+&"RESET": SubResource("Animation_6mxeh"),
+&"fly to top": SubResource("Animation_bg3b2")
+}
+
+[node name="Spaceship Door" type="Node2D"]
+script = ExtResource("1_gey61")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 384.0
+offset_top = -1.0
+offset_right = 624.5
+offset_bottom = 134.5
+scale = Vector2(8, 8)
+mouse_filter = 2
+color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+
+[node name="SpaceshipDoor" type="Sprite2D" parent="."]
+position = Vector2(1678, 534.00006)
+scale = Vector2(8.296875, 8.296875)
+texture = ExtResource("1_s325m")
+
+[node name="SmallAccessButtons" type="AnimatedSprite2D" parent="."]
+position = Vector2(1211.0001, 353)
+scale = Vector2(8, 8.000002)
+sprite_frames = SubResource("SpriteFrames_b03au")
+animation = &"Access Denied"
+frame_progress = 0.5848749
+
+[node name="SmallGrid" type="Area2D" parent="." node_paths=PackedStringArray("nonogramPuzzle")]
+script = ExtResource("2_y3wyr")
+nonogramPuzzle = NodePath("../NonogramPuzzle")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SmallGrid"]
+position = Vector2(1209.75, 524)
+shape = SubResource("RectangleShape2D_6mcwn")
+
+[node name="SmallGrid" type="Sprite2D" parent="SmallGrid"]
+position = Vector2(1211, 524)
+scale = Vector2(10.526308, 10.526308)
+texture = ExtResource("2_qhiu7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="SmallGrid"]
+visible = false
+position = Vector2(1210, 524)
+scale = Vector2(2.5441184, 2.5441184)
+sprite_frames = SubResource("SpriteFrames_eqo1a")
+animation = &"Blinking"
+frame = 1
+frame_progress = 0.051118966
+
+[node name="Player (CharacterBody2D)" parent="." instance=ExtResource("23_v8032")]
+position = Vector2(784, 680)
+scale = Vector2(3.4799993, 3.4799993)
+speed = 400
+acceleration = 10
+friction = 0.0
+
+[node name="NonogramPuzzle" type="Node2D" parent="." node_paths=PackedStringArray("blank_button", "x_button", "fill_button", "zoomedAccessButtons", "accessGrantedMessage", "grid_sprite")]
+visible = false
+script = ExtResource("4_3faby")
+blank_button = NodePath("BlankOption2")
+x_button = NodePath("XOption")
+fill_button = NodePath("ColorOption")
+zoomedAccessButtons = NodePath("ZoomedAccessButtons")
+accessGrantedMessage = NodePath("AccessGrantedMessage")
+grid_sprite = NodePath("NonogramGrid")
+border_ratio = 0.0
+blank_texture = ExtResource("5_3faby")
+x_texture = ExtResource("6_jhs75")
+fill_texture = ExtResource("7_do1hi")
+
+[node name="ColorRect" type="ColorRect" parent="NonogramPuzzle"]
+offset_left = 384.0
+offset_top = -1.0
+offset_right = 624.5
+offset_bottom = 134.5
+scale = Vector2(8, 8)
+mouse_filter = 2
+color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+
+[node name="NonogramNumbers2" type="Sprite2D" parent="NonogramPuzzle"]
+position = Vector2(1296.5, 571)
+scale = Vector2(13, 13)
+texture = ExtResource("11_do1hi")
+
+[node name="NonogramGrid" type="Sprite2D" parent="NonogramPuzzle"]
+position = Vector2(1350, 628)
+scale = Vector2(13, 13)
+texture = ExtResource("7_xl36j")
+
+[node name="ColorOption" type="TextureButton" parent="NonogramPuzzle"]
+offset_left = 1796.0
+offset_top = 381.0
+offset_right = 1805.0
+offset_bottom = 390.0
+scale = Vector2(13, 13)
+texture_normal = ExtResource("8_b1c8y")
+stretch_mode = 0
+
+[node name="XOption" type="TextureButton" parent="NonogramPuzzle"]
+offset_left = 1797.0
+offset_top = 561.00006
+offset_right = 1806.0
+offset_bottom = 570.00006
+scale = Vector2(13, 13)
+texture_normal = ExtResource("10_xl36j")
+
+[node name="BlankOption2" type="TextureButton" parent="NonogramPuzzle"]
+offset_left = 1796.0
+offset_top = 768.0
+offset_right = 1805.0
+offset_bottom = 777.0
+scale = Vector2(13, 13)
+texture_normal = ExtResource("9_jhs75")
+
+[node name="ZoomedAccessButtons" type="AnimatedSprite2D" parent="NonogramPuzzle"]
+position = Vector2(782, 142)
+scale = Vector2(13.333333, 13.333333)
+sprite_frames = SubResource("SpriteFrames_b03au")
+animation = &"Access Denied"
+frame_progress = 0.47491938
+
+[node name="AccessGrantedMessage" type="Node2D" parent="NonogramPuzzle"]
+visible = false
+z_index = 1
+
+[node name="ColorRect2" type="ColorRect" parent="NonogramPuzzle/AccessGrantedMessage"]
+offset_left = 384.0
+offset_top = 393.0
+offset_right = 624.5
+offset_bottom = 430.0
+scale = Vector2(8, 8)
+mouse_filter = 2
+color = Color(0.3574304, 0.21633583, 0.47130752, 1)
+
+[node name="Label" type="Label" parent="NonogramPuzzle/AccessGrantedMessage"]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 744.5
+offset_top = 472.0
+offset_right = 1962.5
+offset_bottom = 623.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_us3c6")
+text = "ACCESS GRANTED"
+horizontal_alignment = 1
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="NonogramPuzzle/AccessGrantedMessage"]
+position = Vector2(1352, 1338)
+scale = Vector2(7.401961, 7.401961)
+sprite_frames = SubResource("SpriteFrames_eqo1a")
+animation = &"Fire"
+frame_progress = 0.040126316
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="NonogramPuzzle/AccessGrantedMessage"]
+libraries = {
+&"": SubResource("AnimationLibrary_6tbog")
+}
+
+[node name="BlockPuzzle" type="ColorRect" parent="NonogramPuzzle/AccessGrantedMessage"]
+offset_left = 384.0
+offset_top = -6.0
+offset_right = 624.5
+offset_bottom = 130.75
+scale = Vector2(8, 8)
+color = Color(0.35686275, 0.21568628, 0.47058824, 0)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1346.0001, 479)
+scale = Vector2(2.1749554, 2.1749554)
+limit_left = 1
+limit_top = 1
+limit_right = 2562
+limit_bottom = 1078
+
+[connection signal="input_event" from="SmallGrid" to="SmallGrid" method="_on_input_event"]
+[connection signal="nonogram_solved" from="NonogramPuzzle" to="." method="_on_nonogram_puzzle_nonogram_solved"]
+[connection signal="nonogram_solved" from="NonogramPuzzle" to="SmallGrid" method="_on_nonogram_puzzle_nonogram_solved"]
