@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://c6pxm0ep2vc1w"]
+[gd_scene load_steps=31 format=3 uid="uid://c6pxm0ep2vc1w"]
 
 [ext_resource type="Script" uid="uid://cnwf8pgn0cq16" path="res://src/Level2/spaceship_door_level.gd" id="1_gey61"]
 [ext_resource type="Texture2D" uid="uid://c1i4j7fcgb1hc" path="res://assets/level2/spaceship door.png" id="1_s325m"]
@@ -22,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://h02vhdkdcbad" path="res://assets/level2/rocket ship frame 2.png" id="19_v8032"]
 [ext_resource type="Texture2D" uid="uid://7vpk8kboit1" path="res://assets/level2/rocket ship no fire.png" id="20_7cerk"]
 [ext_resource type="Texture2D" uid="uid://cheyun3atk6ij" path="res://assets/level2/rocket ship fire.png" id="21_j623o"]
+[ext_resource type="PackedScene" uid="uid://dpux7mjnmklvb" path="res://src/player.tscn" id="23_v8032"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_b03au"]
 animations = [{
@@ -86,6 +87,21 @@ Label/colors/font_color = Color(1, 1, 1, 1)
 Label/font_sizes/font_size = 150
 Label/fonts/font = ExtResource("17_r1esm")
 
+[sub_resource type="Animation" id="Animation_6mxeh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1352, 1338)]
+}
+
 [sub_resource type="Animation" id="Animation_bg3b2"]
 resource_name = "fly to top"
 length = 1.75
@@ -114,21 +130,6 @@ tracks/1/keys = {
 "args": [&"Fire", 1.0, false],
 "method": &"play"
 }]
-}
-
-[sub_resource type="Animation" id="Animation_6mxeh"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1352, 1338)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6tbog"]
@@ -182,6 +183,13 @@ sprite_frames = SubResource("SpriteFrames_eqo1a")
 animation = &"Blinking"
 frame = 1
 frame_progress = 0.051118966
+
+[node name="Player (CharacterBody2D)" parent="." instance=ExtResource("23_v8032")]
+position = Vector2(784, 680)
+scale = Vector2(3.4799993, 3.4799993)
+speed = 400
+acceleration = 10
+friction = 0.0
 
 [node name="NonogramPuzzle" type="Node2D" parent="." node_paths=PackedStringArray("blank_button", "x_button", "fill_button", "zoomedAccessButtons", "accessGrantedMessage", "grid_sprite")]
 visible = false
