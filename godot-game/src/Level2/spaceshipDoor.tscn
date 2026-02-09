@@ -190,6 +190,7 @@ scale = Vector2(3.4799993, 3.4799993)
 speed = 400
 acceleration = 10
 friction = 0.0
+costume = 1
 
 [node name="NonogramPuzzle" type="Node2D" parent="." node_paths=PackedStringArray("blank_button", "x_button", "fill_button", "zoomedAccessButtons", "accessGrantedMessage", "grid_sprite")]
 visible = false
