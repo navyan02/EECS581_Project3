@@ -1,0 +1,87 @@
+[gd_scene load_steps=7 format=3 uid="uid://d2mpima2p72do"]
+
+[ext_resource type="Script" uid="uid://b0casast70ne8" path="res://src/Scene2/takeoff_scene.gd" id="1_s4ljq"]
+[ext_resource type="Texture2D" uid="uid://v5kt2emqq4yk" path="res://src/Scene2/earth.png" id="2_s4ljq"]
+[ext_resource type="Texture2D" uid="uid://brpq8fbi4leqq" path="res://src/Scene2/rocket.png" id="3_kq7vi"]
+
+[sub_resource type="Animation" id="Animation_lta83"]
+resource_name = "rocketGo"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Rocket:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0006049132, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6, 1.8, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1097.0001, 665.00006), Vector2(1096.4592, 664.12964), Vector2(1007.58875, 521.1087), Vector2(906.8595, 359.0033), Vector2(818, 216), Vector2(716.0589, 258.33435), Vector2(623.2604, 296.87195), Vector2(579.30316, 315.12662), Vector2(517.0001, 340.99997), Vector2(363, 468.00003), Vector2(257, 607), Vector2(163, 811)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Rocket:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0018147395, 0.2, 0.2976173, 0.5999771, 1.6497676),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.42586035, 0.91629785, 0.72082096, -0.06283186, -0.3577925]
+}
+
+[sub_resource type="Animation" id="Animation_4jk2d"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Rocket:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1018, 271)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Rocket:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.42586035]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nvkex"]
+_data = {
+&"RESET": SubResource("Animation_4jk2d"),
+&"rocketGo": SubResource("Animation_lta83")
+}
+
+[node name="TakeoffScene" type="Node2D"]
+script = ExtResource("1_s4ljq")
+
+[node name="Earth" type="Sprite2D" parent="."]
+position = Vector2(991.00006, 519)
+scale = Vector2(4.1166663, 4.2193675)
+texture = ExtResource("2_s4ljq")
+
+[node name="Rocket" type="Sprite2D" parent="."]
+position = Vector2(1018, 271)
+rotation = 0.42586035
+scale = Vector2(1.3488562, 1.2565359)
+texture = ExtResource("3_kq7vi")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_nvkex")
+}
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
