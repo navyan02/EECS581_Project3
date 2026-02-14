@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bgiclvcyv66yl"]
+[gd_scene format=3 uid="uid://bgiclvcyv66yl"]
 
 [ext_resource type="Theme" uid="uid://d3v4iv3yxucyw" path="res://assets/titleScreen/customTheme.tres" id="1_qaoob"]
 [ext_resource type="Texture2D" uid="uid://de6xenlqpdc4i" path="res://assets/titleScreen/background.png" id="2_gb4bn"]
@@ -19,7 +19,7 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gb4bn"]
 
-[node name="titleScreen" type="Control"]
+[node name="titleScreen" type="Control" unique_id=429622833]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -30,7 +30,7 @@ theme = ExtResource("1_qaoob")
 script = ExtResource("2_wcofg")
 metadata/_edit_use_anchors_ = true
 
-[node name="background" type="TextureRect" parent="."]
+[node name="background" type="TextureRect" parent="." unique_id=2030336063]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -44,18 +44,18 @@ grow_vertical = 2
 scale = Vector2(1.0129229, 1.0129229)
 texture = ExtResource("2_gb4bn")
 
-[node name="logo" type="TextureRect" parent="."]
+[node name="logo" type="TextureRect" parent="." unique_id=1476613016]
 layout_mode = 0
-offset_left = 487.0
-offset_top = 260.0
-offset_right = 1439.3239
-offset_bottom = 604.723
+offset_left = 499.0
+offset_top = 270.0
+offset_right = 1451.3239
+offset_bottom = 614.723
 scale = Vector2(1.0129229, 1.0129229)
 texture = ExtResource("3_wcofg")
 expand_mode = 5
 stretch_mode = 5
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2000623801]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -70,12 +70,12 @@ grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=1544031170]
 layout_mode = 2
 size_flags_vertical = 3
 alignment = 1
 
-[node name="startButton" type="Button" parent="VBoxContainer/HBoxContainer"]
+[node name="startButton" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=665252885]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("1_qaoob")
@@ -88,7 +88,7 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 
-[node name="viewMap" type="Button" parent="VBoxContainer/HBoxContainer"]
+[node name="viewMap" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=13379987]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/outline_size = 3
@@ -100,7 +100,7 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 
-[node name="exit" type="Button" parent="VBoxContainer"]
+[node name="exit" type="Button" parent="VBoxContainer" unique_id=778866765]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/outline_size = 3
@@ -113,7 +113,7 @@ autowrap_mode = 3
 icon_alignment = 1
 expand_icon = true
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1137737599]
 stream = ExtResource("6_wcofg")
 autoplay = true
 
