@@ -98,13 +98,13 @@ func calculate_grid_dimensions():
 	# Set the calculated values
 	cell_size = individual_cell_size
 	grid_offset = grid_top_left + border_size  # Start after the first border
-	
-	print("Grid calculations:")
-	print("  Grid size: ", grid_size)
-	print("  Grid top-left: ", grid_top_left)
-	print("  Cell size: ", cell_size)
-	print("  Border size: ", border_size)
-	print("  Grid offset: ", grid_offset)
+	#
+	#print("Grid calculations:")
+	#print("  Grid size: ", grid_size)
+	#print("  Grid top-left: ", grid_top_left)
+	#print("  Cell size: ", cell_size)
+	#print("  Border size: ", border_size)
+	#print("  Grid offset: ", grid_offset)
 
 func create_grid_sprites():
 	"""Create sprite nodes for each grid cell"""
@@ -186,6 +186,8 @@ func fill_cell(col: int, row: int, state: CellState):
 	"""Fill a cell with the selected tool"""
 	grid_state[row][col] = state
 	update_cell_sprite(col, row)
+#	Stop the click from being used by other nodes
+	get_viewport().set_input_as_handled()
 
 func update_cell_sprite(col: int, row: int):
 	"""Update the visual representation of a cell"""
