@@ -1,136 +1,215 @@
-[gd_scene load_steps=4 format=3 uid="uid://eg8epmobbqaw"]
+[gd_scene load_steps=19 format=3 uid="uid://eg8epmobbqaw"]
 
 [ext_resource type="Script" uid="uid://bj60vmplr5nap" path="res://src/Level2/dot.gd" id="1_33pkc"]
+[ext_resource type="Script" uid="uid://b7wwtdrrawh45" path="res://src/Level2/connect_the_dots.gd" id="1_hcf5l"]
+[ext_resource type="Script" uid="uid://dmav07l6awsv7" path="res://src/Level2/LineDrawer.gd" id="1_ogw7n"]
 [ext_resource type="Texture2D" uid="uid://d1qeg0qgl231k" path="res://assets/level2/Star.PNG" id="2_ogw7n"]
 [ext_resource type="Texture2D" uid="uid://b0bmmfp3h4e3a" path="res://assets/level2/Space.PNG" id="3_hcf5l"]
+[ext_resource type="Script" uid="uid://d1nixrxxkqfv0" path="res://src/Level2/camdots.gd" id="6_7juwu"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7juwu"]
+radius = 4.1231055
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0oa8l"]
+radius = 4.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8p2ti"]
+radius = 4.1231055
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1yek3"]
+radius = 4.1231055
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5hbrk"]
+radius = 5.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gnbaq"]
+radius = 5.3851647
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_75etv"]
+radius = 5.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_731m6"]
+radius = 5.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_e446v"]
+radius = 5.0990195
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_02ddx"]
+radius = 5.0990195
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ea4wb"]
+radius = 5.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ds8ry"]
+radius = 5.0
 
 [node name="ConnectTheDots" type="Node2D"]
-
-[node name="Dots" type="Node2D" parent="."]
-
-[node name="LineDrawer" type="Node2D" parent="."]
-
-[node name="Dot" type="Area2D" parent="."]
-position = Vector2(0, -86)
-script = ExtResource("1_33pkc")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dot"]
-
-[node name="Star" type="Sprite2D" parent="Dot"]
-z_index = 1
-texture = ExtResource("2_ogw7n")
+script = ExtResource("1_hcf5l")
 
 [node name="Space" type="Sprite2D" parent="."]
 texture = ExtResource("3_hcf5l")
 
-[node name="Dot2" type="Area2D" parent="."]
+[node name="Dots" type="Node2D" parent="."]
+
+[node name="Dot1" type="Area2D" parent="Dots"]
+position = Vector2(0, -86)
+script = ExtResource("1_33pkc")
+neighbors = Array[NodePath]([NodePath("../Dot12"), NodePath("../Dot2")])
+
+[node name="Star" type="Sprite2D" parent="Dots/Dot1"]
+z_index = 1
+texture = ExtResource("2_ogw7n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dots/Dot1"]
+shape = SubResource("CircleShape2D_7juwu")
+
+[node name="Dot2" type="Area2D" parent="Dots"]
 position = Vector2(44, -74)
 script = ExtResource("1_33pkc")
+neighbors = Array[NodePath]([NodePath("../Dot1"), NodePath("../Dot3")])
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dot2"]
-
-[node name="Star" type="Sprite2D" parent="Dot2"]
+[node name="Star" type="Sprite2D" parent="Dots/Dot2"]
 z_index = 1
 position = Vector2(4, 5)
 texture = ExtResource("2_ogw7n")
 
-[node name="Dot3" type="Area2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dots/Dot2"]
+position = Vector2(4, 4)
+shape = SubResource("CircleShape2D_0oa8l")
+
+[node name="Dot3" type="Area2D" parent="Dots"]
 position = Vector2(78, -40)
 script = ExtResource("1_33pkc")
+neighbors = Array[NodePath]([NodePath("../Dot2"), NodePath("../Dot4")])
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dot3"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dots/Dot3"]
+shape = SubResource("CircleShape2D_8p2ti")
 
-[node name="Star" type="Sprite2D" parent="Dot3"]
+[node name="Star" type="Sprite2D" parent="Dots/Dot3"]
 z_index = 1
 texture = ExtResource("2_ogw7n")
 
-[node name="Dot4" type="Area2D" parent="."]
-position = Vector2(0, -86)
+[node name="Dot4" type="Area2D" parent="Dots"]
+position = Vector2(90, 0)
 script = ExtResource("1_33pkc")
+neighbors = Array[NodePath]([NodePath("../Dot3"), NodePath("../Dot5")])
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dot4"]
-
-[node name="Star" type="Sprite2D" parent="Dot4"]
+[node name="Star" type="Sprite2D" parent="Dots/Dot4"]
 z_index = 1
-position = Vector2(99, 87)
+position = Vector2(-0.5, 0)
 texture = ExtResource("2_ogw7n")
 
-[node name="Dot5" type="Area2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dots/Dot4"]
+position = Vector2(-1, -1)
+shape = SubResource("CircleShape2D_1yek3")
+
+[node name="Dot5" type="Area2D" parent="Dots"]
 position = Vector2(77, 34)
 script = ExtResource("1_33pkc")
+neighbors = Array[NodePath]([NodePath("../Dot4"), NodePath("../Dot6")])
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dot5"]
-
-[node name="Star" type="Sprite2D" parent="Dot5"]
+[node name="Star" type="Sprite2D" parent="Dots/Dot5"]
 z_index = 1
 texture = ExtResource("2_ogw7n")
 
-[node name="Dot6" type="Area2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dots/Dot5"]
+position = Vector2(0, -1)
+shape = SubResource("CircleShape2D_5hbrk")
+
+[node name="Dot6" type="Area2D" parent="Dots"]
 position = Vector2(48, 60)
 script = ExtResource("1_33pkc")
+neighbors = Array[NodePath]([NodePath("../Dot5"), NodePath("../Dot7")])
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dot6"]
-
-[node name="Star" type="Sprite2D" parent="Dot6"]
+[node name="Star" type="Sprite2D" parent="Dots/Dot6"]
 z_index = 1
 texture = ExtResource("2_ogw7n")
 
-[node name="Dot7" type="Area2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dots/Dot6"]
+position = Vector2(0, -1)
+shape = SubResource("CircleShape2D_gnbaq")
+
+[node name="Dot7" type="Area2D" parent="Dots"]
 position = Vector2(0, 72)
 script = ExtResource("1_33pkc")
+neighbors = Array[NodePath]([NodePath("../Dot6"), NodePath("../Dot8")])
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dot7"]
-
-[node name="Star" type="Sprite2D" parent="Dot7"]
+[node name="Star" type="Sprite2D" parent="Dots/Dot7"]
 z_index = 1
 texture = ExtResource("2_ogw7n")
 
-[node name="Dot8" type="Area2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dots/Dot7"]
+position = Vector2(0, -1)
+shape = SubResource("CircleShape2D_75etv")
+
+[node name="Dot8" type="Area2D" parent="Dots"]
 position = Vector2(-41, 59)
 script = ExtResource("1_33pkc")
+neighbors = Array[NodePath]([NodePath("../Dot7"), NodePath("../Dot9")])
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dot8"]
-
-[node name="Star" type="Sprite2D" parent="Dot8"]
+[node name="Star" type="Sprite2D" parent="Dots/Dot8"]
 z_index = 1
 texture = ExtResource("2_ogw7n")
 
-[node name="Dot9" type="Area2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dots/Dot8"]
+position = Vector2(0, -1)
+shape = SubResource("CircleShape2D_731m6")
+
+[node name="Dot9" type="Area2D" parent="Dots"]
 position = Vector2(-71, 33)
 script = ExtResource("1_33pkc")
+neighbors = Array[NodePath]([NodePath("../Dot8"), NodePath("../Dot10")])
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dot9"]
-
-[node name="Star" type="Sprite2D" parent="Dot9"]
+[node name="Star" type="Sprite2D" parent="Dots/Dot9"]
 z_index = 1
 texture = ExtResource("2_ogw7n")
 
-[node name="Dot10" type="Area2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dots/Dot9"]
+position = Vector2(0, -1)
+shape = SubResource("CircleShape2D_e446v")
+
+[node name="Dot10" type="Area2D" parent="Dots"]
 position = Vector2(-88, 1)
 script = ExtResource("1_33pkc")
+neighbors = Array[NodePath]([NodePath("../Dot9"), NodePath("../Dot11")])
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dot10"]
-
-[node name="Star" type="Sprite2D" parent="Dot10"]
+[node name="Star" type="Sprite2D" parent="Dots/Dot10"]
 z_index = 1
 texture = ExtResource("2_ogw7n")
 
-[node name="Dot11" type="Area2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dots/Dot10"]
+position = Vector2(0, -1)
+shape = SubResource("CircleShape2D_02ddx")
+
+[node name="Dot11" type="Area2D" parent="Dots"]
 position = Vector2(-69, -39)
 script = ExtResource("1_33pkc")
+neighbors = Array[NodePath]([NodePath("../Dot10"), NodePath("../Dot12")])
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dot11"]
-
-[node name="Star" type="Sprite2D" parent="Dot11"]
+[node name="Star" type="Sprite2D" parent="Dots/Dot11"]
 z_index = 1
 texture = ExtResource("2_ogw7n")
 
-[node name="Dot12" type="Area2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dots/Dot11"]
+position = Vector2(0, -1)
+shape = SubResource("CircleShape2D_ea4wb")
+
+[node name="Dot12" type="Area2D" parent="Dots"]
 position = Vector2(-40, -70)
 script = ExtResource("1_33pkc")
+neighbors = Array[NodePath]([NodePath("../Dot11"), NodePath("../Dot1")])
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dot12"]
-
-[node name="Star" type="Sprite2D" parent="Dot12"]
+[node name="Star" type="Sprite2D" parent="Dots/Dot12"]
 z_index = 1
 texture = ExtResource("2_ogw7n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dots/Dot12"]
+position = Vector2(0, -1)
+shape = SubResource("CircleShape2D_ds8ry")
+
+[node name="LineDrawer" type="Node2D" parent="."]
+script = ExtResource("1_ogw7n")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(5.5, 5.5)
+script = ExtResource("6_7juwu")
