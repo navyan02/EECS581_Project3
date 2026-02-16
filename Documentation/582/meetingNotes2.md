@@ -1,3 +1,31 @@
+## **Meeting Title:** Team Meeting
+### **Date:** Thursday, February 12th, 2026
+---
+#### 👥 Attendees
+
+- Katie Nordberg, Vivian Lara, Christina Sorensen, Kundana Dongala, Navya Nittala
+
+### 📒 Notes
+- Updates:
+  - Christina is drawing more outlines for the levels, facing some issues with VSCode
+  - Vi made another song to use in the background
+  - Kundana worked on some of the cutscenes for the end of the level
+  - Navya made the cutscene for the start of level 2
+
+- Deliverables Due by Sunday:
+  - [ ] Sprint 1 Github URL
+  - [ ] Sprint 2 Requirements Stack
+  - [ ] Sprint 2 Requirements Artifacts
+  - [ ] Peer Evaluation 3
+  
+To Dos:
+  - 
+
+Next Meeting 
+- TA Meeting: Monday, February 16th @ 11:30AM
+- Team Meeting: Thursday, February 19th @ 3PM
+---
+
 ## **Meeting Title:** TA Meeting
 ### **Date:** Monday, February 9th, 2026
 ---
@@ -47,9 +75,9 @@ To Dos:
   - [X]  work on sprint 1 artifacts and the initial architecture document
   - [ ]  Cristina and Vi: art for level 2 
   - [X]  others: Artifacts document and architecture document
-  - [ ]  Navya and kundana: cut scenes and dialogues for level 2 
+  - [X]  Navya and kundana: cut scenes and dialogues for level 2 
   - [ ]  Cristina: star game for level 2 
-  - [ ]  Katie: nanogram game for level 2
+  - [X]  Katie: nanogram game for level 2
 
 Next Meeting 
 - TA Meeting: Monday, February 9th @ 11:30AM

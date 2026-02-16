@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://c6pxm0ep2vc1w"]
+[gd_scene load_steps=33 format=3 uid="uid://c6pxm0ep2vc1w"]
 
 [ext_resource type="Script" uid="uid://cnwf8pgn0cq16" path="res://src/Level2/spaceship_door_level.gd" id="1_gey61"]
 [ext_resource type="Texture2D" uid="uid://c1i4j7fcgb1hc" path="res://assets/level2/spaceship door.png" id="1_s325m"]
@@ -23,6 +23,9 @@
 [ext_resource type="Texture2D" uid="uid://7vpk8kboit1" path="res://assets/level2/rocket ship no fire.png" id="20_7cerk"]
 [ext_resource type="Texture2D" uid="uid://cheyun3atk6ij" path="res://assets/level2/rocket ship fire.png" id="21_j623o"]
 [ext_resource type="PackedScene" uid="uid://dpux7mjnmklvb" path="res://src/player.tscn" id="23_v8032"]
+[ext_resource type="PackedScene" uid="uid://dt1y2vdyj1lf8" path="res://src/endscene.tscn" id="24_7cerk"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_us3c6"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_b03au"]
 animations = [{
@@ -150,10 +153,17 @@ scale = Vector2(8, 8)
 mouse_filter = 2
 color = Color(0.8784314, 0.8784314, 0.8784314, 1)
 
-[node name="SpaceshipDoor" type="Sprite2D" parent="."]
+[node name="Door" type="Area2D" parent="."]
+
+[node name="SpaceshipDoor" type="Sprite2D" parent="Door"]
 position = Vector2(1678, 534.00006)
 scale = Vector2(8.296875, 8.296875)
 texture = ExtResource("1_s325m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door"]
+position = Vector2(1678.0001, 528)
+scale = Vector2(19.282814, 25.531704)
+shape = SubResource("CapsuleShape2D_us3c6")
 
 [node name="SmallAccessButtons" type="AnimatedSprite2D" parent="."]
 position = Vector2(1211.0001, 353)
@@ -313,6 +323,13 @@ limit_top = 1
 limit_right = 2562
 limit_bottom = 1078
 
+[node name="Endscene" parent="." instance=ExtResource("24_7cerk")]
+visible = false
+position = Vector2(381, -8)
+scale = Vector2(1.0036922, 1.0036922)
+
+[connection signal="finishLevel2" from="." to="Endscene" method="_on_spaceship_door_finish_level_2"]
+[connection signal="input_event" from="Door" to="." method="_on_door_input_event"]
 [connection signal="input_event" from="SmallGrid" to="SmallGrid" method="_on_input_event"]
 [connection signal="nonogram_solved" from="NonogramPuzzle" to="." method="_on_nonogram_puzzle_nonogram_solved"]
 [connection signal="nonogram_solved" from="NonogramPuzzle" to="SmallGrid" method="_on_nonogram_puzzle_nonogram_solved"]
