@@ -71,7 +71,7 @@ _data = {
 [node name="TakeoffScene" type="Node2D"]
 script = ExtResource("1_s4ljq")
 
-[node name="Earth" type="Sprite2D" parent="."]
+[node name="Background" type="Sprite2D" parent="."]
 position = Vector2(986.5001, 531.625)
 scale = Vector2(4.0979166, 4.31917)
 texture = ExtResource("2_s4ljq")
