@@ -19,6 +19,7 @@ func _ready():
 		print(dot.name, " neighbors: ", [dot.neighbors])
 
 	#Automatically assign 2 neighbors (previous and next in circle)
+	'''
 	for i in range(count):
 		var prev_idx = (i - 1 + count) % count
 		var next_idx = (i + 1) % count
@@ -26,7 +27,7 @@ func _ready():
 			dots_node.get_path_to(dots[prev_idx]),
 			dots_node.get_path_to(dots[next_idx])
 		]
-
+	'''
 	#Connect input signals
 	for dot in dots:
 		dot.input_event.connect(Callable(self, "_on_dot_input").bind(dot))
@@ -69,7 +70,7 @@ func attempt_connection():
 
 func is_neighbor(a: Area2D, b: Area2D) -> bool:
 	for path in a.neighbors:
-		if get_node(path) == b:
+		if a.get_node(path) == b:
 			return true
 	return false
 

@@ -54,7 +54,6 @@ texture = ExtResource("3_hcf5l")
 [node name="Dot1" type="Area2D" parent="Dots"]
 position = Vector2(0, -86)
 script = ExtResource("1_33pkc")
-neighbors = [NodePath("../Dot12"), NodePath("../Dot2")]
 
 [node name="Star" type="Sprite2D" parent="Dots/Dot1"]
 z_index = 1
@@ -66,7 +65,6 @@ shape = SubResource("CircleShape2D_7juwu")
 [node name="Dot2" type="Area2D" parent="Dots"]
 position = Vector2(44, -74)
 script = ExtResource("1_33pkc")
-neighbors = [NodePath("../Dot1"), NodePath("../Dot3")]
 
 [node name="Star" type="Sprite2D" parent="Dots/Dot2"]
 z_index = 1
@@ -80,7 +78,6 @@ shape = SubResource("CircleShape2D_0oa8l")
 [node name="Dot3" type="Area2D" parent="Dots"]
 position = Vector2(78, -40)
 script = ExtResource("1_33pkc")
-neighbors = [NodePath("../Dot2"), NodePath("../Dot4")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Dots/Dot3"]
 shape = SubResource("CircleShape2D_8p2ti")
@@ -92,7 +89,6 @@ texture = ExtResource("2_ogw7n")
 [node name="Dot4" type="Area2D" parent="Dots"]
 position = Vector2(90, 0)
 script = ExtResource("1_33pkc")
-neighbors = [NodePath("../Dot3"), NodePath("../Dot5")]
 
 [node name="Star" type="Sprite2D" parent="Dots/Dot4"]
 z_index = 1
@@ -106,7 +102,6 @@ shape = SubResource("CircleShape2D_1yek3")
 [node name="Dot5" type="Area2D" parent="Dots"]
 position = Vector2(77, 34)
 script = ExtResource("1_33pkc")
-neighbors = [NodePath("../Dot4"), NodePath("../Dot6")]
 
 [node name="Star" type="Sprite2D" parent="Dots/Dot5"]
 z_index = 1
@@ -119,7 +114,6 @@ shape = SubResource("CircleShape2D_5hbrk")
 [node name="Dot6" type="Area2D" parent="Dots"]
 position = Vector2(48, 60)
 script = ExtResource("1_33pkc")
-neighbors = [NodePath("../Dot5"), NodePath("../Dot7")]
 
 [node name="Star" type="Sprite2D" parent="Dots/Dot6"]
 z_index = 1
@@ -132,7 +126,6 @@ shape = SubResource("CircleShape2D_gnbaq")
 [node name="Dot7" type="Area2D" parent="Dots"]
 position = Vector2(0, 72)
 script = ExtResource("1_33pkc")
-neighbors = [NodePath("../Dot6"), NodePath("../Dot8")]
 
 [node name="Star" type="Sprite2D" parent="Dots/Dot7"]
 z_index = 1
@@ -145,7 +138,6 @@ shape = SubResource("CircleShape2D_75etv")
 [node name="Dot8" type="Area2D" parent="Dots"]
 position = Vector2(-41, 59)
 script = ExtResource("1_33pkc")
-neighbors = [NodePath("../Dot7"), NodePath("../Dot9")]
 
 [node name="Star" type="Sprite2D" parent="Dots/Dot8"]
 z_index = 1
@@ -158,7 +150,6 @@ shape = SubResource("CircleShape2D_731m6")
 [node name="Dot9" type="Area2D" parent="Dots"]
 position = Vector2(-71, 33)
 script = ExtResource("1_33pkc")
-neighbors = [NodePath("../Dot8"), NodePath("../Dot10")]
 
 [node name="Star" type="Sprite2D" parent="Dots/Dot9"]
 z_index = 1
@@ -171,7 +162,6 @@ shape = SubResource("CircleShape2D_e446v")
 [node name="Dot10" type="Area2D" parent="Dots"]
 position = Vector2(-88, 1)
 script = ExtResource("1_33pkc")
-neighbors = [NodePath("../Dot9"), NodePath("../Dot11")]
 
 [node name="Star" type="Sprite2D" parent="Dots/Dot10"]
 z_index = 1
@@ -184,7 +174,6 @@ shape = SubResource("CircleShape2D_02ddx")
 [node name="Dot11" type="Area2D" parent="Dots"]
 position = Vector2(-69, -39)
 script = ExtResource("1_33pkc")
-neighbors = [NodePath("../Dot10"), NodePath("../Dot12")]
 
 [node name="Star" type="Sprite2D" parent="Dots/Dot11"]
 z_index = 1
@@ -197,7 +186,6 @@ shape = SubResource("CircleShape2D_ea4wb")
 [node name="Dot12" type="Area2D" parent="Dots"]
 position = Vector2(-40, -70)
 script = ExtResource("1_33pkc")
-neighbors = [NodePath("../Dot11"), NodePath("../Dot1")]
 
 [node name="Star" type="Sprite2D" parent="Dots/Dot12"]
 z_index = 1

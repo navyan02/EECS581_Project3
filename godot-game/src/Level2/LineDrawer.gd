@@ -12,7 +12,7 @@ func _process(_delta):
 
 func _draw():
 	for line in lines:
-		draw_line(line[0], line[1], Color(1,0,0), 4) # red lines
+		draw_line(line[0], line[1], Color(1.0, 1.0, 1.0, 1.0), 4) # red lines
 
 	if previewing:
 		draw_line(preview_start, preview_end, Color(1,1,0), 2) # yellow preview
