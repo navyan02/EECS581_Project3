@@ -41,32 +41,27 @@ func _on_dot_input(viewport, event: InputEvent, shape_idx, dot):
 				start_dot = dot
 			line_drawer.start_preview(dot.global_position)
 		else:
-			attempt_connection()
+			attempt_connection(dot)
 
-func attempt_connection():
-	var mouse_pos = get_global_mouse_position()
+func attempt_connection(target_dot: Area2D):
+	if target_dot == active_dot:
+		line_drawer.cancel_preview()
+		active_dot = null
+		return
 
-	for dot in dots:
-		if dot == active_dot:
-			continue
-		if dot.global_position.distance_to(mouse_pos) <= snap_distance:
-			if not is_neighbor(active_dot, dot):
-				line_drawer.cancel_preview()
-				active_dot = null
-				return
+	if not is_neighbor(active_dot, target_dot):
+		line_drawer.cancel_preview()
+		active_dot = null
+		return
 
-			line_drawer.finish_preview(dot.global_position)
-			active_dot.connected = true
-			dot.connected = true
+	line_drawer.finish_preview(target_dot.global_position)
+	active_dot.connected = true
+	target_dot.connected = true
 
-			if dot == start_dot and all_connected():
-				success()
+	if target_dot == start_dot and all_connected():
+		success()
 
-			active_dot = dot
-			return
-
-	line_drawer.cancel_preview()
-	active_dot = null
+	active_dot = target_dot
 
 func is_neighbor(a: Area2D, b: Area2D) -> bool:
 	for path in a.neighbors:
