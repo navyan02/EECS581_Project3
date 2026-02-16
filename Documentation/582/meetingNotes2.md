@@ -1,3 +1,24 @@
+## **Meeting Title:** TA Meeting
+### **Date:** Monday, February 16th, 2026
+---
+#### 👥 Attendees
+
+- Navya Nittala, Kundana Dongala, Katie Nordberg, Christina Sorensen, Vivian Lara, Kevin Likcani(TA)
+
+### 📒 Notes/ToDo
+- Sprint 3 (due Sunday, March 1st):
+  - [ ] Sprint 2 Github URL is due on Sunday, March 1st
+  - [ ] Sprint 3 Requirements Stack
+  - [ ] Sprint 3 Requirements Artifacts
+  - [ ] Peer Evaluation 4
+- Sprint 2 Presentation Video (due Sunday, March 8th)
+  - [ ] Start working on script, build off of previous video
+
+Next Meeting 
+- TA Meeting: Monday, February 23rd @ 11:30AM
+- Team Meeting: Thursday, February 19th @ 3PM
+---
+
 ## **Meeting Title:** Team Meeting
 ### **Date:** Thursday, February 12th, 2026
 ---
@@ -13,13 +34,10 @@
   - Navya made the cutscene for the start of level 2
 
 - Deliverables Due by Sunday:
-  - [ ] Sprint 1 Github URL
-  - [ ] Sprint 2 Requirements Stack
-  - [ ] Sprint 2 Requirements Artifacts
-  - [ ] Peer Evaluation 3
-  
-To Dos:
-  - 
+  - [X] Sprint 1 Github URL
+  - [X] Sprint 2 Requirements Stack
+  - [X] Sprint 2 Requirements Artifacts
+  - [X] Peer Evaluation 3
 
 Next Meeting 
 - TA Meeting: Monday, February 16th @ 11:30AM
