@@ -1,12 +1,21 @@
+'''
+File Name: connect_the_dots.gd
+Created: 2/10/2026
+Last Updated: 2/16/2026
+Description: A connect the dots game where the player draws lines from star to star, making the alien ship appear at the end.
+'''
+
 extends Node2D
 
 @onready var dots_node = $Dots
 @onready var dots = $Dots.get_children()
 @onready var line_drawer = $LineDrawer
+@onready var alien_ship = $AlienShip
 @export var snap_distance := 120.0 
 
 var active_dot: Area2D = null
 var start_dot: Area2D = null
+var connections_made := 1
 
 func _ready():
 	# --- Arrange dots in a circle ---
@@ -55,10 +64,11 @@ func attempt_connection(target_dot: Area2D):
 		return
 
 	line_drawer.finish_preview(target_dot.global_position)
+	connections_made += 1
 	active_dot.connected = true
 	target_dot.connected = true
 
-	if target_dot == start_dot and all_connected():
+	if connections_made == dots.size() + 1:
 		success()
 
 	active_dot = target_dot
@@ -77,3 +87,8 @@ func all_connected() -> bool:
 
 func success():
 	print("Puzzle completed!")
+	alien_ship.visible = true
+	alien_ship.modulate.a = 0.0
+
+	var tween = create_tween()
+	tween.tween_property(alien_ship, "modulate:a", 1.0, 0.8)

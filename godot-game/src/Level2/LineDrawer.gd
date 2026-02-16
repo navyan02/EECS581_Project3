@@ -1,3 +1,10 @@
+'''
+File Name: LineDrawer.gd
+Created: 2/10/2026
+Last Updated: 2/15/2026
+Description: Draws the line for when the player is actively connecting the dots and for when the final line between stars are drawn.
+'''
+
 extends Node2D
 
 var lines := []
