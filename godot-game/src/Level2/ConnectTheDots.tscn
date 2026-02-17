@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://eg8epmobbqaw"]
+[gd_scene load_steps=23 format=3 uid="uid://eg8epmobbqaw"]
 
 [ext_resource type="Script" uid="uid://bj60vmplr5nap" path="res://src/Level2/dot.gd" id="1_33pkc"]
 [ext_resource type="Script" uid="uid://b7wwtdrrawh45" path="res://src/Level2/connect_the_dots.gd" id="1_hcf5l"]
@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://b0bmmfp3h4e3a" path="res://assets/level2/Space.PNG" id="3_hcf5l"]
 [ext_resource type="Script" uid="uid://d1nixrxxkqfv0" path="res://src/Level2/camdots.gd" id="6_7juwu"]
 [ext_resource type="Texture2D" uid="uid://dlw2qcupmj024" path="res://assets/level2/rocket ship frame 1.png" id="7_0oa8l"]
+[ext_resource type="Texture2D" uid="uid://ds5qnul2j8671" path="res://assets/level2/Console.PNG" id="8_1yek3"]
+[ext_resource type="Texture2D" uid="uid://bh6va724o1faj" path="res://assets/level2/InternHead.PNG" id="9_5hbrk"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7juwu"]
 radius = 4.1231055
@@ -43,6 +45,10 @@ radius = 5.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ds8ry"]
 radius = 5.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1yek3"]
+radius = 25.904758
+height = 51.809517
 
 [node name="ConnectTheDots" type="Node2D"]
 script = ExtResource("1_hcf5l")
@@ -311,9 +317,29 @@ script = ExtResource("1_ogw7n")
 zoom = Vector2(5.5, 5.5)
 script = ExtResource("6_7juwu")
 
-[node name="AlienShip" type="Sprite2D" parent="."]
+[node name="AlienShip" type="Area2D" parent="."]
 visible = false
-modulate = Color(18.892157, 18.892157, 18.892157, 1)
 position = Vector2(-1.1920929e-07, -7)
 scale = Vector2(0.24019615, 0.30882356)
+
+[node name="AlienSpaceShip" type="Sprite2D" parent="AlienShip"]
+modulate = Color(18.892157, 18.892157, 18.892157, 1)
+scale = Vector2(0.99999994, 0.99999994)
 texture = ExtResource("7_0oa8l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AlienShip"]
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("CapsuleShape2D_1yek3")
+debug_color = Color(2.9841065e-06, 0.54016393, 0.63281035, 0.41960785)
+
+[node name="Console" type="Sprite2D" parent="."]
+z_index = 4
+position = Vector2(-135.9375, 67.999985)
+scale = Vector2(1.0340074, 1.3904761)
+texture = ExtResource("8_1yek3")
+
+[node name="Intern" type="Sprite2D" parent="."]
+z_index = 4
+position = Vector2(-246.49998, 144.96413)
+scale = Vector2(5.796876, 6.657371)
+texture = ExtResource("9_5hbrk")

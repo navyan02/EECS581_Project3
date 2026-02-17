@@ -23,7 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://7vpk8kboit1" path="res://assets/level2/rocket ship no fire.png" id="20_7cerk"]
 [ext_resource type="Texture2D" uid="uid://cheyun3atk6ij" path="res://assets/level2/rocket ship fire.png" id="21_j623o"]
 [ext_resource type="PackedScene" uid="uid://dpux7mjnmklvb" path="res://src/player.tscn" id="23_v8032"]
-[ext_resource type="PackedScene" uid="uid://dt1y2vdyj1lf8" path="res://src/endscene.tscn" id="24_7cerk"]
+[ext_resource type="PackedScene" path="res://src/endscene.tscn" id="24_7cerk"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_us3c6"]
 

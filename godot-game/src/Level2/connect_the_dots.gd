@@ -11,11 +11,14 @@ extends Node2D
 @onready var dots = $Dots.get_children()
 @onready var line_drawer = $LineDrawer
 @onready var alien_ship = $AlienShip
+@onready var console = $Console
+@onready var intern = $Intern
 @export var snap_distance := 120.0 
 
 var active_dot: Area2D = null
 var start_dot: Area2D = null
 var connections_made := 1
+var waiting_for_ship_click := false
 
 func _ready():
 	# --- Arrange dots in a circle ---
@@ -27,16 +30,6 @@ func _ready():
 	for dot in dots:
 		print(dot.name, " neighbors: ", [dot.neighbors])
 
-	#Automatically assign 2 neighbors (previous and next in circle)
-	'''
-	for i in range(count):
-		var prev_idx = (i - 1 + count) % count
-		var next_idx = (i + 1) % count
-		dots[i].neighbors = [
-			dots_node.get_path_to(dots[prev_idx]),
-			dots_node.get_path_to(dots[next_idx])
-		]
-	'''
 	#Connect input signals
 	for dot in dots:
 		dot.input_event.connect(Callable(self, "_on_dot_input").bind(dot))
@@ -51,6 +44,10 @@ func _on_dot_input(viewport, event: InputEvent, shape_idx, dot):
 			line_drawer.start_preview(dot.global_position)
 		else:
 			attempt_connection(dot)
+	if waiting_for_ship_click:
+		return
+	if event is InputEventMouseButton and event.pressed:
+		active_dot = dot
 
 func attempt_connection(target_dot: Area2D):
 	if target_dot == active_dot:
@@ -84,11 +81,48 @@ func all_connected() -> bool:
 		if not dot.connected:
 			return false
 	return true
+	
+func shipInScene():
+	var tween = create_tween()
+	
+	tween.parallel().tween_property(
+		$Console,
+		"position",
+		Vector2(0, 15),
+		1.2
+	)
+	tween.parallel().tween_property(
+		$Console,
+		"scale",
+		Vector2(0.86, 0.86),
+		1.2
+	)
+	
+	tween.parallel().tween_property(
+		$Intern,
+		"position",
+		Vector2(-100, 75),
+		1.2
+	)
+	tween.parallel().tween_property(
+		$Intern,
+		"scale",
+		Vector2(5, 5),
+		1.2
+	)
 
 func success():
+	
 	print("Puzzle completed!")
 	alien_ship.visible = true
 	alien_ship.modulate.a = 0.0
 
 	var tween = create_tween()
 	tween.tween_property(alien_ship, "modulate:a", 1.0, 0.8)
+	
+	waiting_for_ship_click = true
+	$AlienShip.input_pickable = true
+	
+	await get_tree().create_timer(3.0).timeout
+	
+	shipInScene()
