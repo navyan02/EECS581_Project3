@@ -69,6 +69,7 @@ _data = {
 }
 
 [node name="TakeoffScene" type="Node2D"]
+position = Vector2(-6, 4)
 script = ExtResource("1_s4ljq")
 
 [node name="Background" type="Sprite2D" parent="."]

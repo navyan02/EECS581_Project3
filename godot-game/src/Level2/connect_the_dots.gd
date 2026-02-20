@@ -14,6 +14,8 @@ extends Node2D
 @onready var console = $Console
 @onready var intern = $Intern
 @export var snap_distance := 120.0 
+@export var next_scene_path = "res://src/Level2/spaceshipDoor.tscn"
+
 
 var active_dot: Area2D = null
 var start_dot: Area2D = null
@@ -111,6 +113,7 @@ func shipInScene():
 		1.2
 	)
 
+
 func success():
 	
 	print("Puzzle completed!")
@@ -126,3 +129,15 @@ func success():
 	await get_tree().create_timer(3.0).timeout
 	
 	shipInScene()
+	
+	await get_tree().create_timer(1.0).timeout
+	_show_dialog('The alien ship! My team must be there.')
+	await get_tree().create_timer(3.0).timeout
+	get_tree().change_scene_to_file(next_scene_path)	
+	
+func _show_dialog(text: String):
+	var dialog = get_tree().get_first_node_in_group("dialog")
+	if dialog and dialog.has_method("show_message"):
+		dialog.show_message(text)
+	else:
+		print("Dialog: ", text)

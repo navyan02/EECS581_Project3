@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://eg8epmobbqaw"]
+[gd_scene load_steps=24 format=3 uid="uid://s60tvcysod1o"]
 
 [ext_resource type="Script" uid="uid://bj60vmplr5nap" path="res://src/Level2/dot.gd" id="1_33pkc"]
 [ext_resource type="Script" uid="uid://b7wwtdrrawh45" path="res://src/Level2/connect_the_dots.gd" id="1_hcf5l"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dlw2qcupmj024" path="res://assets/level2/rocket ship frame 1.png" id="7_0oa8l"]
 [ext_resource type="Texture2D" uid="uid://ds5qnul2j8671" path="res://assets/level2/Console.PNG" id="8_1yek3"]
 [ext_resource type="Texture2D" uid="uid://bh6va724o1faj" path="res://assets/level2/InternHead.PNG" id="9_5hbrk"]
+[ext_resource type="PackedScene" uid="uid://daegyiygjpfmj" path="res://inventoryFunctionality/dialog_system.tscn" id="10_5hbrk"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7juwu"]
 radius = 4.1231055
@@ -343,3 +344,5 @@ z_index = 4
 position = Vector2(-246.49998, 144.96413)
 scale = Vector2(5.796876, 6.657371)
 texture = ExtResource("9_5hbrk")
+
+[node name="Dialog System" parent="." instance=ExtResource("10_5hbrk")]
