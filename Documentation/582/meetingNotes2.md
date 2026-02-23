@@ -1,4 +1,34 @@
 ## **Meeting Title:** TA Meeting
+### **Date:** Monday, February 23rd, 2026
+---
+#### 👥 Attendees
+
+- Navya Nittala, Kundana Dongala, Katie Nordberg, Christina Sorensen, Vivian Lara, Kevin Likcani(TA)
+
+### 📒 Notes/ToDo
+- updated Kevin on video script progress and ideas
+  - no need to change style much   
+- did a demo of the full game up to level 2
+
+Upcoming: 
+  - Sprint 3 (due Sunday, March 1st):
+    - [ ] Sprint 2 Github URL is due on Sunday, March 1st
+    - [ ] Sprint 3 Requirements Stack
+    - [ ] Sprint 3 Requirements Artifacts
+    - [ ] Peer Evaluation 4
+  - Sprint 2 Presentation Video (due Sunday, March 8th)
+    - [ ] Start working on script, build off of previous video
+
+Next Meeting 
+- TA Meeting: Monday, March 2nd @ 11:30AM
+- Team Meeting: Thursday, March 5th @ 3PM
+---
+
+## **Meeting Title:** Team Meeting
+[Notes did not commit :/ :( ]
+
+---
+## **Meeting Title:** TA Meeting
 ### **Date:** Monday, February 16th, 2026
 ---
 #### 👥 Attendees
