@@ -1,6 +1,6 @@
 extends Panel
 
-@export var dialogue_line: String = "We’re taking off! I wonder where the aliens are..."
+#@export var dialogue_line: String = ""
 @export var chars_per_second: float = 30.0
 @export var auto_hide_after: float = -1.0  # -1 = don't hide
 
@@ -17,7 +17,7 @@ func _ready() -> void:
 	# Make sure label can wrap if needed
 	label.autowrap_mode = TextServer.AUTOWRAP_WORD
 
-	start(dialogue_line)
+	#start(dialogue_line)
 
 func start(text: String) -> void:
 	_full_text = text
