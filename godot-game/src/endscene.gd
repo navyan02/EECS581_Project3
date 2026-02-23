@@ -1,10 +1,9 @@
 extends Node2D
 
-# Change to be the initial scene for level 3
-#@export var next_scene_path = "res://src/Scene2/TakeoffScene.tscn"
+#@export var next_scene_path = ""
 
 func _on_spaceship_door_finish_level_2() -> void:
-		$AnimationPlayer.play("fade")
+	$AnimationPlayer.play("fade")
 
 # When we finish level 3, uncomment this code
 #func _on_animation_player_animation_finished(anim_name: StringName) -> void:
