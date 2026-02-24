@@ -128,11 +128,17 @@ func success():
 	
 	await get_tree().create_timer(3.0).timeout
 	
-	shipInScene()
+	#shipInScene()
+	# Play moveOff backwards to get 'moveOn' essentially
+	$AnimationPlayer.play_backwards("moveOff")
 	
 	await get_tree().create_timer(1.0).timeout
 	_show_dialog('The alien ship! My team must be there.')
-	await get_tree().create_timer(3.0).timeout
+	
+	await get_tree().create_timer(1.5).timeout
+	$HyperspaceJump.play()
+	
+	await get_tree().create_timer(6.0).timeout
 	get_tree().change_scene_to_file(next_scene_path)	
 	
 func _show_dialog(text: String):
@@ -141,3 +147,19 @@ func _show_dialog(text: String):
 		dialog.show_message(text)
 	else:
 		print("Dialog: ", text)
+
+
+var counter = 0
+func _on_control_panel_buttons_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		counter += 1
+		if counter % 2 == 0:
+			_show_dialog('Beep')
+		else:
+			_show_dialog('Boop')
+
+
+func _on_space_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		$AnimationPlayer.play("moveOff")
+		$SpaceArea.visible = false
