@@ -60,6 +60,13 @@ func _ready():
 	# Create sprite nodes for each cell
 	create_grid_sprites()
 	
+#	To give the player a hint as to how the puzzle works, lets partially solve the puzzle at the beginning
+	fill_cell(2, 0, CellState.FILLED)
+	fill_cell(2, 1, CellState.FILLED)
+	fill_cell(2, 2, CellState.X)
+	fill_cell(2, 3, CellState.FILLED)
+	fill_cell(2, 4, CellState.FILLED)
+	
 	# Connect button signals
 	if blank_button:
 		blank_button.pressed.connect(_on_blank_button_pressed)
