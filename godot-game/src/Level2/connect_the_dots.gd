@@ -136,9 +136,12 @@ func success():
 	_show_dialog('The alien ship! My team must be there.')
 	
 	await get_tree().create_timer(1.5).timeout
+	$Dots.visible = false
 	$HyperspaceJump.play()
+	await get_tree().create_timer(5.0).timeout
+	$AnimationPlayer.play("fadeToWhite")	
 	
-	await get_tree().create_timer(6.0).timeout
+	await get_tree().create_timer(1.0).timeout
 	get_tree().change_scene_to_file(next_scene_path)	
 	
 func _show_dialog(text: String):
