@@ -2,6 +2,9 @@ extends Node
 
 var hand_cursor = preload("res://assets/ui/cursorActiveSmall.png")
 
+func _ready() -> void:
+	pass
+
 func change_cursor_hand():
 	Input.set_custom_mouse_cursor(hand_cursor)
 	

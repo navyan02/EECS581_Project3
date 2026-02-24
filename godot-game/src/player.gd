@@ -31,9 +31,6 @@ func _ready() -> void:
 		moveLeftAnim = "player_walk_left"
 		moveRightAnim = "player_walk_right"
 		
-	print("posToGoTo: ", posToGoTo)
-	print("position: ", position)
-	print("global position: ", global_position)
 #	The position to go to should initially be wherever the player is standing.
 	posToGoTo = global_position
 	
