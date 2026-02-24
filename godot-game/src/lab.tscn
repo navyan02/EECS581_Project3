@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://s4mcjpxlgk0u"]
+[gd_scene load_steps=32 format=3 uid="uid://s4mcjpxlgk0u"]
 
 [ext_resource type="Texture2D" uid="uid://ddqfhwa8xxth5" path="res://assets/rooms/labBackground.png" id="1_eohh7"]
 [ext_resource type="Script" uid="uid://bo4gm1152vhkh" path="res://src/lab.gd" id="1_fq8rk"]
@@ -23,6 +23,7 @@
 [ext_resource type="Theme" uid="uid://bs8nkspm4dd87" path="res://inventoryFunctionality/inventoryPanel.tres" id="18_fq8rk"]
 [ext_resource type="PackedScene" uid="uid://bb35sl6mr5dca" path="res://inventoryFunctionality/labLevelInteractables/shelf.tscn" id="18_huwru"]
 [ext_resource type="PackedScene" uid="uid://cxcu67n3jlwte" path="res://inventoryFunctionality/labLevelInteractables/whiteboard.tscn" id="19_mmc43"]
+[ext_resource type="PackedScene" uid="uid://mn3pswi3r007" path="res://src/Level1/level1Endscene.tscn" id="24_mmc43"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_udwgg"]
 size = Vector2(662.33105, 180.08633)
@@ -282,5 +283,12 @@ visible = false
 stream = ExtResource("18_1c3td")
 autoplay = true
 
+[node name="Endscene" parent="." instance=ExtResource("24_mmc43")]
+visible = false
+z_index = 5
+position = Vector2(631.00006, -15)
+scale = Vector2(1.0058002, 1.0058002)
+
+[connection signal="finishLevel1" from="." to="Endscene" method="_on_node_finish_level_1"]
 [connection signal="input_event" from="Node2D/Interactables/Bookshelf" to="Node2D/Interactables/Bookshelf" method="_on_input_event"]
 [connection signal="notepadWasOpened" from="LockedComputerScreen" to="." method="_on_locked_computer_screen_notepad_was_opened"]

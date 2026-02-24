@@ -1,7 +1,7 @@
-[gd_scene load_steps=25 format=3 uid="uid://jmwttottf74j"]
+[gd_scene load_steps=26 format=3 uid="uid://jmwttottf74j"]
 
 [ext_resource type="Texture2D" uid="uid://wrthydkx10mc" path="res://assets/Office/OfficeBackground.png" id="1_ujhis"]
-[ext_resource type="Script" path="res://src/office.gd" id="1_upguj"]
+[ext_resource type="Script" uid="uid://cyv62ycmpuham" path="res://src/office.gd" id="1_upguj"]
 [ext_resource type="Texture2D" uid="uid://dn4xj27xsnsba" path="res://assets/Office/coffeepot.png" id="2_hye3w"]
 [ext_resource type="Texture2D" uid="uid://cmb1pr1oqls07" path="res://assets/Office/Table.png" id="3_vfgj6"]
 [ext_resource type="Texture2D" uid="uid://by2vbjdiyujh1" path="res://assets/Office/Flower.png" id="4_3xwue"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://bufxqmj7igntc" path="res://assets/characters/girl2.png" id="11_ynrh5"]
 [ext_resource type="Script" uid="uid://bedjn8o15neni" path="res://src/npc_3.gd" id="12_1v5ov"]
 [ext_resource type="Texture2D" uid="uid://cuu5uxn0by77k" path="res://assets/characters/boy2.png" id="12_ynrh5"]
+[ext_resource type="PackedScene" uid="uid://dpavfoa0lepcq" path="res://src/Level1/level1TitleScreen.tscn" id="16_8cmy1"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1v5ov"]
 load_path = "res://.godot/imported/TV backgroud.png-bc3d42353a049bf50308cd1790ed3a9b.ctex"
@@ -145,7 +146,7 @@ scale = Vector2(0.12406171, 0.12406171)
 script = ExtResource("1_upguj")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(564.23535, 1547.617)
+position = Vector2(491.68994, 1039.8052)
 scale = Vector2(38.791695, 42.2378)
 texture = ExtResource("1_ujhis")
 
@@ -245,6 +246,11 @@ root_node = NodePath("../Intern")
 libraries = {
 &"": SubResource("AnimationLibrary_21lrq")
 }
+
+[node name="LevelTitleScreen" parent="." instance=ExtResource("16_8cmy1")]
+z_index = 4
+position = Vector2(-7576.8745, -3474.0776)
+scale = Vector2(8.231463, 8.231463)
 
 [connection signal="interactedWithNPC1" from="NPC1" to="NPC3" method="_on_npc_1_interacted_with_npc_1"]
 [connection signal="interactedWithNPC2" from="NPC2" to="NPC3" method="_on_npc_2_interacted_with_npc_2"]

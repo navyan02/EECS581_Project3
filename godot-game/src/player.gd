@@ -30,6 +30,10 @@ func _ready() -> void:
 		idleAnim = "player_idle"
 		moveLeftAnim = "player_walk_left"
 		moveRightAnim = "player_walk_right"
+		
+#	The position to go to should initially be wherever the player is standing.
+	posToGoTo = global_position
+	
 # Get input
 # I used _unhandled_input() instead of just _input() so that the inventory has a chance to handle inventory clicks
 # This way, only clicks outside of the UI will trigger movement!

@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://s60tvcysod1o"]
+[gd_scene load_steps=31 format=3 uid="uid://s60tvcysod1o"]
 
 [ext_resource type="Script" uid="uid://bj60vmplr5nap" path="res://src/Level2/dot.gd" id="1_33pkc"]
 [ext_resource type="Script" uid="uid://b7wwtdrrawh45" path="res://src/Level2/connect_the_dots.gd" id="1_hcf5l"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://ds5qnul2j8671" path="res://assets/level2/Console.PNG" id="8_1yek3"]
 [ext_resource type="Texture2D" uid="uid://bh6va724o1faj" path="res://assets/level2/InternHead.PNG" id="9_5hbrk"]
 [ext_resource type="PackedScene" uid="uid://daegyiygjpfmj" path="res://inventoryFunctionality/dialog_system.tscn" id="10_5hbrk"]
+[ext_resource type="VideoStream" uid="uid://dwompbdpd2h40" path="res://assets/level2/hyperspaceJump7.ogv" id="11_gnbaq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7juwu"]
 radius = 4.1231055
@@ -50,6 +51,148 @@ radius = 5.0
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1yek3"]
 radius = 25.904758
 height = 51.809517
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gnbaq"]
+size = Vector2(217.4585, 59.9292)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5hbrk"]
+size = Vector2(94.44576, 42.082344)
+
+[sub_resource type="Animation" id="Animation_gnbaq"]
+resource_name = "moveOff"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Console:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.96666664),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-1.7534482, -22.679966), Vector2(-135.9375, 67.999985)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Intern:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.033333335, 0.96666664),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-113.00001, 86), Vector2(-246.49998, 144.96413)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Intern:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.033333335, 0.96666664),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(4.8963766, 5.6232004), Vector2(5.796876, 6.657371)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Console:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.96666664),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.87338245, 1.1744765), Vector2(1.0340074, 1.3904761)]
+}
+
+[sub_resource type="Animation" id="Animation_75etv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Console:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1.7534482, -22.679966)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Intern:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-113.00001, 86)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Console:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.87338245, 1.1744765)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Intern:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(4.8963766, 5.6232004)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ColorRect:color")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_731m6"]
+resource_name = "fadeToWhite"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_731m6"]
+_data = {
+&"RESET": SubResource("Animation_75etv"),
+&"fadeToWhite": SubResource("Animation_731m6"),
+&"moveOff": SubResource("Animation_gnbaq")
+}
 
 [node name="ConnectTheDots" type="Node2D"]
 script = ExtResource("1_hcf5l")
@@ -333,16 +476,59 @@ scale = Vector2(0.99999994, 0.99999994)
 shape = SubResource("CapsuleShape2D_1yek3")
 debug_color = Color(2.9841065e-06, 0.54016393, 0.63281035, 0.41960785)
 
+[node name="SpaceArea" type="Area2D" parent="."]
+position = Vector2(-1.1920929e-07, -7)
+scale = Vector2(0.24019615, 0.30882356)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpaceArea"]
+position = Vector2(-0.00012655644, -132.76187)
+scale = Vector2(7.8494887, 6.1596484)
+shape = SubResource("RectangleShape2D_gnbaq")
+
 [node name="Console" type="Sprite2D" parent="."]
 z_index = 4
-position = Vector2(-135.9375, 67.999985)
-scale = Vector2(1.0340074, 1.3904761)
+position = Vector2(-1.7534482, -22.679966)
+scale = Vector2(0.87338245, 1.1744765)
 texture = ExtResource("8_1yek3")
+
+[node name="ControlPanelButtons" type="Area2D" parent="Console"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Console/ControlPanelButtons"]
+position = Vector2(30.631983, 61.88285)
+scale = Vector2(1, 0.9999998)
+shape = SubResource("RectangleShape2D_5hbrk")
 
 [node name="Intern" type="Sprite2D" parent="."]
 z_index = 4
-position = Vector2(-246.49998, 144.96413)
-scale = Vector2(5.796876, 6.657371)
+position = Vector2(-113.00001, 86)
+scale = Vector2(4.8963766, 5.6232004)
 texture = ExtResource("9_5hbrk")
 
 [node name="Dialog System" parent="." instance=ExtResource("10_5hbrk")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_731m6")
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = 5
+offset_left = -176.0
+offset_top = -100.0
+offset_right = -136.0
+offset_bottom = -60.0
+scale = Vector2(8.97263, 5.2131624)
+mouse_filter = 2
+color = Color(1, 1, 1, 0)
+
+[node name="HyperspaceJump" type="VideoStreamPlayer" parent="."]
+offset_left = -176.0
+offset_top = -100.0
+offset_right = 1104.0
+offset_bottom = 620.0
+scale = Vector2(0.28174722, 0.28174722)
+mouse_filter = 2
+stream = ExtResource("11_gnbaq")
+
+[connection signal="input_event" from="SpaceArea" to="." method="_on_space_area_input_event"]
+[connection signal="input_event" from="Console/ControlPanelButtons" to="." method="_on_control_panel_buttons_input_event"]
