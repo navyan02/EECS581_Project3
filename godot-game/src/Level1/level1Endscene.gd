@@ -1,4 +1,4 @@
-extends Node2D
+extends CanvasLayer
 
 @export var next_scene_path = "res://src/Scene2/TakeoffScene.tscn"
 
