@@ -1,3 +1,34 @@
+## **Meeting Title:** Team Meeting
+### **Date:** Thursday, February 26th, 2026
+---
+#### 👥 Attendees
+
+- Katie Nordberg, Vivian Lara, Christina Sorensen, Kundana Dongala, Navya Nittala
+
+### 📒 Notes
+- Updates:
+  - Katie made changes make the level playthrough more seamless, did the presentation video screen recordings, 
+  - Vi made some office assets to replace the placeholder ones
+    
+- Deliverables Due by Sunday:
+  - [X] Sprint 2 Github URL
+  - [X] Sprint 3 Requirements Stack
+  - [X] Sprint 3 Requirements Artifacts
+  - [X] Peer Evaluation 4
+
+- ToDos
+  - need to add music to level 2
+  - implement logic for Pac-Man game
+  - Katie will fix music integration
+  - Christina will record the video
+  - Navya and Kundana will work on the pixle art and cut scenes
+  - Vi will animate aliens for their idle state
+
+Next Meeting 
+- TA Meeting: Monday, March 2th @ 11:30AM
+- Team Meeting: Thursday, March 5th @ 3PM
+---
+
 ## **Meeting Title:** TA Meeting
 ### **Date:** Monday, February 23rd, 2026
 ---
@@ -21,7 +52,7 @@ Upcoming:
 
 Next Meeting 
 - TA Meeting: Monday, March 2nd @ 11:30AM
-- Team Meeting: Thursday, March 5th @ 3PM
+- Team Meeting: Thursday, February 26th @ 3PM
 ---
 
 ## **Meeting Title:** Team Meeting
