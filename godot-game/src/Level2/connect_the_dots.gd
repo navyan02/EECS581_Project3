@@ -66,6 +66,7 @@ func attempt_connection(target_dot: Area2D):
 	connections_made += 1
 	active_dot.connected = true
 	target_dot.connected = true
+	$"Sound Effects/Ding".play()
 
 	if connections_made == dots.size() + 1:
 		success()
@@ -115,7 +116,7 @@ func shipInScene():
 
 
 func success():
-	
+	$"Sound Effects/Completed".play()
 	print("Puzzle completed!")
 	alien_ship.visible = true
 	alien_ship.modulate.a = 0.0
@@ -139,6 +140,7 @@ func success():
 	$Dots.visible = false
 	$HyperspaceJump.play()
 	await get_tree().create_timer(5.0).timeout
+	$"Sound Effects/Woosh".play()
 	$AnimationPlayer.play("fadeToWhite")	
 	
 	await get_tree().create_timer(1.0).timeout
@@ -157,9 +159,11 @@ func _on_control_panel_buttons_input_event(viewport: Node, event: InputEvent, sh
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		counter += 1
 		if counter % 2 == 0:
-			_show_dialog('Beep')
-		else:
 			_show_dialog('Boop')
+			$"Sound Effects/Boop".play()
+		else:
+			_show_dialog('Beep')
+			$"Sound Effects/Beep".play()
 
 
 func _on_space_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
