@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://s60tvcysod1o"]
+[gd_scene format=3 uid="uid://s60tvcysod1o"]
 
 [ext_resource type="Script" uid="uid://bj60vmplr5nap" path="res://src/Level2/dot.gd" id="1_33pkc"]
 [ext_resource type="Script" uid="uid://b7wwtdrrawh45" path="res://src/Level2/connect_the_dots.gd" id="1_hcf5l"]
@@ -11,6 +11,11 @@
 [ext_resource type="Texture2D" uid="uid://bh6va724o1faj" path="res://assets/level2/InternHead.PNG" id="9_5hbrk"]
 [ext_resource type="PackedScene" uid="uid://daegyiygjpfmj" path="res://inventoryFunctionality/dialog_system.tscn" id="10_5hbrk"]
 [ext_resource type="VideoStream" uid="uid://dwompbdpd2h40" path="res://assets/level2/hyperspaceJump7.ogv" id="11_gnbaq"]
+[ext_resource type="AudioStream" uid="uid://bxufk80rv5ckw" path="res://assets/soundEffects/completedPuzzle.mp3" id="12_e446v"]
+[ext_resource type="AudioStream" uid="uid://cwokyrnwshmyr" path="res://assets/soundEffects/dramatic-whoosh.mp3" id="13_02ddx"]
+[ext_resource type="AudioStream" uid="uid://derd6pncjijx3" path="res://assets/soundEffects/mouse-click.mp3" id="14_ea4wb"]
+[ext_resource type="AudioStream" uid="uid://d2ygf3bm25g8p" path="res://assets/soundEffects/beep.mp3" id="15_ea4wb"]
+[ext_resource type="AudioStream" uid="uid://k5peaerl7mbg" path="res://assets/soundEffects/boop.mp3" id="16_ds8ry"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7juwu"]
 radius = 4.1231055
@@ -194,324 +199,322 @@ _data = {
 &"moveOff": SubResource("Animation_gnbaq")
 }
 
-[node name="ConnectTheDots" type="Node2D"]
+[node name="ConnectTheDots" type="Node2D" unique_id=1259321712]
 script = ExtResource("1_hcf5l")
 
-[node name="Space" type="Sprite2D" parent="."]
+[node name="Space" type="Sprite2D" parent="." unique_id=1612871575]
 texture = ExtResource("3_hcf5l")
 
-[node name="Dots" type="Node2D" parent="."]
+[node name="Dots" type="Node2D" parent="." unique_id=1244412211]
 
-[node name="Dot1" type="Area2D" parent="Dots"]
+[node name="Dot1" type="Area2D" parent="Dots" unique_id=1446635893]
 position = Vector2(0, -86)
 script = ExtResource("1_33pkc")
 neighbors = [NodePath("../Dot12"), NodePath("../Dot2")]
 
-[node name="Star" type="Sprite2D" parent="Dots/Dot1"]
+[node name="Star" type="Sprite2D" parent="Dots/Dot1" unique_id=634246922]
 z_index = 1
 texture = ExtResource("2_ogw7n")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dots/Dot1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dots/Dot1" unique_id=1687687042]
 shape = SubResource("CircleShape2D_7juwu")
 
-[node name="Dot2" type="Area2D" parent="Dots"]
+[node name="Dot2" type="Area2D" parent="Dots" unique_id=876977366]
 position = Vector2(44, -74)
 script = ExtResource("1_33pkc")
 neighbors = [NodePath("../Dot1"), NodePath("../Dot3")]
 
-[node name="Star" type="Sprite2D" parent="Dots/Dot2"]
+[node name="Star" type="Sprite2D" parent="Dots/Dot2" unique_id=862677543]
 z_index = 1
 position = Vector2(4, 5)
 texture = ExtResource("2_ogw7n")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dots/Dot2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dots/Dot2" unique_id=978147957]
 position = Vector2(4, 4)
 shape = SubResource("CircleShape2D_0oa8l")
 
-[node name="Dot3" type="Area2D" parent="Dots"]
+[node name="Dot3" type="Area2D" parent="Dots" unique_id=1585757995]
 position = Vector2(78, -40)
 script = ExtResource("1_33pkc")
 neighbors = [NodePath("../Dot2"), NodePath("../Dot4")]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dots/Dot3"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dots/Dot3" unique_id=1706251424]
 shape = SubResource("CircleShape2D_8p2ti")
 
-[node name="Star" type="Sprite2D" parent="Dots/Dot3"]
+[node name="Star" type="Sprite2D" parent="Dots/Dot3" unique_id=969482644]
 z_index = 1
 texture = ExtResource("2_ogw7n")
 
-[node name="Dot4" type="Area2D" parent="Dots"]
+[node name="Dot4" type="Area2D" parent="Dots" unique_id=491142346]
 position = Vector2(90, 0)
 script = ExtResource("1_33pkc")
 neighbors = [NodePath("../Dot3"), NodePath("../Dot5")]
 
-[node name="Star" type="Sprite2D" parent="Dots/Dot4"]
+[node name="Star" type="Sprite2D" parent="Dots/Dot4" unique_id=2052881022]
 z_index = 1
 position = Vector2(-0.5, 0)
 texture = ExtResource("2_ogw7n")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dots/Dot4"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dots/Dot4" unique_id=518518599]
 position = Vector2(-1, -1)
 shape = SubResource("CircleShape2D_1yek3")
 
-[node name="Dot5" type="Area2D" parent="Dots"]
+[node name="Dot5" type="Area2D" parent="Dots" unique_id=337026883]
 position = Vector2(77, 34)
 script = ExtResource("1_33pkc")
 neighbors = [NodePath("../Dot4"), NodePath("../Dot6")]
 
-[node name="Star" type="Sprite2D" parent="Dots/Dot5"]
+[node name="Star" type="Sprite2D" parent="Dots/Dot5" unique_id=479517918]
 z_index = 1
 texture = ExtResource("2_ogw7n")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dots/Dot5"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dots/Dot5" unique_id=1178965041]
 position = Vector2(0, -1)
 shape = SubResource("CircleShape2D_5hbrk")
 
-[node name="Dot6" type="Area2D" parent="Dots"]
+[node name="Dot6" type="Area2D" parent="Dots" unique_id=787060518]
 position = Vector2(48, 60)
 script = ExtResource("1_33pkc")
 neighbors = [NodePath("../Dot5"), NodePath("../Dot7")]
 
-[node name="Star" type="Sprite2D" parent="Dots/Dot6"]
+[node name="Star" type="Sprite2D" parent="Dots/Dot6" unique_id=2052694462]
 z_index = 1
 texture = ExtResource("2_ogw7n")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dots/Dot6"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dots/Dot6" unique_id=593267075]
 position = Vector2(0, -1)
 shape = SubResource("CircleShape2D_gnbaq")
 
-[node name="Dot7" type="Area2D" parent="Dots"]
+[node name="Dot7" type="Area2D" parent="Dots" unique_id=1676803343]
 position = Vector2(0, 72)
 script = ExtResource("1_33pkc")
 neighbors = [NodePath("../Dot6"), NodePath("../Dot8")]
 
-[node name="Star" type="Sprite2D" parent="Dots/Dot7"]
+[node name="Star" type="Sprite2D" parent="Dots/Dot7" unique_id=1504524034]
 z_index = 1
 texture = ExtResource("2_ogw7n")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dots/Dot7"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dots/Dot7" unique_id=184869356]
 position = Vector2(0, -1)
 shape = SubResource("CircleShape2D_75etv")
 
-[node name="Dot8" type="Area2D" parent="Dots"]
+[node name="Dot8" type="Area2D" parent="Dots" unique_id=510436170]
 position = Vector2(-41, 59)
 script = ExtResource("1_33pkc")
 neighbors = [NodePath("../Dot7"), NodePath("../Dot9")]
 
-[node name="Star" type="Sprite2D" parent="Dots/Dot8"]
+[node name="Star" type="Sprite2D" parent="Dots/Dot8" unique_id=311829607]
 z_index = 1
 texture = ExtResource("2_ogw7n")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dots/Dot8"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dots/Dot8" unique_id=714761459]
 position = Vector2(0, -1)
 shape = SubResource("CircleShape2D_731m6")
 
-[node name="Dot9" type="Area2D" parent="Dots"]
+[node name="Dot9" type="Area2D" parent="Dots" unique_id=1146032176]
 position = Vector2(-71, 33)
 script = ExtResource("1_33pkc")
 neighbors = [NodePath("../Dot8"), NodePath("../Dot10")]
 
-[node name="Star" type="Sprite2D" parent="Dots/Dot9"]
+[node name="Star" type="Sprite2D" parent="Dots/Dot9" unique_id=1825231090]
 z_index = 1
 texture = ExtResource("2_ogw7n")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dots/Dot9"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dots/Dot9" unique_id=760527248]
 position = Vector2(0, -1)
 shape = SubResource("CircleShape2D_e446v")
 
-[node name="Dot10" type="Area2D" parent="Dots"]
+[node name="Dot10" type="Area2D" parent="Dots" unique_id=519929472]
 position = Vector2(-85, 1)
 script = ExtResource("1_33pkc")
 neighbors = [NodePath("../Dot9"), NodePath("../Dot11")]
 
-[node name="Star" type="Sprite2D" parent="Dots/Dot10"]
+[node name="Star" type="Sprite2D" parent="Dots/Dot10" unique_id=1217035550]
 z_index = 1
 texture = ExtResource("2_ogw7n")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dots/Dot10"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dots/Dot10" unique_id=423639267]
 position = Vector2(0, -1)
 shape = SubResource("CircleShape2D_02ddx")
 
-[node name="Dot11" type="Area2D" parent="Dots"]
+[node name="Dot11" type="Area2D" parent="Dots" unique_id=1721555185]
 position = Vector2(-69, -39)
 script = ExtResource("1_33pkc")
 neighbors = [NodePath("../Dot10"), NodePath("../Dot12")]
 
-[node name="Star" type="Sprite2D" parent="Dots/Dot11"]
+[node name="Star" type="Sprite2D" parent="Dots/Dot11" unique_id=623320984]
 z_index = 1
 texture = ExtResource("2_ogw7n")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dots/Dot11"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dots/Dot11" unique_id=291465368]
 position = Vector2(0, -1)
 shape = SubResource("CircleShape2D_ea4wb")
 
-[node name="Dot12" type="Area2D" parent="Dots"]
+[node name="Dot12" type="Area2D" parent="Dots" unique_id=1553428830]
 position = Vector2(-40, -70)
 script = ExtResource("1_33pkc")
 neighbors = [NodePath("../Dot11"), NodePath("../Dot1")]
 
-[node name="Star" type="Sprite2D" parent="Dots/Dot12"]
+[node name="Star" type="Sprite2D" parent="Dots/Dot12" unique_id=2000902797]
 z_index = 1
 texture = ExtResource("2_ogw7n")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dots/Dot12"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dots/Dot12" unique_id=1505019363]
 position = Vector2(0, -1)
 shape = SubResource("CircleShape2D_ds8ry")
 
-[node name="Dot13" type="Area2D" parent="Dots"]
+[node name="Dot13" type="Area2D" parent="Dots" unique_id=1062106728]
 position = Vector2(0, -32)
 script = ExtResource("1_33pkc")
 neighbors = [NodePath("../Dot20"), NodePath("../Dot14")]
 
-[node name="Star" type="Sprite2D" parent="Dots/Dot13"]
+[node name="Star" type="Sprite2D" parent="Dots/Dot13" unique_id=1788012242]
 z_index = 1
 texture = ExtResource("2_ogw7n")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dots/Dot13"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dots/Dot13" unique_id=102933444]
 shape = SubResource("CircleShape2D_7juwu")
 
-[node name="Dot14" type="Area2D" parent="Dots"]
+[node name="Dot14" type="Area2D" parent="Dots" unique_id=1050653252]
 position = Vector2(21, -23)
 script = ExtResource("1_33pkc")
 neighbors = [NodePath("../Dot13"), NodePath("../Dot15")]
 
-[node name="Star" type="Sprite2D" parent="Dots/Dot14"]
+[node name="Star" type="Sprite2D" parent="Dots/Dot14" unique_id=874085075]
 z_index = 1
 texture = ExtResource("2_ogw7n")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dots/Dot14"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dots/Dot14" unique_id=341701553]
 shape = SubResource("CircleShape2D_7juwu")
 
-[node name="Dot15" type="Area2D" parent="Dots"]
+[node name="Dot15" type="Area2D" parent="Dots" unique_id=1474726542]
 position = Vector2(28, -5)
 script = ExtResource("1_33pkc")
 neighbors = [NodePath("../Dot14"), NodePath("../Dot16")]
 
-[node name="Star" type="Sprite2D" parent="Dots/Dot15"]
+[node name="Star" type="Sprite2D" parent="Dots/Dot15" unique_id=1154425583]
 z_index = 1
 texture = ExtResource("2_ogw7n")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dots/Dot15"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dots/Dot15" unique_id=2107281914]
 shape = SubResource("CircleShape2D_7juwu")
 
-[node name="Dot16" type="Area2D" parent="Dots"]
+[node name="Dot16" type="Area2D" parent="Dots" unique_id=440995715]
 position = Vector2(20, 9)
 script = ExtResource("1_33pkc")
 neighbors = [NodePath("../Dot15"), NodePath("../Dot17")]
 
-[node name="Star" type="Sprite2D" parent="Dots/Dot16"]
+[node name="Star" type="Sprite2D" parent="Dots/Dot16" unique_id=1887779768]
 z_index = 1
 texture = ExtResource("2_ogw7n")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dots/Dot16"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dots/Dot16" unique_id=1193520726]
 shape = SubResource("CircleShape2D_7juwu")
 
-[node name="Dot17" type="Area2D" parent="Dots"]
+[node name="Dot17" type="Area2D" parent="Dots" unique_id=468756249]
 position = Vector2(1, 20)
 script = ExtResource("1_33pkc")
 neighbors = [NodePath("../Dot16"), NodePath("../Dot18")]
 
-[node name="Star" type="Sprite2D" parent="Dots/Dot17"]
+[node name="Star" type="Sprite2D" parent="Dots/Dot17" unique_id=2119422468]
 z_index = 1
 texture = ExtResource("2_ogw7n")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dots/Dot17"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dots/Dot17" unique_id=1220250750]
 shape = SubResource("CircleShape2D_7juwu")
 
-[node name="Dot18" type="Area2D" parent="Dots"]
+[node name="Dot18" type="Area2D" parent="Dots" unique_id=1987446284]
 position = Vector2(-18, 9)
 script = ExtResource("1_33pkc")
 neighbors = [NodePath("../Dot17"), NodePath("../Dot19")]
 
-[node name="Star" type="Sprite2D" parent="Dots/Dot18"]
+[node name="Star" type="Sprite2D" parent="Dots/Dot18" unique_id=408317359]
 z_index = 1
 texture = ExtResource("2_ogw7n")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dots/Dot18"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dots/Dot18" unique_id=1457892391]
 shape = SubResource("CircleShape2D_7juwu")
 
-[node name="Dot19" type="Area2D" parent="Dots"]
+[node name="Dot19" type="Area2D" parent="Dots" unique_id=588918608]
 position = Vector2(-29, -5)
 script = ExtResource("1_33pkc")
 neighbors = [NodePath("../Dot18"), NodePath("../Dot20")]
 
-[node name="Star" type="Sprite2D" parent="Dots/Dot19"]
+[node name="Star" type="Sprite2D" parent="Dots/Dot19" unique_id=1554677407]
 z_index = 1
 texture = ExtResource("2_ogw7n")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dots/Dot19"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dots/Dot19" unique_id=1279946607]
 shape = SubResource("CircleShape2D_7juwu")
 
-[node name="Dot20" type="Area2D" parent="Dots"]
+[node name="Dot20" type="Area2D" parent="Dots" unique_id=2102593875]
 position = Vector2(-20, -23)
 script = ExtResource("1_33pkc")
 neighbors = [NodePath("../Dot19"), NodePath("../Dot13")]
 
-[node name="Star" type="Sprite2D" parent="Dots/Dot20"]
+[node name="Star" type="Sprite2D" parent="Dots/Dot20" unique_id=1836289812]
 z_index = 1
 texture = ExtResource("2_ogw7n")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dots/Dot20"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dots/Dot20" unique_id=829389199]
 shape = SubResource("CircleShape2D_7juwu")
 
-[node name="LineDrawer" type="Node2D" parent="."]
+[node name="LineDrawer" type="Node2D" parent="." unique_id=1085633329]
 script = ExtResource("1_ogw7n")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=571655312]
 zoom = Vector2(5.5, 5.5)
 script = ExtResource("6_7juwu")
 
-[node name="AlienShip" type="Area2D" parent="."]
+[node name="AlienShip" type="Area2D" parent="." unique_id=1374611155]
 visible = false
 position = Vector2(-1.1920929e-07, -7)
 scale = Vector2(0.24019615, 0.30882356)
 
-[node name="AlienSpaceShip" type="Sprite2D" parent="AlienShip"]
+[node name="AlienSpaceShip" type="Sprite2D" parent="AlienShip" unique_id=866755439]
 modulate = Color(18.892157, 18.892157, 18.892157, 1)
 scale = Vector2(0.99999994, 0.99999994)
 texture = ExtResource("7_0oa8l")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AlienShip"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AlienShip" unique_id=1859740145]
 scale = Vector2(0.99999994, 0.99999994)
 shape = SubResource("CapsuleShape2D_1yek3")
 debug_color = Color(2.9841065e-06, 0.54016393, 0.63281035, 0.41960785)
 
-[node name="SpaceArea" type="Area2D" parent="."]
+[node name="SpaceArea" type="Area2D" parent="." unique_id=168674841]
 position = Vector2(-1.1920929e-07, -7)
 scale = Vector2(0.24019615, 0.30882356)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SpaceArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpaceArea" unique_id=1835463227]
 position = Vector2(-0.00012655644, -132.76187)
 scale = Vector2(7.8494887, 6.1596484)
 shape = SubResource("RectangleShape2D_gnbaq")
 
-[node name="Console" type="Sprite2D" parent="."]
+[node name="Console" type="Sprite2D" parent="." unique_id=1790398430]
 z_index = 4
 position = Vector2(-1.7534482, -22.679966)
 scale = Vector2(0.87338245, 1.1744765)
 texture = ExtResource("8_1yek3")
 
-[node name="ControlPanelButtons" type="Area2D" parent="Console"]
+[node name="ControlPanelButtons" type="Area2D" parent="Console" unique_id=1125049302]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Console/ControlPanelButtons"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Console/ControlPanelButtons" unique_id=967355312]
 position = Vector2(30.631983, 61.88285)
 scale = Vector2(1, 0.9999998)
 shape = SubResource("RectangleShape2D_5hbrk")
 
-[node name="Intern" type="Sprite2D" parent="."]
+[node name="Intern" type="Sprite2D" parent="." unique_id=585657736]
 z_index = 4
 position = Vector2(-113.00001, 86)
 scale = Vector2(4.8963766, 5.6232004)
 texture = ExtResource("9_5hbrk")
 
-[node name="Dialog System" parent="." instance=ExtResource("10_5hbrk")]
+[node name="Dialog System" parent="." unique_id=191833248 instance=ExtResource("10_5hbrk")]
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_731m6")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=534441006]
+libraries/ = SubResource("AnimationLibrary_731m6")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=75318403]
 z_index = 5
 offset_left = -176.0
 offset_top = -100.0
@@ -521,7 +524,7 @@ scale = Vector2(8.97263, 5.2131624)
 mouse_filter = 2
 color = Color(1, 1, 1, 0)
 
-[node name="HyperspaceJump" type="VideoStreamPlayer" parent="."]
+[node name="HyperspaceJump" type="VideoStreamPlayer" parent="." unique_id=1517970568]
 offset_left = -176.0
 offset_top = -100.0
 offset_right = 1104.0
@@ -529,6 +532,23 @@ offset_bottom = 620.0
 scale = Vector2(0.28174722, 0.28174722)
 mouse_filter = 2
 stream = ExtResource("11_gnbaq")
+
+[node name="Sound Effects" type="Node2D" parent="." unique_id=2012996671]
+
+[node name="Completed" type="AudioStreamPlayer2D" parent="Sound Effects" unique_id=1140503165]
+stream = ExtResource("12_e446v")
+
+[node name="Woosh" type="AudioStreamPlayer2D" parent="Sound Effects" unique_id=2104265673]
+stream = ExtResource("13_02ddx")
+
+[node name="Ding" type="AudioStreamPlayer2D" parent="Sound Effects" unique_id=1390763484]
+stream = ExtResource("14_ea4wb")
+
+[node name="Beep" type="AudioStreamPlayer2D" parent="Sound Effects" unique_id=908378770]
+stream = ExtResource("15_ea4wb")
+
+[node name="Boop" type="AudioStreamPlayer2D" parent="Sound Effects" unique_id=1623647505]
+stream = ExtResource("16_ds8ry")
 
 [connection signal="input_event" from="SpaceArea" to="." method="_on_space_area_input_event"]
 [connection signal="input_event" from="Console/ControlPanelButtons" to="." method="_on_control_panel_buttons_input_event"]

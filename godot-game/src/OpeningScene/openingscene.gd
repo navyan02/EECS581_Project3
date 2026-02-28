@@ -6,8 +6,10 @@ extends AnimationPlayer
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	MusicPlayer.stop()
 	play("opening")
 	await animation_finished
+	MusicPlayer.play()
 	get_tree().change_scene_to_file("res://src/Office.tscn")
 
 func show_message(text: String):

@@ -19,7 +19,6 @@
 [ext_resource type="PackedScene" uid="uid://1ue7qfecucme" path="res://inventoryFunctionality/labLevelInteractables/beakers.tscn" id="16_ftuwx"]
 [ext_resource type="PackedScene" uid="uid://d20q7y361u17u" path="res://inventoryFunctionality/inventory_slot.tscn" id="17_1c3td"]
 [ext_resource type="PackedScene" uid="uid://dywb1e1j8cx08" path="res://inventoryFunctionality/labLevelInteractables/scanner.tscn" id="17_rh3ni"]
-[ext_resource type="AudioStream" uid="uid://blc634my7a4eq" path="res://assets/music/main_theme.mp3" id="18_1c3td"]
 [ext_resource type="Theme" uid="uid://bs8nkspm4dd87" path="res://inventoryFunctionality/inventoryPanel.tres" id="18_fq8rk"]
 [ext_resource type="PackedScene" uid="uid://bb35sl6mr5dca" path="res://inventoryFunctionality/labLevelInteractables/shelf.tscn" id="18_huwru"]
 [ext_resource type="PackedScene" uid="uid://cxcu67n3jlwte" path="res://inventoryFunctionality/labLevelInteractables/whiteboard.tscn" id="19_mmc43"]
@@ -278,10 +277,6 @@ layout_mode = 2
 [node name="LockedComputerScreen" parent="." unique_id=1955381492 instance=ExtResource("15_1c3td")]
 layer = 2
 visible = false
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2133044404]
-stream = ExtResource("18_1c3td")
-autoplay = true
 
 [node name="Endscene" parent="." unique_id=427889017 instance=ExtResource("24_mmc43")]
 visible = false
