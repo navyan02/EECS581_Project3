@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dn4xj27xsnsba"
-path="res://.godot/imported/coffeepot.png-cb6f285c30ec6494706966a117a93d9f.ctex"
+uid="uid://buq4ah42p276r"
+path="res://.godot/imported/coffeepot.PNG-84e230f79bcdca7797f95c0be157eaf7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Office/coffeepot.png"
-dest_files=["res://.godot/imported/coffeepot.png-cb6f285c30ec6494706966a117a93d9f.ctex"]
+source_file="res://assets/Office/coffeepot.PNG"
+dest_files=["res://.godot/imported/coffeepot.PNG-84e230f79bcdca7797f95c0be157eaf7.ctex"]
 
 [params]
 

@@ -1,14 +1,14 @@
-[gd_scene load_steps=26 format=3 uid="uid://jmwttottf74j"]
+[gd_scene format=3 uid="uid://jmwttottf74j"]
 
 [ext_resource type="Texture2D" uid="uid://wrthydkx10mc" path="res://assets/Office/OfficeBackground.png" id="1_ujhis"]
 [ext_resource type="Script" uid="uid://cyv62ycmpuham" path="res://src/office.gd" id="1_upguj"]
-[ext_resource type="Texture2D" uid="uid://dn4xj27xsnsba" path="res://assets/Office/coffeepot.png" id="2_hye3w"]
-[ext_resource type="Texture2D" uid="uid://cmb1pr1oqls07" path="res://assets/Office/Table.png" id="3_vfgj6"]
-[ext_resource type="Texture2D" uid="uid://by2vbjdiyujh1" path="res://assets/Office/Flower.png" id="4_3xwue"]
-[ext_resource type="Texture2D" uid="uid://tf4a6uh8xfxh" path="res://assets/Office/TV.png" id="5_iqa1n"]
+[ext_resource type="Texture2D" uid="uid://buq4ah42p276r" path="res://assets/Office/coffeepot.PNG" id="3_8cmy1"]
+[ext_resource type="Texture2D" uid="uid://b8ws3t1khn280" path="res://assets/Office/Table.PNG" id="4_tk53g"]
+[ext_resource type="Texture2D" uid="uid://lf3s8xfx8q4p" path="res://assets/Office/Flower.PNG" id="5_xl0yq"]
 [ext_resource type="Texture2D" uid="uid://du3mydbh8ev0q" path="res://assets/Office/TV backgroud.png" id="6_cdbuu"]
-[ext_resource type="Texture2D" uid="uid://c1fpkhumbk1md" path="res://assets/Office/bean.png" id="7_ynrh5"]
+[ext_resource type="Texture2D" uid="uid://dno742pnkv0i3" path="res://assets/Office/TV.PNG" id="6_ujgqs"]
 [ext_resource type="PackedScene" uid="uid://dpux7mjnmklvb" path="res://src/player.tscn" id="8_hye3w"]
+[ext_resource type="Texture2D" uid="uid://biekaastmve4u" path="res://assets/Office/bean.PNG" id="8_yw371"]
 [ext_resource type="PackedScene" uid="uid://daegyiygjpfmj" path="res://inventoryFunctionality/dialog_system.tscn" id="9_vfgj6"]
 [ext_resource type="PackedScene" uid="uid://t4x28uy2bxb3" path="res://src/npc1.tscn" id="10_3xwue"]
 [ext_resource type="Script" uid="uid://d1yju2kryg6rn" path="res://src/npc_2.gd" id="10_iqa1n"]
@@ -16,9 +16,6 @@
 [ext_resource type="Script" uid="uid://bedjn8o15neni" path="res://src/npc_3.gd" id="12_1v5ov"]
 [ext_resource type="Texture2D" uid="uid://cuu5uxn0by77k" path="res://assets/characters/boy2.png" id="12_ynrh5"]
 [ext_resource type="PackedScene" uid="uid://dpavfoa0lepcq" path="res://src/Level1/level1TitleScreen.tscn" id="16_8cmy1"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1v5ov"]
-load_path = "res://.godot/imported/TV backgroud.png-bc3d42353a049bf50308cd1790ed3a9b.ctex"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hye3w"]
 size = Vector2(1095.5133, 196.90771)
@@ -140,114 +137,107 @@ _data = {
 &"player_walk_right": SubResource("Animation_ehvfd")
 }
 
-[node name="Office" type="Node2D"]
+[node name="Office" type="Node2D" unique_id=169990846]
 position = Vector2(918, 416)
 scale = Vector2(0.12406171, 0.12406171)
 script = ExtResource("1_upguj")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=682590948]
 position = Vector2(491.68994, 1039.8052)
 scale = Vector2(38.791695, 42.2378)
 texture = ExtResource("1_ujhis")
 
-[node name="Coffeepot" type="Sprite2D" parent="."]
-position = Vector2(5094.2397, 1660.464)
-scale = Vector2(9.0004225, 9.702164)
-texture = ExtResource("2_hye3w")
+[node name="Coffeepot" type="Sprite2D" parent="." unique_id=403083328]
+position = Vector2(5118.4204, 1813.6135)
+scale = Vector2(29.219305, 31.497463)
+texture = ExtResource("3_8cmy1")
 
-[node name="Table" type="Sprite2D" parent="."]
-position = Vector2(-298.23877, 2974.3267)
-scale = Vector2(12.463254, 9.313266)
-texture = ExtResource("3_vfgj6")
+[node name="Table" type="Sprite2D" parent="." unique_id=1963300893]
+position = Vector2(-161.21019, 2829.237)
+scale = Vector2(46.180897, 34.50904)
+texture = ExtResource("4_tk53g")
 
-[node name="Flower" type="Sprite2D" parent="."]
+[node name="Flower" type="Sprite2D" parent="." unique_id=1739080389]
 position = Vector2(-153.14978, 1249.3783)
-scale = Vector2(3.3365388, 2.7201924)
-texture = ExtResource("4_3xwue")
+scale = Vector2(14.105883, 11.500155)
+texture = ExtResource("5_xl0yq")
 
-[node name="Tv" type="Sprite2D" parent="."]
-position = Vector2(-5096, -1397.9999)
-scale = Vector2(7.6254354, 7.308824)
-texture = ExtResource("5_iqa1n")
+[node name="Tv" type="Sprite2D" parent="." unique_id=2084381857]
+position = Vector2(-5094.239, -1458.9514)
+scale = Vector2(49.259235, 47.213974)
+texture = ExtResource("6_ujgqs")
 
-[node name="TvBackgroud" type="Sprite2D" parent="."]
-position = Vector2(-5088, -1498.9999)
-scale = Vector2(13.458333, 12.056701)
-texture = SubResource("CompressedTexture2D_1v5ov")
-
-[node name="TvBackgroud2" type="Sprite2D" parent="."]
-position = Vector2(-5124, -1543)
-scale = Vector2(20.614584, 19.564516)
+[node name="TvBackgroud2" type="Sprite2D" parent="." unique_id=424762645]
+position = Vector2(-5094.2393, -1575.8287)
+scale = Vector2(21.242786, 19.696234)
 texture = ExtResource("6_cdbuu")
 
-[node name="Bean" type="Sprite2D" parent="."]
-position = Vector2(6706.3403, 4038.313)
-scale = Vector2(5.8670783, 6.184049)
-texture = ExtResource("7_ynrh5")
+[node name="Bean" type="Sprite2D" parent="." unique_id=1246828133]
+position = Vector2(6891.732, 3715.8928)
+scale = Vector2(52.002014, 54.81144)
+texture = ExtResource("8_yw371")
 
-[node name="BlockPlayerMovement" type="StaticBody2D" parent="."]
+[node name="BlockPlayerMovement" type="StaticBody2D" parent="." unique_id=1094400759]
 show_behind_parent = true
 z_index = 1
 position = Vector2(-6142.1045, 2950.1445)
 scale = Vector2(5.7409835, 5.7409835)
 
-[node name="Block wall" type="CollisionShape2D" parent="BlockPlayerMovement"]
+[node name="Block wall" type="CollisionShape2D" parent="BlockPlayerMovement" unique_id=1138340280]
 visible = false
 z_index = 1
 position = Vector2(1047.352, -444.37482)
 scale = Vector2(2.5017161, 5.269356)
 shape = SubResource("RectangleShape2D_hye3w")
 
-[node name="Dialog System" parent="." instance=ExtResource("9_vfgj6")]
+[node name="Dialog System" parent="." unique_id=958428733 instance=ExtResource("9_vfgj6")]
 
-[node name="NPC1" parent="." instance=ExtResource("10_3xwue")]
+[node name="NPC1" parent="." unique_id=1576881392 instance=ExtResource("10_3xwue")]
 position = Vector2(2877.5999, 1757.1901)
 scale = Vector2(62.11986, 58.53094)
 
-[node name="NPC2" type="Area2D" parent="."]
+[node name="NPC2" type="Area2D" parent="." unique_id=1720041951]
 script = ExtResource("10_iqa1n")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NPC2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPC2" unique_id=709866491]
 position = Vector2(-3441.8357, 1724.948)
 scale = Vector2(109.89828, 128.49216)
 shape = SubResource("CapsuleShape2D_ynrh5")
 
-[node name="Sprite2D" type="Sprite2D" parent="NPC2"]
+[node name="Sprite2D" type="Sprite2D" parent="NPC2" unique_id=347051544]
 position = Vector2(-3462.7485, 1741.0691)
 scale = Vector2(67.98142, 58.208527)
 texture = ExtResource("11_ynrh5")
 
-[node name="NPC3" type="Area2D" parent="."]
+[node name="NPC3" type="Area2D" parent="." unique_id=2003927725]
 position = Vector2(572.2958, 56.423527)
 script = ExtResource("12_1v5ov")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NPC3"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPC3" unique_id=2004959368]
 position = Vector2(6327.4956, 3079.1123)
 scale = Vector2(98.364334, 117.47106)
 shape = SubResource("CapsuleShape2D_upguj")
 
-[node name="Boy2" type="Sprite2D" parent="NPC3"]
+[node name="Boy2" type="Sprite2D" parent="NPC3" unique_id=391077538]
 position = Vector2(6319.434, 3038.81)
 scale = Vector2(57.367176, 61.335396)
 texture = ExtResource("12_ynrh5")
 
-[node name="Player" parent="." instance=ExtResource("8_hye3w")]
+[node name="Player" parent="." unique_id=1603544281 instance=ExtResource("8_hye3w")]
 z_index = 4
 position = Vector2(-5561.7476, 2248.8806)
 scale = Vector2(27, 27)
 floor_constant_speed = true
 
-[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player" unique_id=8765269]
 position = Vector2(-3283.517, 1362.2512)
 remote_path = NodePath("../../Camera2D")
 
-[node name="AnimationPlayer2" type="AnimationPlayer" parent="Player"]
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="Player" unique_id=454696226]
 root_node = NodePath("../Intern")
-libraries = {
-&"": SubResource("AnimationLibrary_21lrq")
-}
+libraries/ = SubResource("AnimationLibrary_21lrq")
 
-[node name="LevelTitleScreen" parent="." instance=ExtResource("16_8cmy1")]
+[node name="LevelTitleScreen" parent="." unique_id=1162617046 instance=ExtResource("16_8cmy1")]
 z_index = 4
 position = Vector2(-7576.8745, -3474.0776)
 scale = Vector2(8.231463, 8.231463)
