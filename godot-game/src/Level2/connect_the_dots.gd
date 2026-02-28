@@ -21,6 +21,7 @@ var active_dot: Area2D = null
 var start_dot: Area2D = null
 var connections_made := 1
 var waiting_for_ship_click := false
+var connectedDots = []
 
 func _ready():
 	# --- Arrange dots in a circle ---
@@ -61,9 +62,15 @@ func attempt_connection(target_dot: Area2D):
 		line_drawer.cancel_preview()
 		active_dot = null
 		return
-
+		
+	if connectedDots.has([active_dot, target_dot]) or connectedDots.has([target_dot, active_dot]):
+		print("Already connected. Skipping")
+		return
+	
 	line_drawer.finish_preview(target_dot.global_position)
 	connections_made += 1
+#	There is no set
+	connectedDots.append([active_dot, target_dot])
 	active_dot.connected = true
 	target_dot.connected = true
 	$"Sound Effects/Ding".play()
