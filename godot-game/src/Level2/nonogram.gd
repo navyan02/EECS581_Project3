@@ -152,6 +152,7 @@ func _input(event):
 			if (check_solution(rocket_solution)):
 #				Prevent the player from continuing to play
 				still_playing = false
+				$"../Sound Effects/PuzzleComplete".play()
 				nonogram_solved.emit()
 				
 #				Wait a moment for the player to see their finished nonogram
@@ -193,6 +194,7 @@ func fill_cell(col: int, row: int, state: CellState):
 	"""Fill a cell with the selected tool"""
 	grid_state[row][col] = state
 	update_cell_sprite(col, row)
+	$"../Sound Effects/Click".play()
 #	Stop the click from being used by other nodes
 	get_viewport().set_input_as_handled()
 
