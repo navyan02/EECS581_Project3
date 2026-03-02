@@ -1,3 +1,28 @@
+## **Meeting Title:** TA Meeting
+### **Date:** Monday, March 2nd, 2026
+---
+#### 👥 Attendees
+
+- Navya Nittala, Kundana Dongala, Christina Sorensen, Vivian Lara, Kevin Likcani(TA)
+
+### 📒 Notes/ToDo
+- gave updates on our progress and next steps 
+
+Upcoming: 
+  - Sprint 2 Presentation Video (due Sunday, March 8th)
+    - Tone: it's okay to have some brainrot in the video.
+    - Our presentation is April 20th.
+  - Sprint 4 (due Sunday, March 15st):
+    - [ ] Sprint 3 Github URL is due on Sunday, March 1st
+    - [ ] Sprint 4 Requirements Stack
+    - [ ] Sprint 4 Requirements Artifacts
+    - [ ] Peer Evaluation 5
+
+Next Meeting 
+- TA Meeting: Monday, March 9th @ 11:30AM
+- Team Meeting: Thursday, March 5th @ 3PM
+---
+
 ## **Meeting Title:** Team Meeting
 ### **Date:** Thursday, February 26th, 2026
 ---
@@ -43,12 +68,12 @@ Next Meeting
 
 Upcoming: 
   - Sprint 3 (due Sunday, March 1st):
-    - [ ] Sprint 2 Github URL is due on Sunday, March 1st
-    - [ ] Sprint 3 Requirements Stack
-    - [ ] Sprint 3 Requirements Artifacts
-    - [ ] Peer Evaluation 4
+    - [X] Sprint 2 Github URL is due on Sunday, March 1st
+    - [X] Sprint 3 Requirements Stack
+    - [X] Sprint 3 Requirements Artifacts
+    - [X] Peer Evaluation 4
   - Sprint 2 Presentation Video (due Sunday, March 8th)
-    - [ ] Start working on script, build off of previous video
+    - [X] Start working on script, build off of previous video
 
 Next Meeting 
 - TA Meeting: Monday, March 2nd @ 11:30AM
