@@ -1,3 +1,38 @@
+## **Meeting Title:** Team Meeting
+### **Date:** Thursday, March 5th, 2026
+---
+#### 👥 Attendees
+
+- Katie Nordberg, Vivian Lara, Christina Sorensen, Kundana Dongala, Navya Nittala
+
+### 📒 Notes
+- Updates:
+  - Navya and Kundana drew out aliens
+    - use alien head for pac-man game
+    - use short arm alien for rest of game
+  - Christina started recording the presentation video.
+    - what's done: the intro skit, title screen, project description, first level play through.
+      - planning to add section label popups like last time
+    - timing issue: 6 minutes and 59 seconds, worried we'll be under time
+      - Katie can create a map navigation screen
+      - add a little talking about the music and art
+      - add the Pac-Man game as future work
+  - Katie updated the screen recordings of the game playthrough and will help christina edit the video. Also started working on the Pac-Man game.
+    - made maze and added movement to the intern (bumping into the walls and moving through maze
+    - if we can't get the Pac-Man implementation, we at least have a maze game
+    - couple ideas: the aliens can go wherever or they are only in one hallway of the maze
+      - decided on keeping the aliens to moving up and down one hallway
+  - Vi is working on animating the aliens 
+    
+- Deliverables Due by Sunday:
+  - [ ] Sprint 2 Presentation Video
+  - [x] Peer Evaluation 5
+
+Next Meeting 
+- TA Meeting: Monday, March 9th @ 11:30AM
+- Team Meeting: Thursday, March 12th @ 3PM
+---
+
 ## **Meeting Title:** TA Meeting
 ### **Date:** Monday, March 2nd, 2026
 ---
