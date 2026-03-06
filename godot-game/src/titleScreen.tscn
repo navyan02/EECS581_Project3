@@ -113,4 +113,5 @@ icon_alignment = 1
 expand_icon = true
 
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/startButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/viewMap" to="." method="_on_view_map_pressed"]
 [connection signal="pressed" from="VBoxContainer/exit" to="." method="_on_exit_pressed"]
