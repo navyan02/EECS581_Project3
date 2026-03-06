@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://de1jmpy7or3n" path="res://assets/level3/maze.png" id="2_fklmb"]
 [ext_resource type="Script" uid="uid://dyrrhc4sa7xd1" path="res://src/Level3/intern_head.gd" id="3_0xpqw"]
 [ext_resource type="Texture2D" uid="uid://2asxdjjlyklr" path="res://assets/level3/Intern Head.png" id="3_bq854"]
+[ext_resource type="Texture2D" uid="uid://bwipdblg2kke6" path="res://assets/level3/circle-xxl.png" id="5_lvkgd"]
 [ext_resource type="PackedScene" uid="uid://dx1ey1jrq4uif" path="res://src/Level3/alienHead.tscn" id="5_v44pr"]
 [ext_resource type="FontFile" uid="uid://bywhyuf8rbomy" path="res://assets/fonts/madspixel/madspixel.ttf" id="7_lvkgd"]
 
@@ -24,7 +25,7 @@ a = Vector2(406, -203)
 b = Vector2(-81, -203)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_2yj0w"]
-a = Vector2(404, 389)
+a = Vector2(403, 382)
 b = Vector2(402, -104)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_5vinu"]
@@ -53,7 +54,7 @@ b = Vector2(-71, -105)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_72umo"]
 a = Vector2(-71, 89)
-b = Vector2(-71, -105)
+b = Vector2(-71, -102)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_al4g3"]
 a = Vector2(-176, -105)
@@ -182,7 +183,7 @@ position = Vector2(292, 366)
 shape = SubResource("SegmentShape2D_lvkgd")
 
 [node name="CollisionShape2D19" type="CollisionShape2D" parent="Walls" unique_id=1328593630]
-position = Vector2(-98, -502)
+position = Vector2(-98, -506)
 shape = SubResource("SegmentShape2D_lvkgd")
 
 [node name="CollisionShape2D20" type="CollisionShape2D" parent="Walls" unique_id=765281041]
@@ -202,7 +203,7 @@ position = Vector2(0, 389)
 shape = SubResource("SegmentShape2D_bq854")
 
 [node name="CollisionShape2D24" type="CollisionShape2D" parent="Walls" unique_id=1277829776]
-position = Vector2(88, 488)
+position = Vector2(96, 488)
 shape = SubResource("SegmentShape2D_bq854")
 
 [node name="CollisionShape2D25" type="CollisionShape2D" parent="Walls" unique_id=2112594326]
@@ -326,6 +327,12 @@ position = Vector2(907, 83.00001)
 scale = Vector2(3.8181791, 3.8181784)
 motion_mode = 1
 script = ExtResource("3_0xpqw")
+
+[node name="Circle" type="Sprite2D" parent="Intern Head" unique_id=1357228001]
+modulate = Color(1, 1, 1, 0.42352942)
+position = Vector2(-0.2619629, 0.52381897)
+scale = Vector2(0.1841519, 0.18415195)
+texture = ExtResource("5_lvkgd")
 
 [node name="InternHead" type="Sprite2D" parent="Intern Head" unique_id=1725319518]
 scale = Vector2(0.99999994, 0.99999994)
