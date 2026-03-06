@@ -5,6 +5,8 @@ extends CharacterBody2D
 @export var friction = 0.3    # How much velocity is retained (1.0 = no friction, 0.0 = instant stop)
 @export var stoppingDistance = 20
 
+signal caughtByAlien
+
 enum costumes {
 	REGULAR,
 	ASTRONAUT
@@ -70,6 +72,7 @@ func _physics_process(delta: float) -> void:
 		
 	for ray in $Rays.get_children():
 		if ray.is_colliding() and ray.get_collider() is Alien:
+				caughtByAlien.emit()
 				print("In range. You died")
 
 
