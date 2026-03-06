@@ -1,0 +1,98 @@
+[gd_scene format=3 uid="uid://5k5u2uqgqqip"]
+
+[ext_resource type="Script" uid="uid://bedmj7la6euqp" path="res://src/levelSelection/level_selection_map.gd" id="1_lm277"]
+[ext_resource type="Texture2D" uid="uid://de6xenlqpdc4i" path="res://assets/titleScreen/background.png" id="1_ng4qd"]
+[ext_resource type="Theme" uid="uid://d3v4iv3yxucyw" path="res://assets/titleScreen/customTheme.tres" id="2_vmh8k"]
+[ext_resource type="Texture2D" uid="uid://daq0t5rc58b6d" path="res://assets/titleScreen/button.png" id="3_h0k8u"]
+[ext_resource type="Texture2D" uid="uid://bpvr0wecgrx07" path="res://src/Scene2/IMG_4070.PNG" id="4_lm277"]
+[ext_resource type="Texture2D" uid="uid://db6snf3l1ny4j" path="res://src/Scene2/IMG_4069.PNG" id="5_h0k8u"]
+[ext_resource type="Texture2D" uid="uid://dlw2qcupmj024" path="res://assets/level2/rocket ship frame 1.png" id="6_lm277"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gf0vy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i4bka"]
+
+[node name="LevelSelectionMap" type="Node2D" unique_id=1946188726]
+script = ExtResource("1_lm277")
+
+[node name="background" type="TextureRect" parent="." unique_id=904418894]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -11.0
+offset_top = -221.0
+offset_right = 1943.7391
+offset_bottom = 1082.1594
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.0129229, 1.0129229)
+texture = ExtResource("1_ng4qd")
+flip_h = true
+
+[node name="Level1" type="Button" parent="." unique_id=1947132233]
+offset_left = 197.0
+offset_top = 470.0
+offset_right = 503.0
+offset_bottom = 582.0
+size_flags_horizontal = 3
+theme = ExtResource("2_vmh8k")
+theme_override_constants/outline_size = 3
+theme_override_styles/hover = SubResource("StyleBoxEmpty_gf0vy")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_i4bka")
+text = "Level 1"
+icon = ExtResource("3_h0k8u")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="Level2" type="Button" parent="." unique_id=1980338975]
+offset_left = 861.0
+offset_top = 202.0
+offset_right = 1167.0
+offset_bottom = 314.0
+size_flags_horizontal = 3
+theme = ExtResource("2_vmh8k")
+theme_override_constants/outline_size = 3
+theme_override_styles/hover = SubResource("StyleBoxEmpty_gf0vy")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_i4bka")
+text = "Level 2"
+icon = ExtResource("3_h0k8u")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="Level3" type="Button" parent="." unique_id=1675408174]
+offset_left = 1408.0
+offset_top = 595.68756
+offset_right = 1714.0
+offset_bottom = 707.68756
+size_flags_horizontal = 3
+theme = ExtResource("2_vmh8k")
+theme_override_constants/outline_size = 3
+theme_override_styles/hover = SubResource("StyleBoxEmpty_gf0vy")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_i4bka")
+text = "Level 3"
+icon = ExtResource("3_h0k8u")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="Earth2" type="Sprite2D" parent="." unique_id=1683619891]
+position = Vector2(349, 803.99994)
+scale = Vector2(5.9411936, 6.1073112)
+texture = ExtResource("4_lm277")
+
+[node name="Rocket Ship" type="Sprite2D" parent="." unique_id=614495724]
+position = Vector2(1017, 443)
+scale = Vector2(3.6562498, 3.6562495)
+texture = ExtResource("5_h0k8u")
+flip_h = true
+
+[node name="Alien Spaceship" type="Sprite2D" parent="." unique_id=1111824671]
+position = Vector2(1558, 447.6875)
+scale = Vector2(3.7524517, 3.7524517)
+texture = ExtResource("6_lm277")
+
+[connection signal="pressed" from="Level1" to="." method="_on_level_1_pressed"]
+[connection signal="pressed" from="Level2" to="." method="_on_level_2_pressed"]
+[connection signal="pressed" from="Level3" to="." method="_on_level_3_pressed"]
