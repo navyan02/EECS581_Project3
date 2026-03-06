@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://dk40w2is2ut7l"]
+[gd_scene load_steps=23 format=3 uid="uid://dk40w2is2ut7l"]
 
 [ext_resource type="PackedScene" uid="uid://daegyiygjpfmj" path="res://inventoryFunctionality/dialog_system.tscn" id="1_53fwb"]
 [ext_resource type="Texture2D" uid="uid://de1jmpy7or3n" path="res://assets/level3/maze.png" id="2_fklmb"]
@@ -32,8 +32,24 @@ b = Vector2(403, 4)
 a = Vector2(403, 401)
 b = Vector2(403, 303)
 
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_imcjx"]
+a = Vector2(403, 401)
+b = Vector2(403, 308)
+
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_yu730"]
 a = Vector2(-71, 94)
+b = Vector2(-71, -105)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_qsyox"]
+a = Vector2(-71, 94)
+b = Vector2(-71, -99)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_jg27x"]
+a = Vector2(-71, 86)
+b = Vector2(-71, -105)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_72umo"]
+a = Vector2(-71, 89)
 b = Vector2(-71, -105)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_al4g3"]
@@ -44,6 +60,10 @@ b = Vector2(-71, -105)
 a = Vector2(-176, -105)
 b = Vector2(-80, -104)
 
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_nmcak"]
+a = Vector2(-176, -105)
+b = Vector2(-74, -105)
+
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_e0qmu"]
 a = Vector2(-166, -105)
 b = Vector2(-71, -105)
@@ -53,13 +73,13 @@ a = Vector2(207, -10)
 b = Vector2(15, -9)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0xpqw"]
-radius = 8.579144
+radius = 7.7561035
 
 [node name="PacManGame" type="Node2D"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(1346.0001, 479)
-scale = Vector2(2.1749554, 2.1749554)
+position = Vector2(907, 83.00001)
+scale = Vector2(3.8181791, 3.8181784)
 limit_left = 1
 limit_top = 1
 limit_right = 2562
@@ -155,15 +175,15 @@ position = Vector2(-98, -502)
 shape = SubResource("SegmentShape2D_lvkgd")
 
 [node name="CollisionShape2D20" type="CollisionShape2D" parent="Walls"]
-position = Vector2(-2, 268)
-shape = SubResource("SegmentShape2D_lvkgd")
+position = Vector2(-2, 269)
+shape = SubResource("SegmentShape2D_imcjx")
 
 [node name="CollisionShape2D21" type="CollisionShape2D" parent="Walls"]
-position = Vector2(579, 0)
+position = Vector2(583, 0)
 shape = SubResource("SegmentShape2D_bq854")
 
 [node name="CollisionShape2D22" type="CollisionShape2D" parent="Walls"]
-position = Vector2(-3, 95)
+position = Vector2(1, 95)
 shape = SubResource("SegmentShape2D_bq854")
 
 [node name="CollisionShape2D23" type="CollisionShape2D" parent="Walls"]
@@ -187,16 +207,16 @@ position = Vector2(767, 189)
 shape = SubResource("SegmentShape2D_yu730")
 
 [node name="CollisionShape2D28" type="CollisionShape2D" parent="Walls"]
-position = Vector2(87, -5)
-shape = SubResource("SegmentShape2D_yu730")
+position = Vector2(87, -8)
+shape = SubResource("SegmentShape2D_qsyox")
 
 [node name="CollisionShape2D29" type="CollisionShape2D" parent="Walls"]
-position = Vector2(669, -2)
-shape = SubResource("SegmentShape2D_yu730")
+position = Vector2(669, 1)
+shape = SubResource("SegmentShape2D_jg27x")
 
 [node name="CollisionShape2D30" type="CollisionShape2D" parent="Walls"]
-position = Vector2(276, 580)
-shape = SubResource("SegmentShape2D_yu730")
+position = Vector2(276, 581)
+shape = SubResource("SegmentShape2D_72umo")
 
 [node name="CollisionShape2D31" type="CollisionShape2D" parent="Walls"]
 position = Vector2(276, 190)
@@ -219,8 +239,8 @@ position = Vector2(870, 774)
 shape = SubResource("SegmentShape2D_t5vk1")
 
 [node name="CollisionShape2D36" type="CollisionShape2D" parent="Walls"]
-position = Vector2(674, 387)
-shape = SubResource("SegmentShape2D_al4g3")
+position = Vector2(673, 387)
+shape = SubResource("SegmentShape2D_nmcak")
 
 [node name="CollisionShape2D37" type="CollisionShape2D" parent="Walls"]
 position = Vector2(862, 387)
@@ -293,6 +313,7 @@ shape = SubResource("SegmentShape2D_1wjsb")
 [node name="Intern Head" type="CharacterBody2D" parent="."]
 position = Vector2(907, 83.00001)
 scale = Vector2(3.8181791, 3.8181784)
+motion_mode = 1
 script = ExtResource("3_0xpqw")
 
 [node name="InternHead" type="Sprite2D" parent="Intern Head"]
