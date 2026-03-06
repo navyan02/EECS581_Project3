@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dx1ey1jrq4uif"]
+
+[ext_resource type="Script" uid="uid://c26vyxas76sjn" path="res://src/Level3/alien.gd" id="1_1vgbm"]
+[ext_resource type="Texture2D" uid="uid://bdql8a8toqsjy" path="res://src/Level3/alien head.png" id="2_ripjw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5vinu"]
+radius = 30.149628
+
+[node name="Alien" type="CharacterBody2D" unique_id=1949602976]
+script = ExtResource("1_1vgbm")
+
+[node name="AlienHead" type="Sprite2D" parent="." unique_id=1235354471]
+position = Vector2(-2.9999962, -1.2182617)
+scale = Vector2(0.1563518, 0.15635173)
+texture = ExtResource("2_ripjw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=6394013]
+position = Vector2(-1.0002403, -2.2182617)
+shape = SubResource("CircleShape2D_5vinu")

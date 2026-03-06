@@ -34,6 +34,9 @@ func _ready() -> void:
 #	The position to go to should initially be wherever the player is standing.
 	posToGoTo = global_position
 	
+#	spawn all the raycasts
+	generate_raycasts()
+	
 # Get input
 # I used _unhandled_input() instead of just _input() so that the inventory has a chance to handle inventory clicks
 # This way, only clicks outside of the UI will trigger movement!
@@ -64,3 +67,21 @@ func _physics_process(delta: float) -> void:
 		if velocity.length() > 1:
 			move_and_slide()
 		#$AnimationPlayer.play(idleAnim)
+		
+	for ray in $Rays.get_children():
+		if ray.is_colliding() and ray.get_collider() is Alien:
+				print("In range. You died")
+
+
+var angle_cone_of_vision := deg_to_rad(360)
+var max_view_distance := 50.0
+var angle_between_rays := deg_to_rad(10)
+
+func generate_raycasts() -> void:
+	var ray_count := angle_cone_of_vision / angle_between_rays
+	for index in ray_count:
+		var ray := RayCast2D.new()
+		var angle = angle_between_rays * (index - ray_count / 2.0)
+		ray.target_position = Vector2.UP.rotated(angle) * max_view_distance
+		$Rays.add_child(ray)
+		ray.enabled = true
