@@ -1,3 +1,27 @@
+## **Meeting Title:** TA Meeting
+### **Date:** Monday, March 9th, 2026
+---
+#### 👥 Attendees
+
+- Navya Nittala, Kundana Dongala, Christina Sorensen, Vivian Lara, Kevin Likcani(TA)
+
+### 📒 Notes/ToDo
+- gave updates on our progress and next steps
+- will give the aliens accessories 
+
+Upcoming: 
+  - Spring Break next week, no TA meeting
+  - Sprint 4 (due Sunday, March 15st):
+    - [ ] Sprint 3 Github URL is due on Sunday, March 1st
+    - [ ] Sprint 4 Requirements Stack
+    - [ ] Sprint 4 Requirements Artifacts
+    - [X] Peer Evaluation 5
+
+Next Meeting 
+- TA Meeting: Monday, March 23rd @ 11:30AM
+- Team Meeting: Thursday, March 12th @ 3PM
+---
+
 ## **Meeting Title:** Team Meeting
 ### **Date:** Thursday, March 5th, 2026
 ---
@@ -25,8 +49,8 @@
   - Vi is working on animating the aliens 
     
 - Deliverables Due by Sunday:
-  - [ ] Sprint 2 Presentation Video
-  - [x] Peer Evaluation 5
+  - [X] Sprint 2 Presentation Video
+  - [X] Peer Evaluation 5
 
 Next Meeting 
 - TA Meeting: Monday, March 9th @ 11:30AM
