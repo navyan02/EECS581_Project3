@@ -1,3 +1,24 @@
+## **Meeting Title:** Team Meeting
+### **Date:** Thursday, March 12th, 2026
+---
+#### 👥 Attendees
+
+- Katie Nordberg, Vivian Lara, Christina Sorensen, Kundana Dongala, Navya Nittala
+
+### 📒 Notes
+- Updates:
+  - Discussed level 4
+    - would be cut scene heavy to explain how aliens have learned engish and lean intern to holding cells
+    -  
+    
+- Deliverables Due by Sunday:
+  - [X] Sprint 4 Requirements Artifacts
+
+Next Meeting 
+- TA Meeting: Monday, March 23th @ 11:30AM
+- Team Meeting: Thursday, March 26thth @ 3PM
+---
+
 ## **Meeting Title:** TA Meeting
 ### **Date:** Monday, March 9th, 2026
 ---
@@ -12,8 +33,8 @@
 Upcoming: 
   - Spring Break next week, no TA meeting
   - Sprint 4 (due Sunday, March 15st):
-    - [ ] Sprint 3 Github URL is due on Sunday, March 1st
-    - [ ] Sprint 4 Requirements Stack
+    - [X] Sprint 3 Github URL is due on Sunday, March 1st
+    - [X] Sprint 4 Requirements Stack
     - [ ] Sprint 4 Requirements Artifacts
     - [X] Peer Evaluation 5
 
