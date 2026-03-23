@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://dx1ey1jrq4uif"]
+[gd_scene load_steps=0 format=3 uid="uid://dx1ey1jrq4uif"]
 
 [ext_resource type="Script" uid="uid://c26vyxas76sjn" path="res://src/Level3/alien.gd" id="1_1vgbm"]
 [ext_resource type="Texture2D" uid="uid://bdql8a8toqsjy" path="res://src/Level3/alien head.png" id="2_ripjw"]
