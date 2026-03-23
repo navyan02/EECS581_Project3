@@ -1,3 +1,27 @@
+## **Meeting Title:** TA Meeting
+### **Date:** Monday, March 23rd, 2026
+---
+#### 👥 Attendees
+
+- Navya Nittala, Kundana Dongala, Christina Sorensen, Vivian Lara, Kevin Likcani(TA)
+
+### 📒 Notes/ToDo
+- quick meeting, not many updates
+- 
+
+  
+Upcoming: 
+  - Sprint 4 (due Sunday, March 29th):
+    - [X] Sprint 4 Github URL is due on Sunday, March 1st
+    - [X] Sprint 5 Requirements Stack
+    - [ ] Sprint 5 Requirements Artifacts
+    - [X] Peer Evaluation 7
+
+Next Meeting 
+- TA Meeting: Monday, March 30th @ 11:30AM
+- Team Meeting: Thursday, March 26th @ 3PM
+---
+
 ## **Meeting Title:** Team Meeting
 ### **Date:** Thursday, March 12th, 2026
 ---
