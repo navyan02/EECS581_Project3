@@ -1,0 +1,88 @@
+[gd_scene format=3 uid="uid://bh37xqxsv8iow"]
+
+[ext_resource type="Script" uid="uid://d0mk3dc5bl31j" path="res://inventoryFunctionality/inventory_system.gd" id="1_kusc6"]
+[ext_resource type="PackedScene" uid="uid://d20q7y361u17u" path="res://inventoryFunctionality/inventory_slot.tscn" id="2_sy4kl"]
+[ext_resource type="Theme" uid="uid://bs8nkspm4dd87" path="res://inventoryFunctionality/inventoryPanel.tres" id="3_4htqa"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x772e"]
+bg_color = Color(0.028657842, 0.22389153, 0.31482244, 0.6156863)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="Theme" id="Theme_fq8rk"]
+Panel/styles/panel = SubResource("StyleBoxFlat_x772e")
+
+[node name="Inventory" type="Control" unique_id=737690628 node_paths=PackedStringArray("containerOfSlots") groups=["inventory"]]
+custom_minimum_size = Vector2(705, 84)
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -352.5
+offset_top = -114.0
+offset_right = 352.5
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("1_kusc6")
+slot_scene = ExtResource("2_sy4kl")
+containerOfSlots = NodePath("InventoryBarBackground/HBoxContainer")
+
+[node name="InventoryBarBackground" type="Panel" parent="." unique_id=34526908]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_4htqa")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="InventoryBarBackground" unique_id=657518958]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -338.0
+offset_top = -32.0
+offset_right = 338.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_fq8rk")
+alignment = 1
+
+[node name="inventory_slot2" parent="InventoryBarBackground/HBoxContainer" unique_id=1348600999 instance=ExtResource("2_sy4kl")]
+layout_mode = 2
+
+[node name="inventory_slot3" parent="InventoryBarBackground/HBoxContainer" unique_id=1213003868 instance=ExtResource("2_sy4kl")]
+layout_mode = 2
+
+[node name="inventory_slot4" parent="InventoryBarBackground/HBoxContainer" unique_id=1887411697 instance=ExtResource("2_sy4kl")]
+layout_mode = 2
+
+[node name="inventory_slot5" parent="InventoryBarBackground/HBoxContainer" unique_id=372908282 instance=ExtResource("2_sy4kl")]
+layout_mode = 2
+
+[node name="inventory_slot6" parent="InventoryBarBackground/HBoxContainer" unique_id=428726827 instance=ExtResource("2_sy4kl")]
+layout_mode = 2
+
+[node name="inventory_slot7" parent="InventoryBarBackground/HBoxContainer" unique_id=911112813 instance=ExtResource("2_sy4kl")]
+layout_mode = 2
+
+[node name="inventory_slot8" parent="InventoryBarBackground/HBoxContainer" unique_id=1053641757 instance=ExtResource("2_sy4kl")]
+layout_mode = 2
+
+[node name="inventory_slot9" parent="InventoryBarBackground/HBoxContainer" unique_id=1199841565 instance=ExtResource("2_sy4kl")]
+layout_mode = 2
+
+[node name="inventory_slot10" parent="InventoryBarBackground/HBoxContainer" unique_id=304369267 instance=ExtResource("2_sy4kl")]
+layout_mode = 2
+
+[node name="inventory_slot11" parent="InventoryBarBackground/HBoxContainer" unique_id=1300252463 instance=ExtResource("2_sy4kl")]
+layout_mode = 2
