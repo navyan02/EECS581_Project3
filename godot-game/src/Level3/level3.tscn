@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://iee8olaobmux"]
+
+[ext_resource type="Texture2D" uid="uid://dbog16m4wb02d" path="res://assets/level3/spaceship inside.png" id="1_r6b7x"]
+[ext_resource type="Texture2D" uid="uid://de1jmpy7or3n" path="res://assets/level3/maze.png" id="2_uyu0e"]
+
+[node name="Level3" type="Node2D" unique_id=242879845]
+
+[node name="SpaceshipInside" type="Sprite2D" parent="." unique_id=787901938]
+position = Vector2(-2, 3)
+texture = ExtResource("1_r6b7x")
+
+[node name="Maze" type="Sprite2D" parent="." unique_id=919058522]
+position = Vector2(-345.00003, 6.999998)
+scale = Vector2(0.45219123, 0.45219123)
+texture = ExtResource("2_uyu0e")
