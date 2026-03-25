@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://co57wec80wjrs"]
+
+[ext_resource type="Shader" uid="uid://ba8b1gptk1an2" path="res://shaders/shimmer.gdshader" id="1_1i3qe"]
+
+[resource]
+shader = ExtResource("1_1i3qe")
+shader_parameter/shine_color = Color(1, 1, 1, 1)
+shader_parameter/shine_speed = 1.0
+shader_parameter/shine_size = 0.01
