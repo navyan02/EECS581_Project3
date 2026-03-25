@@ -1,0 +1,97 @@
+[gd_scene format=3 uid="uid://cuwf22kfg7x5q"]
+
+[ext_resource type="Script" uid="uid://03y66qrwoo3p" path="res://src/Level3/Level3Start.gd" id="1_pp7ey"]
+[ext_resource type="Texture2D" uid="uid://de6xenlqpdc4i" path="res://assets/titleScreen/background.png" id="2_pi5my"]
+[ext_resource type="FontFile" uid="uid://ukbnmf8j0smr" path="res://assets/titleScreen/Pixle_Font.ttf" id="3_gvwr4"]
+
+[sub_resource type="Animation" id="Animation_nvkex"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_4jk2d"]
+resource_name = "fadeToBlack"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ylj1n"]
+resource_name = "fadeToNormal"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_47b8r"]
+_data = {
+&"RESET": SubResource("Animation_nvkex"),
+&"fadeToBlack": SubResource("Animation_4jk2d"),
+&"fadeToNormal": SubResource("Animation_ylj1n")
+}
+
+[node name="Level Intro Screen" type="Node2D" unique_id=160234830]
+script = ExtResource("1_pp7ey")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1871802320]
+position = Vector2(980.2941, 542.25)
+scale = Vector2(1.2770758, 1.0600586)
+texture = ExtResource("2_pi5my")
+
+[node name="level" type="Label" parent="Background" unique_id=867111353]
+offset_left = -228.93451
+offset_top = -203.27313
+offset_right = 271.0655
+offset_bottom = -53.273132
+theme_override_fonts/font = ExtResource("3_gvwr4")
+theme_override_font_sizes/font_size = 150
+text = "Level 3: "
+
+[node name="Level Goal" type="Label" parent="Background" unique_id=526501989]
+offset_left = -680.46625
+offset_top = 81.11828
+offset_right = 663.03876
+offset_bottom = 287.25433
+theme_override_fonts/font = ExtResource("3_gvwr4")
+theme_override_font_sizes/font_size = 160
+text = "Find Your Team"
+horizontal_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1973728631]
+modulate = Color(1, 1, 1, 0)
+offset_top = -2.0
+offset_right = 1934.0
+offset_bottom = 1088.0
+color = Color(0.07719716, 0.06546505, 0.16762501, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2006764225]
+libraries/ = SubResource("AnimationLibrary_47b8r")
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
