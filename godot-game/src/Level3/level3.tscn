@@ -11,6 +11,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5o3p2"]
 size = Vector2(732.97845, 274.82758)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vdn3b"]
+size = Vector2(248, 244.5)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tu5wr"]
 size = Vector2(1182, 53.000015)
 
@@ -36,12 +39,19 @@ position = Vector2(-24.394226, -35.497208)
 scale = Vector2(1.0000002, 1)
 shape = SubResource("RectangleShape2D_5o3p2")
 
-[node name="Maze" type="Sprite2D" parent="." unique_id=919058522]
-material = ExtResource("2_7b0sx")
-position = Vector2(487, 535)
-scale = Vector2(4.76, 4.7600007)
-texture = ExtResource("3_5o3p2")
+[node name="Maze" type="Area2D" parent="." unique_id=541480158]
+scale = Vector2(1, 0.99999994)
 script = ExtResource("3_uyu0e")
+
+[node name="Sprite" type="Sprite2D" parent="Maze" unique_id=919058522]
+material = ExtResource("2_7b0sx")
+position = Vector2(487, 535.00006)
+scale = Vector2(4.76, 4.760001)
+texture = ExtResource("3_5o3p2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Maze" unique_id=966289320]
+position = Vector2(486, 533.75006)
+shape = SubResource("RectangleShape2D_vdn3b")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=504192578]
 position = Vector2(2108, 823)
