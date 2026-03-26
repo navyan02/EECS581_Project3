@@ -1,3 +1,28 @@
+## **Meeting Title:** Team Meeting
+### **Date:** Thursday, March 26th, 2026
+---
+#### 👥 Attendees
+
+- Katie Nordberg, Christina Sorensen, Kundana Dongala, Navya Nittala
+
+### 📒 Notes
+- Updates:
+  -  Katie: added level 3 lobby for inside of the spaceship
+
+ToDo:
+  - Need to work on final cut scene for level 3 where the intern learns that the alien planet exploded and that the team is not in the spaceship and gets caught by the alien in the current spaceship
+    - story board reflects this
+  - Vi maybe reached out to Carla about getting a license for Steam
+  - Create Alienese language (Kundana)
+    
+- Deliverables Due by Sunday:
+  - [X] Sprint 5 Requirements Artifacts
+
+Next Meeting 
+- TA Meeting: Monday, March 30th @ 11:30AM
+- Team Meeting: Thursday, April 2th @ 3PM
+---
+
 ## **Meeting Title:** TA Meeting
 ### **Date:** Monday, March 23rd, 2026
 ---
@@ -7,8 +32,6 @@
 
 ### 📒 Notes/ToDo
 - quick meeting, not many updates
-- 
-
   
 Upcoming: 
   - Sprint 4 (due Sunday, March 29th):
