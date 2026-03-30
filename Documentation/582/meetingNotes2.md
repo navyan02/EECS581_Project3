@@ -1,3 +1,28 @@
+## **Meeting Title:** TA Meeting
+### **Date:** Monday, March 30th, 2026
+---
+#### 👥 Attendees
+
+- Navya Nittala, Kundana Dongala, Vivian Lara, Kevin Likcani(TA)
+
+### 📒 Notes/ToDo
+- Updated on research to get Steam License (not possible), will potentially use itch.io
+- Kevin suggested that the Alienese language can have noises for how it will be spoken
+- Kevin requests to have the alien named after him 
+- Showed level 4 story board
+
+Upcoming: 
+  - Final Sprint (due Sunday, April 12th):
+    - [X] Final Sprint Github URL 
+    - [X] Final Sprint Requirements Stack
+    - [ ] Final Sprint Requirements Artifacts
+    - [X] Peer Evaluation 8
+
+Next Meeting 
+- TA Meeting: Monday, April 6thth @ 11:30AM
+- Team Meeting: Thursday, April 2nd @ 3PM
+---
+
 ## **Meeting Title:** Team Meeting
 ### **Date:** Thursday, March 26th, 2026
 ---
@@ -130,7 +155,7 @@ Next Meeting
 ---
 #### 👥 Attendees
 
-- Navya Nittala, Kundana Dongala, Christina Sorensen, Vivian Lara, Kevin Likcani(TA)
+- Katie Nordberg, Navya Nittala, Kundana Dongala, Christina Sorensen, Vivian Lara, Kevin Likcani(TA)
 
 ### 📒 Notes/ToDo
 - gave updates on our progress and next steps 
