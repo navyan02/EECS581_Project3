@@ -69,15 +69,15 @@ a = Vector2(-176, -105)
 b = Vector2(-74, -105)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_e0qmu"]
-a = Vector2(-166, -105)
-b = Vector2(-71, -105)
+a = Vector2(-168, -105)
+b = Vector2(-67, -105)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_coyun"]
 a = Vector2(311, -203)
 b = Vector2(-81, -203)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_1wjsb"]
-a = Vector2(207, -10)
+a = Vector2(209, -10)
 b = Vector2(15, -9)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0xpqw"]
@@ -278,7 +278,7 @@ position = Vector2(567, 97)
 shape = SubResource("SegmentShape2D_e0qmu")
 
 [node name="CollisionShape2D42" type="CollisionShape2D" parent="Walls" unique_id=1793319634]
-position = Vector2(181, 682)
+position = Vector2(183, 682)
 shape = SubResource("SegmentShape2D_e0qmu")
 
 [node name="CollisionShape2D43" type="CollisionShape2D" parent="Walls" unique_id=347903588]
@@ -393,6 +393,26 @@ horizontal_alignment = 1
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Finish Line" unique_id=1824823521]
 position = Vector2(1001, 1059)
 shape = SubResource("RectangleShape2D_lvkgd")
+
+[node name="You Win" type="Node2D" parent="." unique_id=1688498249]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="You Win" unique_id=1753575977]
+offset_right = 1937.0
+offset_bottom = 1168.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="You Win" unique_id=93888716]
+offset_left = 165.0
+offset_top = 370.0
+offset_right = 1741.0
+offset_bottom = 736.0
+text = "YOU WIN
+
+You made it to the holding cells"
+label_settings = SubResource("LabelSettings_yu730")
+horizontal_alignment = 1
 
 [connection signal="caughtByAlien" from="Intern Head" to="." method="_on_intern_head_caught_by_alien"]
 [connection signal="area_entered" from="Finish Line" to="Intern Head" method="_on_finish_line_area_entered"]
