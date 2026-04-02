@@ -226,6 +226,7 @@ size = Vector2(2362.75, 39)
 
 [sub_resource type="Animation" id="Animation_yit6v"]
 resource_name = "Alien Walks Catches Intern"
+length = 2.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -233,10 +234,10 @@ tracks/0/path = NodePath("Alien:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
+"times": PackedFloat32Array(0, 1.9666667),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(2523, 729), Vector2(1811, 726.00006)]
+"values": [Vector2(2523, 729), Vector2(1328.4401, 726.36)]
 }
 tracks/1/type = "method"
 tracks/1/imported = false
@@ -374,6 +375,7 @@ limit_left = 1
 limit_top = 0
 limit_right = 2309
 limit_bottom = 1077
+position_smoothing_speed = 1.0
 
 [node name="Level Border" type="StaticBody2D" parent="." unique_id=29148087]
 position = Vector2(173.00012, 96)
