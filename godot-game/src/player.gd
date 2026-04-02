@@ -64,3 +64,6 @@ func _physics_process(delta: float) -> void:
 		if velocity.length() > 1:
 			move_and_slide()
 		$AnimationPlayer.play(idleAnim)
+		
+func move_to_spot(target_pos: Vector2):
+	posToGoTo = target_pos

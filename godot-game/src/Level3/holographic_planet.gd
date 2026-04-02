@@ -1,11 +1,13 @@
 extends Area2D
 
 @export var mainLevel : Node
+@onready var dialog = $"../../Dialog System"
 
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.is_pressed():
 		mainLevel.interactedWithHologram = true
-		_show_dialog("It seems like their planet isn't doing so good...")
+		_show_dialog("Their planet exploded? Is that why they're coming to Earth...")
+		await dialog.dialog_finished
 		mainLevel.checkForAlien()
 		
 func _show_dialog(text: String):

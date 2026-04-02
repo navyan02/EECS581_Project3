@@ -6,5 +6,6 @@ extends Node2D
 func checkForAlien():
 	if interactedWithHologram and interactedWithJailCells:
 		print("enter alien")
+		$AlienAnim.play("Alien Catches Intern")
 	else:
 		print("missing interaction")
