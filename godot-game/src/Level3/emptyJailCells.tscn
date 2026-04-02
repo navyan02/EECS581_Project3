@@ -1,0 +1,131 @@
+[gd_scene format=3 uid="uid://14kcffip8av6"]
+
+[ext_resource type="Script" uid="uid://d32xnv81yjpkl" path="res://src/Level3/empty_jail_cells.gd" id="1_h5sda"]
+[ext_resource type="Texture2D" uid="uid://q8mfu80gddpe" path="res://assets/level3/empty jail cells.jpeg" id="1_lphvd"]
+[ext_resource type="Script" uid="uid://bn0hlnmvqpry7" path="res://src/Level3/cellDoors.gd" id="2_m8wqa"]
+[ext_resource type="Script" uid="uid://ypefc52ux6am" path="res://src/Level3/holographic_planet.gd" id="3_h5sda"]
+[ext_resource type="PackedScene" uid="uid://daegyiygjpfmj" path="res://inventoryFunctionality/dialog_system.tscn" id="3_jxdos"]
+[ext_resource type="Texture2D" uid="uid://raiiicv74png" path="res://assets/level3/holographicPlanet.png" id="4_ftujt"]
+[ext_resource type="PackedScene" uid="uid://dpux7mjnmklvb" path="res://src/player.tscn" id="4_h5sda"]
+[ext_resource type="PackedScene" uid="uid://bh37xqxsv8iow" path="res://src/inventory.tscn" id="5_ftujt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w4imh"]
+size = Vector2(732.97845, 274.82758)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oepab"]
+size = Vector2(99.80072, 209.87782)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_w4imh"]
+radius = 13.878089
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c0jxt"]
+size = Vector2(1182, 53.000015)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yit6v"]
+size = Vector2(2362.75, 39)
+
+[node name="EmptyJailCells" type="Node2D" unique_id=1136074529]
+script = ExtResource("1_h5sda")
+
+[node name="SpaceshipInside" type="Sprite2D" parent="." unique_id=343297761]
+position = Vector2(1159.0001, 527.9999)
+scale = Vector2(11.028571, 11.02857)
+texture = ExtResource("1_lphvd")
+
+[node name="BlockPlayerMovement" type="StaticBody2D" parent="SpaceshipInside" unique_id=1821059262]
+show_behind_parent = true
+z_index = 1
+position = Vector2(6.874115, -7.6293945e-06)
+scale = Vector2(0.28736818, 0.28736818)
+
+[node name="Block wall" type="CollisionShape2D" parent="SpaceshipInside/BlockPlayerMovement" unique_id=1529038359]
+z_index = -1
+position = Vector2(-24.394226, -35.497208)
+scale = Vector2(1.0000002, 1)
+shape = SubResource("RectangleShape2D_w4imh")
+
+[node name="Cell Doors" type="Area2D" parent="SpaceshipInside" unique_id=874626693 node_paths=PackedStringArray("mainLevel")]
+script = ExtResource("2_m8wqa")
+mainLevel = NodePath("../..")
+
+[node name="Cell Door 1" type="CollisionShape2D" parent="SpaceshipInside/Cell Doors" unique_id=1932230741]
+z_index = 1
+position = Vector2(-38.463158, -1.3147583)
+scale = Vector2(0.3019892, 0.30198923)
+shape = SubResource("RectangleShape2D_oepab")
+
+[node name="Cell Door 2" type="CollisionShape2D" parent="SpaceshipInside/Cell Doors" unique_id=1406035418]
+z_index = 1
+position = Vector2(10.9715, -1.0880743)
+scale = Vector2(0.3019892, 0.30198923)
+shape = SubResource("RectangleShape2D_oepab")
+
+[node name="Cell Door 3" type="CollisionShape2D" parent="SpaceshipInside/Cell Doors" unique_id=972163912]
+z_index = 1
+position = Vector2(60.02591, -1.2694215)
+scale = Vector2(0.3019892, 0.30198923)
+shape = SubResource("RectangleShape2D_oepab")
+
+[node name="Holographic Planet" type="Area2D" parent="SpaceshipInside" unique_id=142762529 node_paths=PackedStringArray("mainLevel")]
+script = ExtResource("3_h5sda")
+mainLevel = NodePath("../..")
+
+[node name="HolographicPlanet" type="Sprite2D" parent="SpaceshipInside/Holographic Planet" unique_id=934663542]
+position = Vector2(-77.344574, 22.124367)
+scale = Vector2(0.3331845, 0.3331845)
+texture = ExtResource("4_ftujt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpaceshipInside/Holographic Planet" unique_id=181121075]
+position = Vector2(-77.344574, 22.033691)
+shape = SubResource("CircleShape2D_w4imh")
+
+[node name="Dialog System" parent="." unique_id=648167094 instance=ExtResource("3_jxdos")]
+layer = 2
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1715889368]
+position = Vector2(2108, 823)
+scale = Vector2(2.4080627, 2.4080627)
+limit_left = 1
+limit_top = 0
+limit_right = 2309
+limit_bottom = 1077
+
+[node name="Level Border" type="StaticBody2D" parent="." unique_id=29148087]
+position = Vector2(173.00012, 96)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Level Border" unique_id=1007437766]
+position = Vector2(-200.00012, 442)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_c0jxt")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Level Border" unique_id=1888113524]
+position = Vector2(971.6249, 1009.99976)
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_yit6v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level Border" unique_id=860417579]
+position = Vector2(988.9999, -122)
+shape = SubResource("RectangleShape2D_yit6v")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Level Border" unique_id=1786491629]
+position = Vector2(2163.5, 431)
+rotation = -1.5707963
+shape = SubResource("RectangleShape2D_c0jxt")
+
+[node name="Player" parent="." unique_id=1293927112 instance=ExtResource("4_h5sda")]
+z_index = 4
+position = Vector2(2108, 823)
+scale = Vector2(2.4080627, 2.4080627)
+floor_constant_speed = true
+stoppingDistance = 10
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player" unique_id=443832838]
+remote_path = NodePath("../../Camera2D")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=947137862]
+
+[node name="Inventory" parent="CanvasLayer" unique_id=737690628 instance=ExtResource("5_ftujt")]
+metadata/_edit_use_anchors_ = true
+
+[connection signal="input_event" from="SpaceshipInside/Cell Doors" to="SpaceshipInside/Cell Doors" method="_on_input_event"]
+[connection signal="input_event" from="SpaceshipInside/Holographic Planet" to="SpaceshipInside/Holographic Planet" method="_on_input_event"]
