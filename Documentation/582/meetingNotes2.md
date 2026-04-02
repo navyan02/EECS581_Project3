@@ -1,3 +1,54 @@
+## **Meeting Title:** Team Meeting
+### **Date:** Thursday, April 2nd, 2026
+---
+#### 👥 Attendees
+
+- Katie Nordberg, Christina Sorensen, Kundana Dongala, Navya Nittala, Vi Lara 
+
+### 📒 Notes
+- Updates:
+  -  Katie added pop up dialouges for level 3 puzzle
+  -  No other major updates
+
+- Discussed art needed for level 4
+  - Alien language dictionary (book style for when in inventory and usage view)
+- Going with 6 levels
+  - level 5 has last puzzle
+  - level 6 is conclusion with moral decision intern has to make
+
+ToDo:
+- if we do 6 levels:
+  - level 3 ending cut scene
+    - need artwork for jail cells, exploded planet 
+  - level 4 intro
+  - level 4 pipe game
+  - level 4 outro cut scene 
+  - level 4 alien language dictionary (need art)
+  - level 5 intro cutscene
+  - level 5 explore dictionary cut scene 
+  - level 5 puzzle
+  - level 5 outro cutscene
+  - level 6 intro/storyline cutscene
+  - level 6 final decision (2) options
+    - ending depends on which decision is made (2 cut scenes)
+   
+  - level 4:
+    - passcode for alien language (alien language, kundana)
+    - make cutscene for intern talking to alien(navya)
+    - make cut scene for mother ship (vi)
+    - make pipe puzzle (christina)
+ 
+  - level 5:
+    - find team, introduce yourself, and follow the team to go to control room
+  
+- Deliverables Due by Sunday:
+  - Nothing!
+
+Next Meeting 
+- TA Meeting: Monday, April 6th @ 11:30AM
+- Team Meeting: Thursday, April 10th @ 3PM
+---
+
 ## **Meeting Title:** TA Meeting
 ### **Date:** Monday, March 30th, 2026
 ---
