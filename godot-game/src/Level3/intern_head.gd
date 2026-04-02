@@ -93,8 +93,10 @@ func generate_raycasts() -> void:
 		$Rays.add_child(ray)
 		ray.enabled = true
 
+signal mazeWon
 
 func _on_finish_line_area_entered(area: Area2D) -> void:
 #	Make sure the area that entered the finish line was the player not an alien.
 	if (area == $Area2D):
 		print("You win")
+		mazeWon.emit()

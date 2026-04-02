@@ -84,6 +84,7 @@ rotation = -1.5707963
 shape = SubResource("RectangleShape2D_tu5wr")
 
 [node name="Dialog System" parent="." unique_id=452198126 instance=ExtResource("5_e8418")]
+layer = 2
 
 [node name="Player" parent="." unique_id=1201182621 instance=ExtResource("6_5o3p2")]
 z_index = 4
