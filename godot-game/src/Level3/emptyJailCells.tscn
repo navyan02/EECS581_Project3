@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://udygqk5cvcfm" path="res://assets/level3/explosion2.png" id="7_c0jxt"]
 [ext_resource type="Texture2D" uid="uid://ce4la231sj2kn" path="res://assets/level3/explosion3.png" id="8_yit6v"]
 [ext_resource type="Texture2D" uid="uid://cl0rrfb81cby4" path="res://assets/level3/alien.png" id="12_c0jxt"]
+[ext_resource type="Script" uid="uid://deh21fj24tlha" path="res://src/Level3/friendlyAlien.gd" id="13_yit6v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w4imh"]
 size = Vector2(732.97845, 274.82758)
@@ -230,7 +231,7 @@ length = 2.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Alien:position")
+tracks/0/path = NodePath("Friendly Alien:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -249,8 +250,36 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0.6),
 "transitions": PackedFloat32Array(1),
 "values": [{
-"args": [Vector2(995, 743)],
+"args": [Vector2(243, 733)],
 "method": &"move_to_spot"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Friendly Alien")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": ["Alien: Hey, YOU"],
+"method": &"_show_dialog"
+}]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.3666667),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"endLevel"
 }]
 }
 
@@ -259,7 +288,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Alien:position")
+tracks/0/path = NodePath("Friendly Alien:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -369,7 +398,7 @@ autoplay = &"explosion"
 layer = 2
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1715889368]
-position = Vector2(995, 743.00006)
+position = Vector2(1941, 753)
 scale = Vector2(2.4080627, 2.4080627)
 limit_left = 1
 limit_top = 0
@@ -401,7 +430,7 @@ shape = SubResource("RectangleShape2D_c0jxt")
 
 [node name="Player" parent="." unique_id=1293927112 instance=ExtResource("4_h5sda")]
 z_index = 4
-position = Vector2(995, 743.00006)
+position = Vector2(1941, 753)
 scale = Vector2(2.4080627, 2.4080627)
 floor_constant_speed = true
 stoppingDistance = 10
@@ -417,10 +446,11 @@ metadata/_edit_use_anchors_ = true
 [node name="AlienAnim" type="AnimationPlayer" parent="." unique_id=1035038217]
 libraries/ = SubResource("AnimationLibrary_oiac1")
 
-[node name="Alien" type="Sprite2D" parent="." unique_id=352467702]
+[node name="Friendly Alien" type="Sprite2D" parent="." unique_id=352467702]
 position = Vector2(2523, 729)
 scale = Vector2(5.59375, 5.59375)
 texture = ExtResource("12_c0jxt")
+script = ExtResource("13_yit6v")
 
 [connection signal="input_event" from="SpaceshipInside/Cell Doors" to="SpaceshipInside/Cell Doors" method="_on_input_event"]
 [connection signal="input_event" from="SpaceshipInside/Holographic Planet" to="SpaceshipInside/Holographic Planet" method="_on_input_event"]
