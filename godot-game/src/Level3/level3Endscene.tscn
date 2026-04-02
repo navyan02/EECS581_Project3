@@ -1,0 +1,96 @@
+[gd_scene format=3 uid="uid://dq1fqnt44q7j7"]
+
+[ext_resource type="Script" uid="uid://4jvo1aplewpe" path="res://src/Level1/level1Endscene.gd" id="1_2wdwg"]
+[ext_resource type="Texture2D" uid="uid://de6xenlqpdc4i" path="res://assets/titleScreen/background.png" id="2_52f3a"]
+[ext_resource type="FontFile" uid="uid://ukbnmf8j0smr" path="res://assets/titleScreen/Pixle_Font.ttf" id="3_ah852"]
+[ext_resource type="Theme" uid="uid://d3v4iv3yxucyw" path="res://assets/titleScreen/customTheme.tres" id="4_xv41r"]
+[ext_resource type="Texture2D" uid="uid://daq0t5rc58b6d" path="res://assets/titleScreen/button.png" id="5_4r15c"]
+
+[sub_resource type="Animation" id="Animation_ca0vj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_y6i17"]
+resource_name = "fade"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.03, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_imvvc"]
+_data = {
+&"RESET": SubResource("Animation_ca0vj"),
+&"fade": SubResource("Animation_y6i17")
+}
+
+[node name="Endscene" type="CanvasLayer" unique_id=322433883]
+script = ExtResource("1_2wdwg")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=364412626]
+position = Vector2(960.00006, 555)
+scale = Vector2(1.25, 1.0859375)
+texture = ExtResource("2_52f3a")
+
+[node name="Label" type="Label" parent="." unique_id=489544373]
+offset_left = 651.0
+offset_top = 271.0
+offset_right = 1373.0
+offset_bottom = 496.0
+theme_override_fonts/font = ExtResource("3_ah852")
+theme_override_font_sizes/font_size = 225
+text = "Level 3"
+
+[node name="Label2" type="Label" parent="." unique_id=890661563]
+offset_left = 454.0
+offset_top = 482.0
+offset_right = 1520.0
+offset_bottom = 782.0
+theme_override_fonts/font = ExtResource("3_ah852")
+theme_override_font_sizes/font_size = 300
+text = "Complete "
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1689677874]
+libraries/ = SubResource("AnimationLibrary_imvvc")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1569873637]
+modulate = Color(1, 1, 1, 0)
+offset_right = 1917.0
+offset_bottom = 1121.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+color = Color(0, 0, 0, 1)
+
+[node name="Button" type="Button" parent="." unique_id=286796751]
+offset_left = 728.00006
+offset_top = 795.00006
+offset_right = 1334.0
+offset_bottom = 986.00006
+scale = Vector2(0.7321134, 0.7321134)
+size_flags_horizontal = 4
+theme = ExtResource("4_xv41r")
+theme_override_font_sizes/font_size = 80
+text = "Level 4"
+icon = ExtResource("5_4r15c")
+icon_alignment = 1
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
