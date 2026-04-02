@@ -5,9 +5,9 @@
 [ext_resource type="Script" uid="uid://bn0hlnmvqpry7" path="res://src/Level3/cellDoors.gd" id="2_m8wqa"]
 [ext_resource type="Script" uid="uid://ypefc52ux6am" path="res://src/Level3/holographic_planet.gd" id="3_h5sda"]
 [ext_resource type="PackedScene" uid="uid://daegyiygjpfmj" path="res://inventoryFunctionality/dialog_system.tscn" id="3_jxdos"]
-[ext_resource type="Texture2D" uid="uid://raiiicv74png" path="res://assets/level3/holographicPlanet.png" id="4_ftujt"]
 [ext_resource type="PackedScene" uid="uid://dpux7mjnmklvb" path="res://src/player.tscn" id="4_h5sda"]
 [ext_resource type="PackedScene" uid="uid://bh37xqxsv8iow" path="res://src/inventory.tscn" id="5_ftujt"]
+[ext_resource type="Texture2D" uid="uid://bqd63jx6if5vj" path="res://assets/level3/holographicPlanetSmall.png" id="5_h5sda"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w4imh"]
 size = Vector2(732.97845, 274.82758)
@@ -23,6 +23,68 @@ size = Vector2(1182, 53.000015)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yit6v"]
 size = Vector2(2362.75, 39)
+
+[sub_resource type="Animation" id="Animation_h5sda"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpaceshipInside/Holographic Planet/HolographicPlanet:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-82.54197, 9.778514)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SpaceshipInside/Holographic Planet/CollisionShape2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-82.54197, 9.6878395)]
+}
+
+[sub_resource type="Animation" id="Animation_ftujt"]
+resource_name = "floating hologram"
+length = 1.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpaceshipInside/Holographic Planet/HolographicPlanet:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.73333335, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-82.54197, 9.778514), Vector2(-82.542, 6.791), Vector2(-82.54197, 9.778514)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SpaceshipInside/Holographic Planet/CollisionShape2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.73333335, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-82.54197, 9.6878395), Vector2(-82.542, 6.791), Vector2(-82.54197, 9.6878395)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_w4imh"]
+_data = {
+&"RESET": SubResource("Animation_h5sda"),
+&"floating hologram": SubResource("Animation_ftujt")
+}
 
 [node name="EmptyJailCells" type="Node2D" unique_id=1136074529]
 script = ExtResource("1_h5sda")
@@ -67,16 +129,17 @@ scale = Vector2(0.3019892, 0.30198923)
 shape = SubResource("RectangleShape2D_oepab")
 
 [node name="Holographic Planet" type="Area2D" parent="SpaceshipInside" unique_id=142762529 node_paths=PackedStringArray("mainLevel")]
+position = Vector2(-4.9870577, -36.088074)
 script = ExtResource("3_h5sda")
 mainLevel = NodePath("../..")
 
 [node name="HolographicPlanet" type="Sprite2D" parent="SpaceshipInside/Holographic Planet" unique_id=934663542]
-position = Vector2(-77.344574, 22.124367)
-scale = Vector2(0.3331845, 0.3331845)
-texture = ExtResource("4_ftujt")
+position = Vector2(-82.54197, 9.778514)
+scale = Vector2(0.6319125, 0.6319125)
+texture = ExtResource("5_h5sda")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SpaceshipInside/Holographic Planet" unique_id=181121075]
-position = Vector2(-77.344574, 22.033691)
+position = Vector2(-82.54197, 9.6878395)
 shape = SubResource("CircleShape2D_w4imh")
 
 [node name="Dialog System" parent="." unique_id=648167094 instance=ExtResource("3_jxdos")]
@@ -126,6 +189,10 @@ remote_path = NodePath("../../Camera2D")
 
 [node name="Inventory" parent="CanvasLayer" unique_id=737690628 instance=ExtResource("5_ftujt")]
 metadata/_edit_use_anchors_ = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1460624576]
+libraries/ = SubResource("AnimationLibrary_w4imh")
+autoplay = &"floating hologram"
 
 [connection signal="input_event" from="SpaceshipInside/Cell Doors" to="SpaceshipInside/Cell Doors" method="_on_input_event"]
 [connection signal="input_event" from="SpaceshipInside/Holographic Planet" to="SpaceshipInside/Holographic Planet" method="_on_input_event"]
