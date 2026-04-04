@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://de2f7bnunvw1e"
-path="res://.godot/imported/alien_bounce.PNG-6e728388e102738ee7452d89bd5156eb.ctex"
+uid="uid://b2t2b2o5fl8i6"
+path="res://.godot/imported/alienSide3.png-adbc343c3600de7e23cf50b2cb676bab.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/level3/alien_bounce.PNG"
-dest_files=["res://.godot/imported/alien_bounce.PNG-6e728388e102738ee7452d89bd5156eb.ctex"]
+source_file="res://assets/characters/alienSide3.png"
+dest_files=["res://.godot/imported/alienSide3.png-adbc343c3600de7e23cf50b2cb676bab.ctex"]
 
 [params]
 

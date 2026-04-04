@@ -11,8 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://dit243kthug31" path="res://assets/level3/explosion1.png" id="6_oepab"]
 [ext_resource type="Texture2D" uid="uid://udygqk5cvcfm" path="res://assets/level3/explosion2.png" id="7_c0jxt"]
 [ext_resource type="Texture2D" uid="uid://ce4la231sj2kn" path="res://assets/level3/explosion3.png" id="8_yit6v"]
-[ext_resource type="Texture2D" uid="uid://cl0rrfb81cby4" path="res://assets/level3/alien.png" id="12_c0jxt"]
-[ext_resource type="Script" uid="uid://deh21fj24tlha" path="res://src/Level3/friendlyAlien.gd" id="13_yit6v"]
+[ext_resource type="PackedScene" uid="uid://b5itupxnie705" path="res://src/friendly_alien.tscn" id="14_g0j5u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w4imh"]
 size = Vector2(732.97845, 274.82758)
@@ -228,30 +227,32 @@ size = Vector2(2362.75, 39)
 [sub_resource type="Animation" id="Animation_yit6v"]
 resource_name = "Alien Walks Catches Intern"
 length = 2.0
-tracks/0/type = "value"
+tracks/0/type = "method"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Friendly Alien:position")
+tracks/0/path = NodePath("Player")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.9666667),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(2523, 729), Vector2(1328.4401, 726.36)]
-}
-tracks/1/type = "method"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Player")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
 "times": PackedFloat32Array(0.6),
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [Vector2(243, 733)],
 "method": &"move_to_spot"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.3666667),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"endLevel"
 }]
 }
 tracks/2/type = "method"
@@ -261,42 +262,19 @@ tracks/2/path = NodePath("Friendly Alien")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(1),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0.033333335, 1.4),
+"transitions": PackedFloat32Array(1, 1),
 "values": [{
+"args": [Vector2(1328, 726)],
+"method": &"move_to_spot"
+}, {
 "args": ["Alien: Hey, YOU"],
 "method": &"_show_dialog"
-}]
-}
-tracks/3/type = "method"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath(".")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(1.3666667),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"endLevel"
 }]
 }
 
 [sub_resource type="Animation" id="Animation_g0j5u"]
 length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Friendly Alien:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(2523, 729)]
-}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_oiac1"]
 _data = {
@@ -446,11 +424,8 @@ metadata/_edit_use_anchors_ = true
 [node name="AlienAnim" type="AnimationPlayer" parent="." unique_id=1035038217]
 libraries/ = SubResource("AnimationLibrary_oiac1")
 
-[node name="Friendly Alien" type="Sprite2D" parent="." unique_id=352467702]
-position = Vector2(2523, 729)
-scale = Vector2(5.59375, 5.59375)
-texture = ExtResource("12_c0jxt")
-script = ExtResource("13_yit6v")
+[node name="Friendly Alien" parent="." unique_id=262141793 instance=ExtResource("14_g0j5u")]
+position = Vector2(2457, 696.00006)
 
 [connection signal="input_event" from="SpaceshipInside/Cell Doors" to="SpaceshipInside/Cell Doors" method="_on_input_event"]
 [connection signal="input_event" from="SpaceshipInside/Holographic Planet" to="SpaceshipInside/Holographic Planet" method="_on_input_event"]
