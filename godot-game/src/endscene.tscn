@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://dt1y2vdyj1lf8"]
+[gd_scene format=3 uid="uid://dt1y2vdyj1lf8"]
 
 [ext_resource type="Texture2D" uid="uid://de6xenlqpdc4i" path="res://assets/titleScreen/background.png" id="1_d1072"]
 [ext_resource type="Script" uid="uid://jq1thjxeskmv" path="res://src/endscene.gd" id="1_y6i17"]
 [ext_resource type="FontFile" uid="uid://ukbnmf8j0smr" path="res://assets/titleScreen/Pixle_Font.ttf" id="2_y6i17"]
+[ext_resource type="Theme" uid="uid://d3v4iv3yxucyw" path="res://assets/titleScreen/customTheme.tres" id="4_imvvc"]
+[ext_resource type="Texture2D" uid="uid://daq0t5rc58b6d" path="res://assets/titleScreen/button.png" id="5_3lqxh"]
 
 [sub_resource type="Animation" id="Animation_ca0vj"]
 length = 0.001
@@ -41,15 +43,15 @@ _data = {
 &"fade": SubResource("Animation_y6i17")
 }
 
-[node name="Endscene" type="Node2D"]
+[node name="Endscene" type="Node2D" unique_id=440226633]
 script = ExtResource("1_y6i17")
 
-[node name="Background" type="Sprite2D" parent="."]
+[node name="Background" type="Sprite2D" parent="." unique_id=1602437083]
 position = Vector2(964, 555)
 scale = Vector2(1.25, 1.0859375)
 texture = ExtResource("1_d1072")
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=990598416]
 offset_left = 651.0
 offset_top = 271.0
 offset_right = 1373.0
@@ -58,7 +60,7 @@ theme_override_fonts/font = ExtResource("2_y6i17")
 theme_override_font_sizes/font_size = 225
 text = "Level 2 "
 
-[node name="Label2" type="Label" parent="."]
+[node name="Label2" type="Label" parent="." unique_id=1619756828]
 offset_left = 454.0
 offset_top = 482.0
 offset_right = 1520.0
@@ -67,15 +69,27 @@ theme_override_fonts/font = ExtResource("2_y6i17")
 theme_override_font_sizes/font_size = 300
 text = "Complete "
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_imvvc")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=475046699]
+libraries/ = SubResource("AnimationLibrary_imvvc")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1807279007]
 modulate = Color(1, 1, 1, 0)
 offset_right = 1917.0
 offset_bottom = 1121.0
 color = Color(0, 0, 0, 1)
 
+[node name="Button" type="Button" parent="." unique_id=1293851289]
+offset_left = 728.00006
+offset_top = 795.00006
+offset_right = 1334.0
+offset_bottom = 986.00006
+scale = Vector2(0.7321134, 0.7321134)
+size_flags_horizontal = 4
+theme = ExtResource("4_imvvc")
+theme_override_font_sizes/font_size = 80
+text = "Level 3"
+icon = ExtResource("5_3lqxh")
+icon_alignment = 1
+
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
