@@ -1,3 +1,26 @@
+## **Meeting Title:** TA Meeting
+### **Date:** Monday, April 6th, 2026
+---
+#### 👥 Attendees
+
+- Navya Nittala, Kundana Dongala, Vivian Lara, Katie Nordberg Kevin Likcani(TA)
+
+### 📒 Notes/ToDo
+- Demoed the rest of level 3 ending
+- Updated on changes to the levels
+  
+Upcoming: 
+  - Final Sprint (due Sunday, April 12th):
+    - [X] Final Sprint Github URL 
+    - [X] Final Sprint Requirements Stack
+    - [ ] Final Sprint Requirements Artifacts
+    - [X] Peer Evaluation 8
+
+Next Meeting 
+- TA Meeting: Monday, April 13th @ 11:30AM (3 more left)
+- Team Meeting: Thursday, April 2nd @ 3PM
+---
+
 ## **Meeting Title:** Team Meeting
 ### **Date:** Thursday, April 2nd, 2026
 ---
@@ -70,7 +93,7 @@ Upcoming:
     - [X] Peer Evaluation 8
 
 Next Meeting 
-- TA Meeting: Monday, April 6thth @ 11:30AM
+- TA Meeting: Monday, April 6th @ 11:30AM
 - Team Meeting: Thursday, April 2nd @ 3PM
 ---
 
