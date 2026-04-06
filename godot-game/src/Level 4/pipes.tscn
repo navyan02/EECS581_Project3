@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cqwhl7tpjkffx"]
+
+[ext_resource type="Texture2D" uid="uid://b0bmmfp3h4e3a" path="res://assets/level2/Space.PNG" id="1_2qxjr"]
+
+[node name="Pipes" type="Node2D" unique_id=387755880]
+
+[node name="SpaceBackground" type="Sprite2D" parent="." unique_id=198872422]
+texture = ExtResource("1_2qxjr")
