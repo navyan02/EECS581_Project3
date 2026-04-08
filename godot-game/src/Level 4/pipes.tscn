@@ -1,8 +1,36 @@
 [gd_scene format=3 uid="uid://cqwhl7tpjkffx"]
 
 [ext_resource type="Texture2D" uid="uid://b0bmmfp3h4e3a" path="res://assets/level2/Space.PNG" id="1_2qxjr"]
+[ext_resource type="Texture2D" uid="uid://c7clbkmi3dno2" path="res://assets/level4/straightline.png" id="2_7cme7"]
+[ext_resource type="Texture2D" uid="uid://rq75rwqi0whh" path="res://assets/level4/trunr.png" id="3_rqvyp"]
+[ext_resource type="Texture2D" uid="uid://wwq4gbmritvy" path="res://assets/level4/turnl.png" id="4_b4pt7"]
 
 [node name="Pipes" type="Node2D" unique_id=387755880]
 
 [node name="SpaceBackground" type="Sprite2D" parent="." unique_id=198872422]
 texture = ExtResource("1_2qxjr")
+
+[node name="line1" type="Sprite2D" parent="." unique_id=646886095]
+position = Vector2(-139, 43)
+scale = Vector2(0.9296875, 0.984375)
+texture = ExtResource("2_7cme7")
+
+[node name="line2" type="Sprite2D" parent="." unique_id=209166234]
+position = Vector2(-103, 50)
+texture = ExtResource("3_rqvyp")
+
+[node name="line3" type="Sprite2D" parent="." unique_id=482218830]
+position = Vector2(-72, 54)
+texture = ExtResource("2_7cme7")
+
+[node name="line4" type="Sprite2D" parent="." unique_id=1440076055]
+position = Vector2(-35, 48)
+texture = ExtResource("4_b4pt7")
+
+[node name="line5" type="Sprite2D" parent="." unique_id=1147606159]
+position = Vector2(-37, 8)
+rotation = 1.5707964
+texture = ExtResource("2_7cme7")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1516265258]
+zoom = Vector2(6, 6)
