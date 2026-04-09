@@ -1,3 +1,32 @@
+## **Meeting Title:** Team Meeting
+### **Date:** Thursday, April 9th, 2026
+---
+#### 👥 Attendees
+
+- Katie Nordberg, Christina Sorensen, Kundana Dongala, Navya Nittala, Vi Lara
+
+### 📒 Notes
+- Updates:
+  - Christina is starting on the puzzle (got assets)
+  - Vi finshed the escape pod background
+  - Kundana made alien language
+- will make wordle/hangman style puzzle to free the team from the jail cell
+
+ToDo:
+  - Navya: work on cut scenes for intern/alien
+  - Christina: finish pipe puzzle
+  - Kundana: evenly space letters on a grid and make cut scene intern/team
+  - Katie: making intro/outro screen, add level 4 for map screen, alien language puzzle
+  - Vi: make mother ship background 
+    
+- Deliverables Due by Sunday:
+  - [X] Final Sprint Requirements Artifacts
+
+Next Meeting 
+- TA Meeting: Monday, April 13th @ 11:30AM
+- Team Meeting: Thursday, April 16th @ 3PM
+---
+
 ## **Meeting Title:** TA Meeting
 ### **Date:** Monday, April 6th, 2026
 ---
