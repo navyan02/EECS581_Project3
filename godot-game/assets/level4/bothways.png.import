@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7clbkmi3dno2"
-path="res://.godot/imported/straightline.png-cdab9e62774a73f47450cd891c2827f8.ctex"
+uid="uid://dog62ld5r6ueg"
+path="res://.godot/imported/bothways.png-0d8677fc210b39c2aeb56d6f82f79791.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/level4/straightline.png"
-dest_files=["res://.godot/imported/straightline.png-cdab9e62774a73f47450cd891c2827f8.ctex"]
+source_file="res://assets/level4/bothways.png"
+dest_files=["res://.godot/imported/bothways.png-0d8677fc210b39c2aeb56d6f82f79791.ctex"]
 
 [params]
 

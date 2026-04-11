@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://rq75rwqi0whh"
-path="res://.godot/imported/trunr.png-464c125a09b84902fe4c599fb6fe474d.ctex"
+uid="uid://dsia5xthl048e"
+path="res://.godot/imported/turnright.png-18846c4412865792f829d28b32ad7a64.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/level4/trunr.png"
-dest_files=["res://.godot/imported/trunr.png-464c125a09b84902fe4c599fb6fe474d.ctex"]
+source_file="res://assets/level4/turnright.png"
+dest_files=["res://.godot/imported/turnright.png-18846c4412865792f829d28b32ad7a64.ctex"]
 
 [params]
 
