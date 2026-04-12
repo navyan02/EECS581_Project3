@@ -23,9 +23,9 @@ func _ready():
 	for i in range(curRotation):
 		connections = rotate1Time(connections)
 	
-	print ("Correct:", correctRotation)
-	
 	updateVisual()
+	
+	get_tree().get_root().get_node("Pipes").win()
 
 
 func _input_event(_viewport, event, _shape_idx):
@@ -49,8 +49,6 @@ func rotatePipe():
 	rotation_degrees = curRotation * 90
 	
 	connections = rotate1Time(connections)
-	
-	print("Current:", curRotation)
 	
 	updateVisual()
 

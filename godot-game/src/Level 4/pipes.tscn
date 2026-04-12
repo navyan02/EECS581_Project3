@@ -13,275 +13,277 @@ script = ExtResource("1_b4pt7")
 [node name="SpaceBackground" type="Sprite2D" parent="." unique_id=198872422]
 texture = ExtResource("1_2qxjr")
 
-[node name="line1" type="Area2D" parent="." unique_id=343165922]
+[node name="pipes" type="CanvasGroup" parent="." unique_id=725147550]
+
+[node name="line1" type="Area2D" parent="pipes" unique_id=343165922]
 position = Vector2(-150.00002, 44)
 scale = Vector2(0.9296875, 0.984375)
 script = ExtResource("2_rqvyp")
 
-[node name="line" type="Sprite2D" parent="line1" unique_id=1718799258]
+[node name="line" type="Sprite2D" parent="pipes/line1" unique_id=1718799258]
 modulate = Color(18.892157, 18.892157, 18.892157, 1)
 position = Vector2(2.2262335e-05, -5.662441e-07)
 scale = Vector2(1.002659, 1.0001242)
 texture = ExtResource("2_7cme7")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="line1" unique_id=1256043463]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="pipes/line1" unique_id=1256043463]
 polygon = PackedVector2Array(-10.756287, -5.079365, -10.756287, 6.0952377, 10.756317, 6.0952377, 10.756317, -5.079365)
 
-[node name="line2" type="Area2D" parent="." unique_id=635678388]
+[node name="line2" type="Area2D" parent="pipes" unique_id=635678388]
 position = Vector2(-129, 50)
 script = ExtResource("2_rqvyp")
 
-[node name="line" type="Sprite2D" parent="line2" unique_id=300306204]
+[node name="line" type="Sprite2D" parent="pipes/line2" unique_id=300306204]
 texture = ExtResource("3_rqvyp")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="line2" unique_id=114061355]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="pipes/line2" unique_id=114061355]
 polygon = PackedVector2Array(0, 0, 0, 11, 11, 11, 11, 0, 11, -11, -11, -11, -11, 0, -1, 0)
 
-[node name="line3" type="Area2D" parent="." unique_id=86890594]
+[node name="line3" type="Area2D" parent="pipes" unique_id=86890594]
 position = Vector2(-107, 55)
 script = ExtResource("2_rqvyp")
 
-[node name="line" type="Sprite2D" parent="line3" unique_id=94052424]
+[node name="line" type="Sprite2D" parent="pipes/line3" unique_id=94052424]
 texture = ExtResource("2_7cme7")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="line3" unique_id=420036413]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="pipes/line3" unique_id=420036413]
 polygon = PackedVector2Array(-11, -5, -11, 6, 10, 6, 10, -5)
 
-[node name="line4" type="Area2D" parent="." unique_id=1174217149]
+[node name="line4" type="Area2D" parent="pipes" unique_id=1174217149]
 position = Vector2(-86, 50)
 script = ExtResource("2_rqvyp")
 
-[node name="line" type="Sprite2D" parent="line4" unique_id=928966377]
+[node name="line" type="Sprite2D" parent="pipes/line4" unique_id=928966377]
 texture = ExtResource("4_b4pt7")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="line4" unique_id=1974146006]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="pipes/line4" unique_id=1974146006]
 polygon = PackedVector2Array(0, 0, -11, 0, -11, 11, 11, 11, 11, 0, 11, -11, 0, -11)
 
-[node name="line5" type="Area2D" parent="." unique_id=1181876233]
+[node name="line5" type="Area2D" parent="pipes" unique_id=1181876233]
 position = Vector2(-80, 28)
 rotation = 1.5707964
 script = ExtResource("2_rqvyp")
 
-[node name="line" type="Sprite2D" parent="line5" unique_id=627003506]
+[node name="line" type="Sprite2D" parent="pipes/line5" unique_id=627003506]
 position = Vector2(0, -3.7550926e-06)
 texture = ExtResource("2_7cme7")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="line5" unique_id=32917610]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="pipes/line5" unique_id=32917610]
 polygon = PackedVector2Array(0, 0, -10, -5, -10, 6, 11, 6, 11, -5, -9, -5)
 
-[node name="line6" type="Area2D" parent="." unique_id=1385686746]
+[node name="line6" type="Area2D" parent="pipes" unique_id=1385686746]
 position = Vector2(-80, 6)
 rotation = 1.5707964
 script = ExtResource("2_rqvyp")
 
-[node name="line" type="Sprite2D" parent="line6" unique_id=1300895728]
+[node name="line" type="Sprite2D" parent="pipes/line6" unique_id=1300895728]
 position = Vector2(0, -3.3815716e-06)
 texture = ExtResource("2_7cme7")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="line6" unique_id=1835265749]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="pipes/line6" unique_id=1835265749]
 polygon = PackedVector2Array(12, -5, 12, 6, -10, 6, -10, -5)
 
-[node name="line7" type="Area2D" parent="." unique_id=1116528081]
+[node name="line7" type="Area2D" parent="pipes" unique_id=1116528081]
 position = Vector2(-80, -16)
 rotation = 1.5707964
 script = ExtResource("2_rqvyp")
 
-[node name="line" type="Sprite2D" parent="line7" unique_id=208362653]
+[node name="line" type="Sprite2D" parent="pipes/line7" unique_id=208362653]
 texture = ExtResource("2_7cme7")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="line7" unique_id=1907097195]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="pipes/line7" unique_id=1907097195]
 polygon = PackedVector2Array(12, 6, 12, -5, -10, -5, -10, 6)
 
-[node name="line8" type="Area2D" parent="." unique_id=1459259071]
+[node name="line8" type="Area2D" parent="pipes" unique_id=1459259071]
 position = Vector2(-86, -38)
 rotation = -1.5707964
 script = ExtResource("2_rqvyp")
 
-[node name="line" type="Sprite2D" parent="line8" unique_id=1691577822]
+[node name="line" type="Sprite2D" parent="pipes/line8" unique_id=1691577822]
 position = Vector2(0, 3.8146973e-06)
 texture = ExtResource("4_b4pt7")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="line8" unique_id=741898462]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="pipes/line8" unique_id=741898462]
 polygon = PackedVector2Array(0, 0, -12, 0, -12, 11, 11, 11, 11, -11, 0, -11)
 
-[node name="line9" type="Area2D" parent="." unique_id=177100418]
+[node name="line9" type="Area2D" parent="pipes" unique_id=177100418]
 position = Vector2(-108, -49)
-rotation = -3.1415927
+rotation = 3.1415925
 script = ExtResource("2_rqvyp")
 
-[node name="line" type="Sprite2D" parent="line9" unique_id=733942586]
+[node name="line" type="Sprite2D" parent="pipes/line9" unique_id=733942586]
 texture = ExtResource("3_rqvyp")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="line9" unique_id=280858407]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="pipes/line9" unique_id=280858407]
 polygon = PackedVector2Array(-11, 0, -10.999992, -11, 1.0000076, -11, 11.000008, -10.999996, 11, 10.000004, 0, 10, 0, 0)
 
-[node name="line10" type="Area2D" parent="." unique_id=1747152607]
+[node name="line10" type="Area2D" parent="pipes" unique_id=1747152607]
 position = Vector2(-108, -71)
 rotation = -1.5707964
 script = ExtResource("2_rqvyp")
 
-[node name="line" type="Sprite2D" parent="line10" unique_id=1999357255]
+[node name="line" type="Sprite2D" parent="pipes/line10" unique_id=1999357255]
 position = Vector2(0, 7.6293945e-06)
 texture = ExtResource("3_rqvyp")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="line10" unique_id=38985576]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="pipes/line10" unique_id=38985576]
 polygon = PackedVector2Array(11, -11, -12.000004, -11, -12.000004, 0, 0, 0, 0, 11, 11, 11, 11, -10)
 
-[node name="line11" type="Area2D" parent="." unique_id=1436988442]
+[node name="line11" type="Area2D" parent="pipes" unique_id=1436988442]
 position = Vector2(-86, -77)
 script = ExtResource("2_rqvyp")
 
-[node name="line" type="Sprite2D" parent="line11" unique_id=189432887]
+[node name="line" type="Sprite2D" parent="pipes/line11" unique_id=189432887]
 texture = ExtResource("2_7cme7")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="line11" unique_id=1875128923]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="pipes/line11" unique_id=1875128923]
 polygon = PackedVector2Array(-11, -5, -11, 6, 10, 6, 10, -5)
 
-[node name="line12" type="Area2D" parent="." unique_id=451115866]
+[node name="line12" type="Area2D" parent="pipes" unique_id=451115866]
 position = Vector2(-64, -77)
 script = ExtResource("2_rqvyp")
 
-[node name="line" type="Sprite2D" parent="line12" unique_id=291780290]
+[node name="line" type="Sprite2D" parent="pipes/line12" unique_id=291780290]
 texture = ExtResource("2_7cme7")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="line12" unique_id=415901933]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="pipes/line12" unique_id=415901933]
 polygon = PackedVector2Array(-12, -5, -12, 6, 10, 6, 10, -5)
 
-[node name="line13" type="Area2D" parent="." unique_id=1101081075]
+[node name="line13" type="Area2D" parent="pipes" unique_id=1101081075]
 position = Vector2(-42, -77)
 script = ExtResource("2_rqvyp")
 
-[node name="line" type="Sprite2D" parent="line13" unique_id=277587321]
+[node name="line" type="Sprite2D" parent="pipes/line13" unique_id=277587321]
 texture = ExtResource("2_7cme7")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="line13" unique_id=1716049714]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="pipes/line13" unique_id=1716049714]
 polygon = PackedVector2Array(-12, -5, -12, 6, 11, 6, 11, -5)
 
-[node name="line14" type="Area2D" parent="." unique_id=346837168]
+[node name="line14" type="Area2D" parent="pipes" unique_id=346837168]
 position = Vector2(-20, -77)
 script = ExtResource("2_rqvyp")
 
-[node name="line" type="Sprite2D" parent="line14" unique_id=48263825]
+[node name="line" type="Sprite2D" parent="pipes/line14" unique_id=48263825]
 texture = ExtResource("2_7cme7")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="line14" unique_id=1821243698]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="pipes/line14" unique_id=1821243698]
 polygon = PackedVector2Array(-11, -5, -11, 6, 10, 6, 10, -5)
 
-[node name="line15" type="Area2D" parent="." unique_id=1723776894]
+[node name="line15" type="Area2D" parent="pipes" unique_id=1723776894]
 position = Vector2(2, -71)
 script = ExtResource("2_rqvyp")
 
-[node name="line" type="Sprite2D" parent="line15" unique_id=823692368]
+[node name="line" type="Sprite2D" parent="pipes/line15" unique_id=823692368]
 texture = ExtResource("3_rqvyp")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="line15" unique_id=1798342927]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="pipes/line15" unique_id=1798342927]
 polygon = PackedVector2Array(-12, -11, -12, 0, 0, 0, 0, 11, 11, 11, 11, 0, 11, -11)
 
-[node name="line16" type="Area2D" parent="." unique_id=1775684263]
+[node name="line16" type="Area2D" parent="pipes" unique_id=1775684263]
 position = Vector2(13, -49)
-rotation = 3.1415927
+rotation = -3.1415925
 script = ExtResource("2_rqvyp")
 
-[node name="line" type="Sprite2D" parent="line16" unique_id=529745352]
+[node name="line" type="Sprite2D" parent="pipes/line16" unique_id=529745352]
 texture = ExtResource("3_rqvyp")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="line16" unique_id=80067796]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="pipes/line16" unique_id=80067796]
 polygon = PackedVector2Array(11.000002, 11, 11, -11, -11, -10.999996, -11, 3.8146973e-06, 0, 0, 1.9073486e-06, 11)
 
-[node name="line17" type="Area2D" parent="." unique_id=1060368542]
+[node name="line17" type="Area2D" parent="pipes" unique_id=1060368542]
 position = Vector2(35, -44)
 script = ExtResource("2_rqvyp")
 
-[node name="line" type="Sprite2D" parent="line17" unique_id=1038652764]
+[node name="line" type="Sprite2D" parent="pipes/line17" unique_id=1038652764]
 texture = ExtResource("2_7cme7")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="line17" unique_id=44410708]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="pipes/line17" unique_id=44410708]
 polygon = PackedVector2Array(-11, -5, -11, 6, 10, 6, 10, -5)
 
-[node name="line18" type="Area2D" parent="." unique_id=448887388]
+[node name="line18" type="Area2D" parent="pipes" unique_id=448887388]
 position = Vector2(57, -38)
 script = ExtResource("2_rqvyp")
 
-[node name="line" type="Sprite2D" parent="line18" unique_id=1537361751]
+[node name="line" type="Sprite2D" parent="pipes/line18" unique_id=1537361751]
 texture = ExtResource("3_rqvyp")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="line18" unique_id=1927986544]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="pipes/line18" unique_id=1927986544]
 polygon = PackedVector2Array(-12, -11, -12, 0, 0, 0, 0, 11, 11, 11, 11, -11)
 
-[node name="line19" type="Area2D" parent="." unique_id=967660602]
+[node name="line19" type="Area2D" parent="pipes" unique_id=967660602]
 position = Vector2(63, -16)
 rotation = 1.5707964
 script = ExtResource("2_rqvyp")
 
-[node name="line" type="Sprite2D" parent="line19" unique_id=293882363]
+[node name="line" type="Sprite2D" parent="pipes/line19" unique_id=293882363]
 position = Vector2(-4.7683716e-07, 0)
 texture = ExtResource("2_7cme7")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="line19" unique_id=960566434]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="pipes/line19" unique_id=960566434]
 polygon = PackedVector2Array(-11, 6, 10, 6, 9.999999, -5, -11.000002, -5)
 
-[node name="line20" type="Area2D" parent="." unique_id=1897399158]
+[node name="line20" type="Area2D" parent="pipes" unique_id=1897399158]
 position = Vector2(63, 6)
 rotation = 1.5707964
 script = ExtResource("2_rqvyp")
 
-[node name="line" type="Sprite2D" parent="line20" unique_id=1354426078]
+[node name="line" type="Sprite2D" parent="pipes/line20" unique_id=1354426078]
 position = Vector2(-1, -9.536743e-07)
 texture = ExtResource("2_7cme7")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="line20" unique_id=1593436244]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="pipes/line20" unique_id=1593436244]
 polygon = PackedVector2Array(-12, 6, 10, 6, 10, -5, -12, -5)
 
-[node name="line21" type="Area2D" parent="." unique_id=890894760]
+[node name="line21" type="Area2D" parent="pipes" unique_id=890894760]
 position = Vector2(68, 27)
 rotation = 1.5707964
 script = ExtResource("2_rqvyp")
 
-[node name="line" type="Sprite2D" parent="line21" unique_id=1932660971]
+[node name="line" type="Sprite2D" parent="pipes/line21" unique_id=1932660971]
 texture = ExtResource("4_b4pt7")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="line21" unique_id=136955838]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="pipes/line21" unique_id=136955838]
 polygon = PackedVector2Array(-10.999999, 11, 11, 11, 11, -11, 0, -11, 0, 0, -10.999999, 0)
 
-[node name="line22" type="Area2D" parent="." unique_id=1562757277]
+[node name="line22" type="Area2D" parent="pipes" unique_id=1562757277]
 position = Vector2(90, 32)
 script = ExtResource("2_rqvyp")
 
-[node name="line" type="Sprite2D" parent="line22" unique_id=594645388]
+[node name="line" type="Sprite2D" parent="pipes/line22" unique_id=594645388]
 texture = ExtResource("2_7cme7")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="line22" unique_id=800246232]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="pipes/line22" unique_id=800246232]
 polygon = PackedVector2Array(-11, -5, -11, 6, 10, 6, 10, -5)
 
-[node name="line23" type="Area2D" parent="." unique_id=423541068]
+[node name="line23" type="Area2D" parent="pipes" unique_id=423541068]
 position = Vector2(112, 32)
 script = ExtResource("2_rqvyp")
 
-[node name="line" type="Sprite2D" parent="line23" unique_id=815173621]
+[node name="line" type="Sprite2D" parent="pipes/line23" unique_id=815173621]
 texture = ExtResource("2_7cme7")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="line23" unique_id=421717755]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="pipes/line23" unique_id=421717755]
 polygon = PackedVector2Array(-12, -5, -12, 6, 10, 6, 10, -5)
 
-[node name="line24" type="Area2D" parent="." unique_id=590693826]
+[node name="line24" type="Area2D" parent="pipes" unique_id=590693826]
 position = Vector2(134, 32)
 script = ExtResource("2_rqvyp")
 
-[node name="line" type="Sprite2D" parent="line24" unique_id=1698895975]
+[node name="line" type="Sprite2D" parent="pipes/line24" unique_id=1698895975]
 texture = ExtResource("2_7cme7")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="line24" unique_id=1889376843]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="pipes/line24" unique_id=1889376843]
 polygon = PackedVector2Array(-12, -5, -12, 6, 10, 6, 10, -5)
 
-[node name="line25" type="Area2D" parent="." unique_id=158191285]
+[node name="line25" type="Area2D" parent="pipes" unique_id=158191285]
 position = Vector2(156, 32)
 script = ExtResource("2_rqvyp")
 
-[node name="line" type="Sprite2D" parent="line25" unique_id=938238492]
+[node name="line" type="Sprite2D" parent="pipes/line25" unique_id=938238492]
 position = Vector2(-1, 0)
 texture = ExtResource("2_7cme7")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="line25" unique_id=1981114375]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="pipes/line25" unique_id=1981114375]
 polygon = PackedVector2Array(-12, -5, -12, 6, 10, 6, 10, -5)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1516265258]
