@@ -1,3 +1,23 @@
+## **Meeting Title:** TA Meeting
+### **Date:** Monday, April 13th, 2026
+---
+#### 👥 Attendees
+
+- Navya Nittala, Kundana Dongala, Vivian Lara, Katie Nordberg Kevin Likcani(TA)
+
+### 📒 Notes/ToDo
+  - Gave updates on new language puzzle for level 4 (this is the last puzzle of the game)
+  - No major updates 
+  
+Upcoming: 
+  - Sunday, April 26
+    - [ ] Final Github Link 
+
+Next Meeting 
+- TA Meeting: Monday, April 20th @ 11:30AM (2 left!)
+- Team Meeting: Thursday, April 16nd @ 3PM
+---
+
 ## **Meeting Title:** Team Meeting
 ### **Date:** Thursday, April 9th, 2026
 ---
