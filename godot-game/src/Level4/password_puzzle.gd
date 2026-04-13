@@ -37,30 +37,40 @@ func _on_button_pressed(button_name):
 			index = 0
 			guess = ""
 			
-			var fiveCol = $"Enter Password/RealLetters5Col"
-			var fourCol = $"Enter Password/RealLetters4Col"
-			for n in fiveCol.get_children():
-				fiveCol.remove_child(n)
-				n.queue_free()
-			for n in fourCol.get_children():
-				fourCol.remove_child(n)
-				n.queue_free()
+			var row1 = $"Enter Password/Row1"
+			var row2 = $"Enter Password/Row2"
+			var row3 = $"Enter Password/Row3"
+			for row in [row1, row2, row3]:
+				for n in row.get_children():
+					row.remove_child(n)
+					n.queue_free()
 	else:
 		index += 1
 			
 func appendLetter(button_name, correct):
-	var letterToFrame = {'a': 1, 'b':2, 'c':3,}	
+	# Subtract 65 because 'A' is 65
+	var indexInAlphabet = button_name.to_upper().unicode_at(0) - 65
+	var frameNumber = indexInAlphabet
+#	Skip row 2 and go straight to row 3
+	if indexInAlphabet >=9:
+		frameNumber += 9
+#	Skip row 4 and go straight to row 5
+	if indexInAlphabet >= 18:
+		frameNumber += 9
+		
 	var gridCont = null
-	if (index < 10):
-		gridCont = $"Enter Password/RealLetters5Col"
+	if (index < 5):
+		gridCont = $"Enter Password/Row1"
+	elif (index < 10):
+		gridCont = $"Enter Password/Row2"
 	else:
-		gridCont = $"Enter Password/RealLetters4Col"
+		gridCont = $"Enter Password/Row3"
 			
 	if (correct):
 		var letter = $CorrectLetter.duplicate()
-		letter.get_child(0).frame = index
+		letter.get_child(0).frame = frameNumber
 		gridCont.add_child(letter)
 	else:
 		var letter = $IncorrectLetter.duplicate()
-		letter.get_child(0).frame = index
+		letter.get_child(0).frame = frameNumber
 		gridCont.add_child(letter)
