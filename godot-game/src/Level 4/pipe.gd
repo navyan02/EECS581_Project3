@@ -9,7 +9,7 @@ var curRotation := 0
 func _ready():
 	# Save correct rotation (from editor)
 	
-	correctRotation = int(abs(rotation_degrees / 90)) % 4
+	correctRotation = int(abs(round(rotation_degrees / 90))) % 4
 	
 	# Start from base connections
 	connections = base_connections.duplicate()
@@ -24,9 +24,6 @@ func _ready():
 		connections = rotate1Time(connections)
 	
 	updateVisual()
-	
-	get_tree().get_root().get_node("Pipes").win()
-
 
 func _input_event(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton and event.pressed:
@@ -51,6 +48,8 @@ func rotatePipe():
 	connections = rotate1Time(connections)
 	
 	updateVisual()
+	
+	get_tree().get_root().get_node("Pipes").check_win()
 
 
 func rotate1Time(dirs):
