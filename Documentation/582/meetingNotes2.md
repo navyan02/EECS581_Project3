@@ -1,3 +1,36 @@
+## **Meeting Title:** Team Meeting
+### **Date:** Thursday, April 16th, 2026
+---
+#### 👥 Attendees
+
+- Katie Nordberg, Christina Sorensen, Kundana Dongala, Navya Nittala, Vi Lara
+
+### 📒 Notes
+- Updates:
+  - Christina finished level 5 storyboard 
+  - Vi finished the jail cell background for the mothership
+  - Navya finished the intern alien cutscene
+- All pieces for level 4 are done, need to be put together
+  
+ToDo:
+  - Christina: final cut scene 
+  - Kundana: intern/team cut scene, 
+  - Katie: finish level 4, ch 5 starting cut scene and logic for the decision button 
+  - Vi: make background for word puzzle game and earth outdoor background, work on song for ending 
+  - Navya: intro and ending scenes, 
+    
+- Deliverables Due by Sunday:
+  - Nothing
+- Deliverables Due by Sunday, April 26th
+  - [X] Final Github Link  
+- Deliverables Due by Wednesday, May 6th
+  - Quad Chart 
+
+Next Meeting 
+- TA Meeting: Monday, April 23rd @ 11:30AM
+- Team Meeting: Thursday, April 27th @ 3PM
+---
+
 ## **Meeting Title:** TA Meeting
 ### **Date:** Monday, April 13th, 2026
 ---
