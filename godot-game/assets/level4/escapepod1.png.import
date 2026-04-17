@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cl0rrfb81cby4"
-path="res://.godot/imported/Alien.png-848341c0553778f0f323095ce196190c.ctex"
+uid="uid://xj4ii5ex53ro"
+path="res://.godot/imported/escapepod1.png-6f95b97646d1d3a4060c537d1d76f392.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/Alien.png"
-dest_files=["res://.godot/imported/Alien.png-848341c0553778f0f323095ce196190c.ctex"]
+source_file="res://assets/level4/escapepod1.png"
+dest_files=["res://.godot/imported/escapepod1.png-6f95b97646d1d3a4060c537d1d76f392.ctex"]
 
 [params]
 
