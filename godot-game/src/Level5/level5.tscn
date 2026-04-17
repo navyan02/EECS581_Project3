@@ -1,0 +1,287 @@
+[gd_scene format=3 uid="uid://bs6naddwchlh8"]
+
+[ext_resource type="Script" uid="uid://beehuaf86imed" path="res://src/Level5/level_5.gd" id="1_w8r6g"]
+[ext_resource type="Texture2D" uid="uid://q8mfu80gddpe" path="res://assets/level3/empty jail cells.jpeg" id="2_nkow4"]
+[ext_resource type="Texture2D" uid="uid://b4dod7d6iaj5p" path="res://assets/characters/boy1.png" id="3_qulj4"]
+[ext_resource type="Texture2D" uid="uid://cuu5uxn0by77k" path="res://assets/characters/boy2.png" id="4_m1cko"]
+[ext_resource type="Texture2D" uid="uid://dg2hng3nwnkqn" path="res://assets/characters/boy3.png" id="5_d80t1"]
+[ext_resource type="Texture2D" uid="uid://dsx3pc3k2kans" path="res://assets/characters/girl4.png" id="6_bci6d"]
+[ext_resource type="PackedScene" uid="uid://b5itupxnie705" path="res://src/friendly_alien.tscn" id="7_muh65"]
+[ext_resource type="PackedScene" uid="uid://dpux7mjnmklvb" path="res://src/player.tscn" id="8_bv654"]
+[ext_resource type="Texture2D" uid="uid://ccsloh5a580a8" path="res://assets/level5/jailcell.jpeg" id="9_nkow4"]
+[ext_resource type="PackedScene" uid="uid://daegyiygjpfmj" path="res://inventoryFunctionality/dialog_system.tscn" id="9_xbcwc"]
+
+[sub_resource type="Animation" id="Animation_nkow4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Boy1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(726, 652.99994)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Girl4:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(199, 668)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Boy3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1235, 669.99994)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Boy2:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(729.99994, 670)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("JailCellsInFront/Jailcell:z_index")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("JailCellsInFront/Jailcell2:z_index")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("JailCellsInFront/Jailcell3:z_index")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_w8r6g"]
+resource_name = "dialog"
+length = 30.0
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 2.0333333, 6.9666667, 12.033334),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"values": [{
+"args": ["Henry: We're free!", 3.0],
+"method": &"_show_dialog"
+}, {
+"args": ["Henry: Quick! We need to change their destination. The aliens seem to be oblivious.", 5.0],
+"method": &"_show_dialog"
+}, {
+"args": ["Henry: I think if we change their destination, they will follow their navigational systems. ", 5.0],
+"method": &"_show_dialog"
+}, {
+"args": ["Henry: There's a toxic planet that we can trick them into going to. Here are the coords!", 0.0],
+"method": &"_show_dialog"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_qulj4"]
+resource_name = "leaveTheCells"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Boy1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8666667, 1.2333333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(726, 652.99994), Vector2(514, 647), Vector2(508, 738), Vector2(556, 748)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Boy2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.33333334, 0.76666665, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(729.99994, 670), Vector2(920.99994, 674), Vector2(921, 753), Vector2(874.99994, 756.99994)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Boy3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.46666667, 0.8666667, 1.5333333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1235, 669.99994), Vector2(1445, 680), Vector2(1447, 798), Vector2(1044, 779)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Girl4:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.73333335, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(199, 668), Vector2(427, 683), Vector2(427, 741), Vector2(717, 771.99994)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("JailCellsInFront/Jailcell:z_index")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.72),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [1, 0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("JailCellsInFront/Jailcell2:z_index")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.72),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [1, 0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("JailCellsInFront/Jailcell3:z_index")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.72),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [1, 0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nkow4"]
+_data = {
+&"RESET": SubResource("Animation_nkow4"),
+&"dialog": SubResource("Animation_w8r6g"),
+&"leaveTheCells": SubResource("Animation_qulj4")
+}
+
+[node name="Level5" type="Node2D" unique_id=2115329994]
+script = ExtResource("1_w8r6g")
+
+[node name="EmptyJailCells" type="Sprite2D" parent="." unique_id=89276561]
+position = Vector2(850, 549)
+scale = Vector2(10.554762, 10.554762)
+texture = ExtResource("2_nkow4")
+
+[node name="JailCellsInFront" type="Node" parent="." unique_id=1181724085]
+
+[node name="Jailcell" type="Sprite2D" parent="JailCellsInFront" unique_id=48073839]
+z_index = 1
+position = Vector2(712.75, 541.12506)
+scale = Vector2(10.616664, 10.616663)
+texture = ExtResource("9_nkow4")
+
+[node name="Jailcell2" type="Sprite2D" parent="JailCellsInFront" unique_id=1341300947]
+z_index = 1
+position = Vector2(1180, 537)
+scale = Vector2(10.616664, 10.616663)
+texture = ExtResource("9_nkow4")
+
+[node name="Jailcell3" type="Sprite2D" parent="JailCellsInFront" unique_id=1404187155]
+z_index = 1
+position = Vector2(153.37503, 537)
+scale = Vector2(9.708332, 10.616663)
+texture = ExtResource("9_nkow4")
+
+[node name="Boy1" type="Sprite2D" parent="." unique_id=829489530]
+z_index = 1
+position = Vector2(726, 652.99994)
+scale = Vector2(5.999998, 5.999998)
+texture = ExtResource("3_qulj4")
+
+[node name="Boy2" type="Sprite2D" parent="." unique_id=1892136575]
+z_index = 1
+position = Vector2(729.99994, 670)
+scale = Vector2(5.600179, 5.600179)
+texture = ExtResource("4_m1cko")
+
+[node name="Boy3" type="Sprite2D" parent="." unique_id=2083174291]
+z_index = 1
+position = Vector2(1235, 669.99994)
+scale = Vector2(5.600179, 5.600179)
+texture = ExtResource("5_d80t1")
+
+[node name="Girl4" type="Sprite2D" parent="." unique_id=645743638]
+z_index = 1
+position = Vector2(199, 668)
+scale = Vector2(5.600179, 5.600179)
+texture = ExtResource("6_bci6d")
+
+[node name="Friendly Alien" parent="." unique_id=262141793 instance=ExtResource("7_muh65")]
+position = Vector2(1849, 761)
+
+[node name="Dialog System" parent="." unique_id=1920042980 instance=ExtResource("9_xbcwc")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=176007824]
+libraries/ = SubResource("AnimationLibrary_nkow4")
+autoplay = &"leaveTheCells"
+
+[node name="Player (CharacterBody2D)" parent="." unique_id=1471644051 instance=ExtResource("8_bv654")]
+z_index = 2
+position = Vector2(1138, 808)
+scale = Vector2(2.3183014, 2.3183014)
