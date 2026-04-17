@@ -6,6 +6,11 @@ var index : int = 0
 var guess : String = ""
 var success : bool = false
 
+@onready var audioStreamPlayer : AudioStreamPlayer2D = $AudioStreamPlayer2D
+var wrongSound = preload("res://assets/soundEffects/wrong.mp3")
+var correctSound = preload("res://assets/soundEffects/zing.mp3")
+var stopInput = false
+
 func _ready():
 	for button in $"Translation Guide/Buttons".get_children():
 		# Check if the child is actually a button to avoid errors
@@ -18,22 +23,37 @@ func _ready():
 func _on_button_pressed(button_name):
 	if (success):
 		return
+	if (stopInput):
+		return
 		
 	print(button_name, " was pressed")
 	guess += button_name
 	
 	print(guess)
 	
+#	Append a green letter is that is the correct letter for that index in the password. 
+#	Otherwise append a white letter.
 	if (password[index] == button_name):
 		appendLetter(button_name, true)
 	else:
 		appendLetter(button_name, false)
 		
+#	If the entire password has been filled in, check if it is correct. 
 	if (index == password.length() - 1):
 		if (guess == password):
-			print("Success")
-		else:
-			print("start over")
+			# Wrong passcode
+			audioStreamPlayer.stop()
+			audioStreamPlayer.stream = correctSound
+			audioStreamPlayer.play()
+		else:			
+			# Wrong passcode
+			audioStreamPlayer.stop()
+			audioStreamPlayer.stream = wrongSound
+			audioStreamPlayer.play()
+			stopInput = true
+			await get_tree().create_timer(1.5).timeout
+			stopInput = false
+			
 			index = 0
 			guess = ""
 			
