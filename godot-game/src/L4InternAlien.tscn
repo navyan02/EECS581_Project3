@@ -1,0 +1,356 @@
+[gd_scene format=3 uid="uid://ctsskwkovt4th"]
+
+[ext_resource type="Texture2D" uid="uid://q8mfu80gddpe" path="res://assets/level3/empty jail cells.jpeg" id="1_it1n8"]
+[ext_resource type="Texture2D" uid="uid://bqd63jx6if5vj" path="res://assets/level3/holographicPlanetSmall.png" id="2_f0u0i"]
+[ext_resource type="Texture2D" uid="uid://dit243kthug31" path="res://assets/level3/explosion1.png" id="3_a6s28"]
+[ext_resource type="Texture2D" uid="uid://udygqk5cvcfm" path="res://assets/level3/explosion2.png" id="4_bftnl"]
+[ext_resource type="Texture2D" uid="uid://ce4la231sj2kn" path="res://assets/level3/explosion3.png" id="5_6lehc"]
+[ext_resource type="PackedScene" uid="uid://daegyiygjpfmj" path="res://inventoryFunctionality/dialog_system.tscn" id="6_6lehc"]
+[ext_resource type="PackedScene" uid="uid://b5itupxnie705" path="res://src/friendly_alien.tscn" id="7_6lehc"]
+[ext_resource type="PackedScene" uid="uid://dpux7mjnmklvb" path="res://src/player.tscn" id="7_bftnl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_m86x5"]
+radius = 115.10864
+
+[sub_resource type="Animation" id="Animation_h5sda"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpaceshipInside/Holographic Planet/HolographicPlanet:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-82.54197, 9.778514)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SpaceshipInside/Holographic Planet/CollisionShape2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-82.54197, 9.6878395)]
+}
+
+[sub_resource type="Animation" id="Animation_ftujt"]
+resource_name = "floating hologram"
+length = 1.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpaceshipInside/Holographic Planet/HolographicPlanet:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.73333335, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-82.54197, 9.778514), Vector2(-82.542, 6.791), Vector2(-82.54197, 9.778514)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SpaceshipInside/Holographic Planet/CollisionShape2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.73333335, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-82.54197, 9.6878395), Vector2(-82.542, 6.791), Vector2(-82.54197, 9.6878395)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5rber"]
+_data = {
+&"RESET": SubResource("Animation_h5sda"),
+&"floating hologram": SubResource("Animation_ftujt")
+}
+
+[sub_resource type="Animation" id="Animation_oepab"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HolographicPlanet/Explosion1:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.9121911, 0.91219115)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HolographicPlanet/Explosion4:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.2338932, 1.2338928)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HolographicPlanet/Explosion2:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.0965213, 1.0965211)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HolographicPlanet/Explosion3:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.3079771, 1.3079771)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("HolographicPlanet/Explosion5:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.1164972, 1.1164973)]
+}
+
+[sub_resource type="Animation" id="Animation_c0jxt"]
+resource_name = "explosion"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HolographicPlanet/Explosion1:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.037278283, 0.037278287), Vector2(0.9121911, 0.91219115)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HolographicPlanet/Explosion4:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.5, 1.8333334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.0504252, 0.050425187), Vector2(1.2338932, 1.2338928)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HolographicPlanet/Explosion2:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.23333333, 1.5666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.044811256, 0.044811253), Vector2(1.0965213, 1.0965211)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HolographicPlanet/Explosion3:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.73333335, 1.9333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.053452846, 0.053452846), Vector2(1.3079771, 1.3079771)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("HolographicPlanet/Explosion5:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.12802356, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.040317036, 0.040317055), Vector2(1.1164972, 1.1164973)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ip5ri"]
+_data = {
+&"RESET": SubResource("Animation_oepab"),
+&"explosion": SubResource("Animation_c0jxt")
+}
+
+[sub_resource type="Animation" id="Animation_m86x5"]
+resource_name = "alienInternConvo"
+length = 577.23334
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Friendly Alien")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 4.4666667, 8, 13.366667, 17.933332, 24.4, 35.066666, 38.4, 41.466667, 45.633335, 50.633335, 56.566666, 62.2, 68.46667, 76.1, 83.2, 89.36667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": ["Alien: Hey, YOU!"],
+"method": &"_show_dialog"
+}, {
+"args": ["Alien: Who are you? Why are are you here?!?"],
+"method": &"_show_dialog"
+}, {
+"args": ["Intern: I uhhhh I'm oh nooo please dont hurt me!"],
+"method": &"_show_dialog"
+}, {
+"args": ["Alien: No no it's okay! Don't be scared!"],
+"method": &"_show_dialog"
+}, {
+"args": ["Alien: I'm not here to hurt you, I'm here to help! My name is Kevin."],
+"method": &"_show_dialog"
+}, {
+"args": ["My home planet was destroyed. My species needs a new home, and we found Earth as a the perfect candidate. They're planning on taking by killing all humans. I don't think that's right. I believe that we should find an uninhabited planet and not harm any other race.  "],
+"method": &"_show_dialog"
+}, {
+"args": ["Intern: You want to help! How do you know English?"],
+"method": &"_show_dialog"
+}, {
+"args": ["Kevin: Of course! I love Earth!"],
+"method": &"_show_dialog"
+}, {
+"args": ["Humans are all so different from each other and yet they work so well together!"],
+"method": &"_show_dialog"
+}, {
+"args": ["Unlike us...one difference, and well, that's what led to the destruction of our planet. "],
+"method": &"_show_dialog"
+}, {
+"args": ["But that's why I speak English! I also know Mandarin, Hindi, Arabic, and Spanish! But what brings you here?"],
+"method": &"_show_dialog"
+}, {
+"args": ["Intern: Oh wow, well I guess that explains some of it. "],
+"method": &"_show_dialog"
+}, {
+"args": ["Your people took the team that was stopping you from destroying our planet. They're the only ones that can save us and I'm here to save them. "],
+"method": &"_show_dialog"
+}, {
+"args": ["Kevin: Oh wow...I heard a rumor that some humans were captured. It saddens me that its true. "],
+"method": &"_show_dialog"
+}, {
+"args": ["They must be on the mothership.  "],
+"method": &"_show_dialog"
+}, {
+"args": ["Intern: This isn't the mothership!?!?"],
+"method": &"_show_dialog"
+}, {
+"args": ["Kevin: This is actually one of our smaller escape pods. I would help you, but I don't know how to drive. It'll be up to you to figure it out. Follow me!"],
+"method": &"_show_dialog"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mo4qt"]
+_data = {
+&"alienInternConvo": SubResource("Animation_m86x5")
+}
+
+[node name="L4InternAlien" type="Node2D" unique_id=874781622]
+
+[node name="EmptyJailCells" type="Sprite2D" parent="." unique_id=1665198629]
+position = Vector2(959.99994, 541.49994)
+scale = Vector2(9.095238, 10.2952385)
+texture = ExtResource("1_it1n8")
+
+[node name="Holographic Planet" type="Area2D" parent="." unique_id=165860554]
+position = Vector2(-4.9870577, -36.088074)
+
+[node name="HolographicPlanet" type="Sprite2D" parent="Holographic Planet" unique_id=742945842]
+position = Vector2(168.98706, 336.0881)
+scale = Vector2(5.5432286, 5.3500466)
+texture = ExtResource("2_f0u0i")
+
+[node name="Explosion5" type="Sprite2D" parent="Holographic Planet/HolographicPlanet" unique_id=134976284]
+position = Vector2(-12.961914, 0.56915283)
+scale = Vector2(1.1164972, 1.1164973)
+texture = ExtResource("3_a6s28")
+
+[node name="Explosion1" type="Sprite2D" parent="Holographic Planet/HolographicPlanet" unique_id=14240446]
+position = Vector2(12.263123, 3.8064651)
+scale = Vector2(0.9121911, 0.91219115)
+texture = ExtResource("3_a6s28")
+
+[node name="Explosion4" type="Sprite2D" parent="Holographic Planet/HolographicPlanet" unique_id=1578672137]
+position = Vector2(-0.3845539, -14.211868)
+scale = Vector2(1.2338932, 1.2338928)
+texture = ExtResource("4_bftnl")
+
+[node name="Explosion2" type="Sprite2D" parent="Holographic Planet/HolographicPlanet" unique_id=849602298]
+position = Vector2(0.3328991, 13.912312)
+scale = Vector2(1.0965213, 1.0965211)
+texture = ExtResource("4_bftnl")
+
+[node name="Explosion3" type="Sprite2D" parent="Holographic Planet/HolographicPlanet" unique_id=1103665655]
+position = Vector2(2.5344396, 2.2988482)
+scale = Vector2(1.3079771, 1.3079771)
+texture = ExtResource("5_6lehc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Holographic Planet" unique_id=243954246]
+position = Vector2(172.98706, 342.08807)
+shape = SubResource("CircleShape2D_m86x5")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Holographic Planet" unique_id=455873641]
+root_node = NodePath("../../..")
+libraries/ = SubResource("AnimationLibrary_5rber")
+autoplay = &"floating hologram"
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="Holographic Planet" unique_id=502526197]
+libraries/ = SubResource("AnimationLibrary_ip5ri")
+autoplay = &"explosion"
+
+[node name="Player" parent="." unique_id=1588632530 instance=ExtResource("7_bftnl")]
+z_index = 4
+position = Vector2(289, 727)
+scale = Vector2(2.4080627, 2.4080627)
+floor_constant_speed = true
+stoppingDistance = 10
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player" unique_id=1765772577]
+position = Vector2(-1.2458148, 2.0763578)
+remote_path = NodePath("../../Camera2D")
+
+[node name="Friendly Alien" parent="." unique_id=262141793 instance=ExtResource("7_6lehc")]
+position = Vector2(1047.0001, 659.00006)
+
+[node name="Dialog System" parent="." unique_id=1527251034 instance=ExtResource("6_6lehc")]
+layer = 2
+
+[node name="internAlienChat" type="AnimationPlayer" parent="." unique_id=750865575]
+libraries/ = SubResource("AnimationLibrary_mo4qt")
+autoplay = &"alienInternConvo"
+
+[connection signal="input_event" from="Holographic Planet" to="Holographic Planet" method="_on_input_event"]
