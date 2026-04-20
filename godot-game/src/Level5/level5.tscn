@@ -100,7 +100,7 @@ tracks/6/keys = {
 
 [sub_resource type="Animation" id="Animation_w8r6g"]
 resource_name = "dialog"
-length = 30.0
+length = 16.0
 tracks/0/type = "method"
 tracks/0/imported = false
 tracks/0/enabled = true
