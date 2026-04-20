@@ -1,6 +1,6 @@
 extends Node2D
 
-@export var next_scene_path := "res://src/Level5/level5.tscn"
+@export var next_scene_path := "res://src/Level 4/pipes.tscn"
 
 func _ready() -> void:
 	await get_tree().create_timer(3).timeout
