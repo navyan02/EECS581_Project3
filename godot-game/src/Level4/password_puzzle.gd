@@ -41,10 +41,12 @@ func _on_button_pressed(button_name):
 #	If the entire password has been filled in, check if it is correct. 
 	if (index == password.length() - 1):
 		if (guess == password):
-			# Wrong passcode
+			# right passcode
 			audioStreamPlayer.stop()
 			audioStreamPlayer.stream = correctSound
 			audioStreamPlayer.play()
+			get_tree().change_scene_to_file("res://src/Level4/level4Endscene.tscn")
+
 		else:			
 			# Wrong passcode
 			audioStreamPlayer.stop()
