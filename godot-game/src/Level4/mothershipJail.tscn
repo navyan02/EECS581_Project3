@@ -25,12 +25,12 @@ position = Vector2(1109, 543)
 scale = Vector2(10.98143, 10.98143)
 texture = ExtResource("3_6ybed")
 
-[node name="Password" type="Area2D" parent="." unique_id=1129575489]
+[node name="PasswordKeypad" type="Area2D" parent="." unique_id=1129575489]
 position = Vector2(192, 0)
 collision_layer = 2
 script = ExtResource("4_awn5s")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Password" unique_id=565104]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PasswordKeypad" unique_id=565104]
 position = Vector2(1690, 516.25)
 shape = SubResource("RectangleShape2D_6ybed")
 
@@ -63,4 +63,4 @@ metadata/_edit_use_anchors_ = true
 visible = false
 position = Vector2(971, 322)
 
-[connection signal="input_event" from="Password" to="." method="_on_area_2d_input_event"]
+[connection signal="input_event" from="PasswordKeypad" to="." method="_on_area_2d_input_event"]
