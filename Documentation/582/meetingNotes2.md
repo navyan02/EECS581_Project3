@@ -1,3 +1,23 @@
+## **Meeting Title:** TA Meeting
+### **Date:** Monday, April 20th, 2026
+---
+#### 👥 Attendees
+
+- Navya Nittala, Vivian Lara, Katie Nordberg Kevin Likcani(TA)
+
+### 📒 Notes/ToDo
+- gave updates on level 4 status and level 5 plan
+- presesnting today!!
+  
+Upcoming: 
+  - Sunday, April 26
+    - [X] Final Github Link 
+
+Next Meeting 
+- TA Meeting: Monday, April 27th @ 11:30AM (2 left!)
+- Team Meeting: Thursday, April 23rd @ 3PM
+---
+
 ## **Meeting Title:** Team Meeting
 ### **Date:** Thursday, April 16th, 2026
 ---
