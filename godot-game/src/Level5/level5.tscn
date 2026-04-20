@@ -12,6 +12,15 @@
 [ext_resource type="PackedScene" uid="uid://daegyiygjpfmj" path="res://inventoryFunctionality/dialog_system.tscn" id="9_xbcwc"]
 [ext_resource type="PackedScene" uid="uid://vvg6sqaghsif" path="res://src/friendly_alien2.tscn" id="11_qulj4"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qulj4"]
+size = Vector2(1182, 53.000015)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m1cko"]
+size = Vector2(2362.75, 39)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d80t1"]
+size = Vector2(2256, 902)
+
 [sub_resource type="Animation" id="Animation_nkow4"]
 length = 0.001
 tracks/0/type = "value"
@@ -357,6 +366,32 @@ _data = {
 
 [node name="Level5" type="Node2D" unique_id=2115329994]
 script = ExtResource("1_w8r6g")
+
+[node name="Level Border" type="StaticBody2D" parent="." unique_id=295011240]
+position = Vector2(173.00012, 96)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Level Border" unique_id=1681318109]
+position = Vector2(-456.00015, 445)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_qulj4")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Level Border" unique_id=1535615790]
+position = Vector2(619.6249, 1012.99976)
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_m1cko")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level Border" unique_id=2007623487]
+position = Vector2(636.9999, -119)
+shape = SubResource("RectangleShape2D_m1cko")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Level Border" unique_id=1403044006]
+position = Vector2(1811.5, 434)
+rotation = -1.5707963
+shape = SubResource("RectangleShape2D_qulj4")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Level Border" unique_id=392176255]
+position = Vector2(678.9999, 323)
+shape = SubResource("RectangleShape2D_d80t1")
 
 [node name="EmptyJailCells" type="Sprite2D" parent="." unique_id=89276561]
 position = Vector2(850, 549)

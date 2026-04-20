@@ -20,6 +20,15 @@ size = Vector2(260, 246.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7k51k"]
 size = Vector2(30.35617, 59.105244)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_81iof"]
+size = Vector2(1182, 53.000015)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h4i17"]
+size = Vector2(2362.75, 39)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_da0du"]
+size = Vector2(2256, 902)
+
 [node name="MothershipJail" type="Node2D" unique_id=442293699]
 script = ExtResource("1_uukfb")
 
@@ -38,7 +47,7 @@ position = Vector2(1690, 516.25)
 shape = SubResource("RectangleShape2D_6ybed")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1485488459]
-position = Vector2(1902, 713)
+position = Vector2(1902.0001, 753)
 scale = Vector2(2.1749554, 2.1749554)
 limit_left = 1
 limit_top = 1
@@ -47,7 +56,7 @@ limit_bottom = 1078
 
 [node name="Player" parent="." unique_id=1291790639 instance=ExtResource("5_blfbc")]
 z_index = 4
-position = Vector2(1902, 713)
+position = Vector2(1902.0001, 753)
 scale = Vector2(2.1749554, 2.1749554)
 floor_constant_speed = true
 stoppingDistance = 10
@@ -141,6 +150,32 @@ z_index = 1
 position = Vector2(1618, 528)
 scale = Vector2(10.616664, 10.172619)
 texture = ExtResource("13_xrmpd")
+
+[node name="Level Border" type="StaticBody2D" parent="." unique_id=1018332288]
+position = Vector2(173.00012, 96)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Level Border" unique_id=1060574034]
+position = Vector2(-200.00012, 442)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_81iof")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Level Border" unique_id=1974469569]
+position = Vector2(971.6249, 1009.99976)
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_h4i17")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level Border" unique_id=292713657]
+position = Vector2(988.9999, -122)
+shape = SubResource("RectangleShape2D_h4i17")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Level Border" unique_id=1156203985]
+position = Vector2(2107.5, 431)
+rotation = -1.5707963
+shape = SubResource("RectangleShape2D_81iof")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Level Border" unique_id=1689405686]
+position = Vector2(948.9999, 311)
+shape = SubResource("RectangleShape2D_da0du")
 
 [connection signal="input_event" from="PasswordKeypad" to="." method="_on_area_2d_input_event"]
 [connection signal="input_event" from="Girl4" to="." method="_on_girl_4_input_event"]
