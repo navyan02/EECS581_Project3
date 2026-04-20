@@ -7,7 +7,7 @@
 [ext_resource type="Script" uid="uid://dqlbi4u1nqkjg" path="res://src/Level4/password.gd" id="4_awn5s"]
 [ext_resource type="PackedScene" uid="uid://dpux7mjnmklvb" path="res://src/player.tscn" id="5_blfbc"]
 [ext_resource type="PackedScene" uid="uid://bh37xqxsv8iow" path="res://src/inventory.tscn" id="6_awn5s"]
-[ext_resource type="PackedScene" uid="uid://cdb1fb41lmrl3" path="res://src/Level5/translatorTablet.tscn" id="7_blfbc"]
+[ext_resource type="PackedScene" uid="uid://cdb1fb41lmrl3" path="res://src/Level4/translatorTablet.tscn" id="7_blfbc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6ybed"]
 size = Vector2(260, 246.5)

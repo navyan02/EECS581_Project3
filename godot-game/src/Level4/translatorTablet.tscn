@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cdb1fb41lmrl3"]
 
-[ext_resource type="Script" uid="uid://dhcu3gjdykuuf" path="res://src/Level5/translator_tablet.gd" id="1_b3dn1"]
-[ext_resource type="Resource" uid="uid://iqbierdhnhms" path="res://src/Level5/translatorTablet.tres" id="2_dppxm"]
+[ext_resource type="Script" uid="uid://dhcu3gjdykuuf" path="res://src/Level4/translator_tablet.gd" id="1_b3dn1"]
+[ext_resource type="Resource" uid="uid://iqbierdhnhms" path="res://src/Level4/translatorTablet.tres" id="2_dppxm"]
 [ext_resource type="Texture2D" uid="uid://2qjxy6pvfewa" path="res://assets/level4/Alien Tablet.png" id="2_ptyut"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dppxm"]
