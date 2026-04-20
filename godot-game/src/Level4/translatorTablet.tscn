@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cdb1fb41lmrl3"]
+
+[ext_resource type="Script" uid="uid://dhcu3gjdykuuf" path="res://src/Level4/translator_tablet.gd" id="1_b3dn1"]
+[ext_resource type="Resource" uid="uid://iqbierdhnhms" path="res://src/Level4/translatorTablet.tres" id="2_dppxm"]
+[ext_resource type="Texture2D" uid="uid://2qjxy6pvfewa" path="res://assets/level4/Alien Tablet.png" id="2_ptyut"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dppxm"]
+size = Vector2(386, 308)
+
+[node name="TranslatorTablet" type="Area2D" unique_id=1556968877]
+script = ExtResource("1_b3dn1")
+item_data = ExtResource("2_dppxm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1124411127]
+shape = SubResource("RectangleShape2D_dppxm")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1054817831]
+texture = ExtResource("2_ptyut")

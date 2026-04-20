@@ -10,3 +10,7 @@ func _on_level_2_pressed() -> void:
 
 func _on_level_3_pressed() -> void:
 	get_tree().change_scene_to_file("res://src/Level3/Level3Start.tscn")
+
+
+func _on_level_4_pressed() -> void:
+	get_tree().change_scene_to_file("res://src/Level4/Level4Start.tscn")

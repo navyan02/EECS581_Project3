@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bpvr0wecgrx07" path="res://src/Scene2/IMG_4070.PNG" id="4_lm277"]
 [ext_resource type="Texture2D" uid="uid://db6snf3l1ny4j" path="res://src/Scene2/IMG_4069.PNG" id="5_h0k8u"]
 [ext_resource type="Texture2D" uid="uid://dlw2qcupmj024" path="res://assets/level2/rocket ship frame 1.png" id="6_lm277"]
+[ext_resource type="Texture2D" uid="uid://xj4ii5ex53ro" path="res://assets/level4/escapepod1.png" id="8_gf0vy"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gf0vy"]
 
@@ -30,9 +31,9 @@ texture = ExtResource("1_ng4qd")
 flip_h = true
 
 [node name="Level1" type="Button" parent="." unique_id=1947132233]
-offset_left = 197.0
+offset_left = 196.0
 offset_top = 470.0
-offset_right = 503.0
+offset_right = 502.0
 offset_bottom = 582.0
 size_flags_horizontal = 3
 theme = ExtResource("2_vmh8k")
@@ -46,10 +47,10 @@ icon_alignment = 1
 expand_icon = true
 
 [node name="Level2" type="Button" parent="." unique_id=1980338975]
-offset_left = 861.0
-offset_top = 202.0
-offset_right = 1167.0
-offset_bottom = 314.0
+offset_left = 488.0
+offset_top = 72.0
+offset_right = 794.0
+offset_bottom = 184.0
 size_flags_horizontal = 3
 theme = ExtResource("2_vmh8k")
 theme_override_constants/outline_size = 3
@@ -62,10 +63,10 @@ icon_alignment = 1
 expand_icon = true
 
 [node name="Level3" type="Button" parent="." unique_id=1675408174]
-offset_left = 1408.0
-offset_top = 595.68756
-offset_right = 1714.0
-offset_bottom = 707.68756
+offset_left = 966.0
+offset_top = 288.68756
+offset_right = 1272.0
+offset_bottom = 400.68756
 size_flags_horizontal = 3
 theme = ExtResource("2_vmh8k")
 theme_override_constants/outline_size = 3
@@ -83,16 +84,40 @@ scale = Vector2(5.9411936, 6.1073112)
 texture = ExtResource("4_lm277")
 
 [node name="Rocket Ship" type="Sprite2D" parent="." unique_id=614495724]
-position = Vector2(1017, 443)
+position = Vector2(644, 313)
 scale = Vector2(3.6562498, 3.6562495)
 texture = ExtResource("5_h0k8u")
 flip_h = true
 
 [node name="Alien Spaceship" type="Sprite2D" parent="." unique_id=1111824671]
-position = Vector2(1558, 447.6875)
+position = Vector2(1116, 140.68753)
 scale = Vector2(3.7524517, 3.7524517)
 texture = ExtResource("6_lm277")
+
+[node name="Level4" type="Button" parent="." unique_id=455479051]
+offset_left = 1440.0
+offset_top = 83.0
+offset_right = 1746.0
+offset_bottom = 195.0
+size_flags_horizontal = 3
+theme = ExtResource("2_vmh8k")
+theme_override_constants/outline_size = 3
+theme_override_styles/hover = SubResource("StyleBoxEmpty_gf0vy")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_i4bka")
+text = "Level 4"
+icon = ExtResource("3_h0k8u")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="Escape Pod" type="Sprite2D" parent="." unique_id=15687255]
+position = Vector2(1596, 324)
+rotation = -1.5707964
+scale = Vector2(6.1674995, 6.167499)
+texture = ExtResource("8_gf0vy")
+flip_h = true
 
 [connection signal="pressed" from="Level1" to="." method="_on_level_1_pressed"]
 [connection signal="pressed" from="Level2" to="." method="_on_level_2_pressed"]
 [connection signal="pressed" from="Level3" to="." method="_on_level_3_pressed"]
+[connection signal="pressed" from="Level4" to="." method="_on_level_4_pressed"]
