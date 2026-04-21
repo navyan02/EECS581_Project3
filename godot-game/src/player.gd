@@ -67,3 +67,10 @@ func _physics_process(delta: float) -> void:
 		
 func move_to_spot(target_pos: Vector2):
 	posToGoTo = target_pos
+	
+func _show_dialog(text: String):
+	var dialog = get_tree().get_first_node_in_group("dialog")
+	if dialog and dialog.has_method("show_message"):
+		dialog.show_message(text)
+	else:
+		print("Dialog: ", text)
