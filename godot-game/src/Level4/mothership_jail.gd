@@ -1,6 +1,5 @@
 extends Node2D
 
-
  #Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	var inventory = get_tree().get_first_node_in_group("inventory")
@@ -31,8 +30,8 @@ func _on_girl_4_input_event(viewport: Node, event: InputEvent, shape_idx: int) -
 
 func _on_boy_1_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-		_show_dialog("I'm Dr. Henry. This is my team. We work at NASA. Please save us.")
+		_show_dialog("I'm Dr. Henry. Nice to meet you, Intern. I wish we were meeting under better circumstances...")
 	
 func _on_boy_2_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-		_show_dialog("I don't know who you are or how you got here but please help us.")
+		_show_dialog("I don't know anything about you or how you got here but please help us.")
