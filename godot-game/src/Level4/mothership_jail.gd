@@ -19,3 +19,20 @@ func _show_dialog(text: String):
 		dialog.show_message(text)
 	else:
 		print("Dialog: ", text)
+
+
+func _on_boy_3_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		_show_dialog("You've GOT to get us out of here!")
+
+func _on_girl_4_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		_show_dialog("Please help us escape! They're going to destroy Earth!!!")
+
+func _on_boy_1_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		_show_dialog("I'm Dr. Henry. This is my team. We work at NASA. Please save us.")
+	
+func _on_boy_2_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		_show_dialog("I don't know who you are or how you got here but please help us.")

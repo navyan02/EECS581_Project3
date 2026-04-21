@@ -1,16 +1,33 @@
-[gd_scene format=3 uid="uid://b8mxdtl46limj"]
+[gd_scene format=3 uid="uid://2xxcm0hqvt3r"]
 
 [ext_resource type="Script" uid="uid://b6uwupjqidtxa" path="res://src/Level4/mothership_jail.gd" id="1_uukfb"]
 [ext_resource type="Texture2D" uid="uid://cf6q5lfpaak34" path="res://assets/level4/jail_mothership.png" id="2_8t2p8"]
-[ext_resource type="Texture2D" uid="uid://jj84ofn0frgo" path="res://assets/level4/jail_bars.png" id="3_6ybed"]
 [ext_resource type="PackedScene" uid="uid://daegyiygjpfmj" path="res://inventoryFunctionality/dialog_system.tscn" id="3_ko8n1"]
-[ext_resource type="Script" uid="uid://dqlbi4u1nqkjg" path="res://src/Level4/password.gd" id="4_awn5s"]
+[ext_resource type="Script" path="res://src/Level4/password.gd" id="4_awn5s"]
 [ext_resource type="PackedScene" uid="uid://dpux7mjnmklvb" path="res://src/player.tscn" id="5_blfbc"]
 [ext_resource type="PackedScene" uid="uid://bh37xqxsv8iow" path="res://src/inventory.tscn" id="6_awn5s"]
-[ext_resource type="PackedScene" uid="uid://cdb1fb41lmrl3" path="res://src/Level4/translatorTablet.tscn" id="7_blfbc"]
+[ext_resource type="PackedScene" path="res://src/Level4/translatorTablet.tscn" id="7_blfbc"]
+[ext_resource type="Texture2D" uid="uid://dsx3pc3k2kans" path="res://assets/characters/girl4.png" id="8_81iof"]
+[ext_resource type="Texture2D" uid="uid://b4dod7d6iaj5p" path="res://assets/characters/boy1.png" id="9_h4i17"]
+[ext_resource type="Texture2D" uid="uid://dg2hng3nwnkqn" path="res://assets/characters/boy3.png" id="10_da0du"]
+[ext_resource type="Texture2D" uid="uid://cuu5uxn0by77k" path="res://assets/characters/boy2.png" id="11_sdsfx"]
+[ext_resource type="Texture2D" uid="uid://bgefbd4msfu8j" path="res://assets/level5/jailcell.png" id="12_rsl2i"]
+[ext_resource type="Texture2D" uid="uid://cpcb7it4rdjit" path="res://assets/level5/croppedJailCell.png" id="13_xrmpd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6ybed"]
 size = Vector2(260, 246.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7k51k"]
+size = Vector2(30.35617, 59.105244)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_81iof"]
+size = Vector2(1182, 53.000015)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h4i17"]
+size = Vector2(2362.75, 39)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_da0du"]
+size = Vector2(2256, 902)
 
 [node name="MothershipJail" type="Node2D" unique_id=442293699]
 script = ExtResource("1_uukfb")
@@ -19,11 +36,6 @@ script = ExtResource("1_uukfb")
 position = Vector2(1122, 536)
 scale = Vector2(10.767321, 10.767321)
 texture = ExtResource("2_8t2p8")
-
-[node name="JailBars" type="Sprite2D" parent="." unique_id=203759737]
-position = Vector2(1109, 543)
-scale = Vector2(10.98143, 10.98143)
-texture = ExtResource("3_6ybed")
 
 [node name="PasswordKeypad" type="Area2D" parent="." unique_id=1129575489]
 position = Vector2(192, 0)
@@ -35,7 +47,7 @@ position = Vector2(1690, 516.25)
 shape = SubResource("RectangleShape2D_6ybed")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1485488459]
-position = Vector2(1902, 713)
+position = Vector2(1902.0001, 753)
 scale = Vector2(2.1749554, 2.1749554)
 limit_left = 1
 limit_top = 1
@@ -44,7 +56,7 @@ limit_bottom = 1078
 
 [node name="Player" parent="." unique_id=1291790639 instance=ExtResource("5_blfbc")]
 z_index = 4
-position = Vector2(1902, 713)
+position = Vector2(1902.0001, 753)
 scale = Vector2(2.1749554, 2.1749554)
 floor_constant_speed = true
 stoppingDistance = 10
@@ -63,4 +75,110 @@ metadata/_edit_use_anchors_ = true
 visible = false
 position = Vector2(971, 322)
 
+[node name="Girl4" type="Area2D" parent="." unique_id=1063543254]
+
+[node name="Girl4" type="Sprite2D" parent="Girl4" unique_id=203284708]
+z_index = 1
+position = Vector2(689.20575, 657)
+scale = Vector2(5.600179, 5.600179)
+texture = ExtResource("8_81iof")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Girl4" unique_id=618068339]
+position = Vector2(692, 653.5)
+scale = Vector2(5.600179, 5.600179)
+shape = SubResource("RectangleShape2D_7k51k")
+
+[node name="Boy1" type="Area2D" parent="." unique_id=2012098573]
+
+[node name="Boy1" type="Sprite2D" parent="Boy1" unique_id=207675931]
+z_index = 1
+position = Vector2(1045.2058, 644.99994)
+scale = Vector2(5.999998, 5.999998)
+texture = ExtResource("9_h4i17")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boy1" unique_id=472859152]
+position = Vector2(1052, 653.5)
+scale = Vector2(5.600179, 5.600179)
+shape = SubResource("RectangleShape2D_7k51k")
+
+[node name="Boy3" type="Area2D" parent="." unique_id=1513908938]
+
+[node name="Boy3" type="Sprite2D" parent="Boy3" unique_id=1168033598]
+z_index = 1
+position = Vector2(1554.2058, 661.99994)
+scale = Vector2(5.600179, 5.600179)
+texture = ExtResource("10_da0du")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boy3" unique_id=1320827422]
+position = Vector2(1555.9999, 653.5)
+scale = Vector2(5.600179, 5.600179)
+shape = SubResource("RectangleShape2D_7k51k")
+
+[node name="Boy2" type="Area2D" parent="." unique_id=615840298]
+
+[node name="Boy2" type="Sprite2D" parent="Boy2" unique_id=661437580]
+z_index = 1
+position = Vector2(1272.2057, 643.99994)
+scale = Vector2(5.600179, 5.600179)
+texture = ExtResource("11_sdsfx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boy2" unique_id=1687211072]
+position = Vector2(1268, 653.5)
+scale = Vector2(5.600179, 5.600179)
+shape = SubResource("RectangleShape2D_7k51k")
+
+[node name="Jailcell" type="Sprite2D" parent="." unique_id=157942961]
+z_index = 1
+position = Vector2(968.99994, 528.9999)
+scale = Vector2(10.616664, 10.172619)
+texture = ExtResource("12_rsl2i")
+
+[node name="Jailcell2" type="Sprite2D" parent="." unique_id=1008342729]
+z_index = 1
+position = Vector2(617.99994, 527.9999)
+scale = Vector2(10.616664, 10.172619)
+texture = ExtResource("12_rsl2i")
+
+[node name="Jailcell3" type="Sprite2D" parent="." unique_id=367265578]
+z_index = 1
+position = Vector2(1322, 528)
+scale = Vector2(10.616664, 10.172619)
+texture = ExtResource("12_rsl2i")
+
+[node name="Jailcell4" type="Sprite2D" parent="." unique_id=1349887883]
+z_index = 1
+position = Vector2(1618, 528)
+scale = Vector2(10.616664, 10.172619)
+texture = ExtResource("13_xrmpd")
+
+[node name="Level Border" type="StaticBody2D" parent="." unique_id=1018332288]
+position = Vector2(173.00012, 96)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Level Border" unique_id=1060574034]
+position = Vector2(-200.00012, 442)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_81iof")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Level Border" unique_id=1974469569]
+position = Vector2(971.6249, 1009.99976)
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_h4i17")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level Border" unique_id=292713657]
+position = Vector2(988.9999, -122)
+shape = SubResource("RectangleShape2D_h4i17")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Level Border" unique_id=1156203985]
+position = Vector2(2107.5, 431)
+rotation = -1.5707963
+shape = SubResource("RectangleShape2D_81iof")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Level Border" unique_id=1689405686]
+position = Vector2(948.9999, 311)
+shape = SubResource("RectangleShape2D_da0du")
+
 [connection signal="input_event" from="PasswordKeypad" to="." method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Girl4" to="." method="_on_girl_4_input_event"]
+[connection signal="input_event" from="Boy1" to="." method="_on_boy_1_input_event"]
+[connection signal="input_event" from="Boy3" to="." method="_on_boy_3_input_event"]
+[connection signal="input_event" from="Boy2" to="." method="_on_boy_2_input_event"]
