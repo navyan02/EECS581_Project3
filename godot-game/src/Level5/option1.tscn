@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://b4p6h4epu2xc2"]
+
+[ext_resource type="Texture2D" uid="uid://blpjqb5jecwib" path="res://assets/level5/outsidebackground.jpg" id="1_241vq"]
+[ext_resource type="Texture2D" uid="uid://6qpdf2k7vxvw" path="res://assets/level5/Henry1-1.png (1).png" id="2_h1r3s"]
+[ext_resource type="Texture2D" uid="uid://dp4o1qoa8xd2w" path="res://assets/level5/DSRelax.png" id="3_h8g8k"]
+[ext_resource type="Texture2D" uid="uid://c2tmwwvtnck8k" path="res://assets/level5/BGGuy-1.png.png" id="4_4vukd"]
+[ext_resource type="Texture2D" uid="uid://h0tjedh8b6im" path="res://assets/level5/girl2Normal-1.png.png" id="5_4817o"]
+[ext_resource type="Texture2D" uid="uid://rd4m7flhskks" path="res://assets/level5/BlondeGirl1-1.png.png" id="6_xwa2l"]
+[ext_resource type="Texture2D" uid="uid://bgspk3a3icj35" path="res://assets/level5/internSide.png" id="7_h1r3s"]
+
+[sub_resource type="Animation" id="Animation_27wag"]
+resource_name = "endscene"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_33htb"]
+_data = {
+&"endscene": SubResource("Animation_27wag")
+}
+
+[node name="Option1" type="Node2D" unique_id=1664670359]
+
+[node name="endscnene" type="AnimationPlayer" parent="." unique_id=1210146559]
+libraries/ = SubResource("AnimationLibrary_33htb")
+
+[node name="background" type="Sprite2D" parent="." unique_id=1727418308]
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_241vq")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1927216478]
+
+[node name="HenryHappy" type="Sprite2D" parent="." unique_id=1882737367]
+position = Vector2(309, 335.99997)
+scale = Vector2(8.499622, 8.3046875)
+texture = ExtResource("2_h1r3s")
+
+[node name="NASAHappy2" type="Sprite2D" parent="." unique_id=495733146]
+position = Vector2(-644.00006, 428)
+scale = Vector2(7.3117194, 6.871094)
+texture = ExtResource("3_h8g8k")
+
+[node name="NASAHappy1" type="Sprite2D" parent="." unique_id=182156631]
+position = Vector2(-438.3125, 314.49997)
+scale = Vector2(9.721775, 8.890625)
+texture = ExtResource("4_4vukd")
+
+[node name="NASAHappy3" type="Sprite2D" parent="." unique_id=447667481]
+position = Vector2(53.000008, 343)
+scale = Vector2(8.937501, 8.585937)
+texture = ExtResource("5_4817o")
+
+[node name="NASAHappy4" type="Sprite2D" parent="." unique_id=1556037057]
+position = Vector2(-185, 330)
+scale = Vector2(8.78125, 8.3984375)
+texture = ExtResource("6_xwa2l")
+flip_h = true
+
+[node name="Intern" type="Sprite2D" parent="." unique_id=1039959686]
+position = Vector2(684.00006, 360)
+scale = Vector2(8.016667, 8.225)
+texture = ExtResource("7_h1r3s")
+flip_h = true
