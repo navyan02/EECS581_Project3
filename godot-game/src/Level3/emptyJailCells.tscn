@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://14kcffip8av6"]
 
 [ext_resource type="Script" uid="uid://d32xnv81yjpkl" path="res://src/Level3/empty_jail_cells.gd" id="1_h5sda"]
-[ext_resource type="Texture2D" uid="uid://q8mfu80gddpe" path="res://assets/level3/empty jail cells.jpeg" id="1_lphvd"]
 [ext_resource type="Script" uid="uid://bn0hlnmvqpry7" path="res://src/Level3/cellDoors.gd" id="2_m8wqa"]
 [ext_resource type="Script" uid="uid://ypefc52ux6am" path="res://src/Level3/holographic_planet.gd" id="3_h5sda"]
 [ext_resource type="PackedScene" uid="uid://daegyiygjpfmj" path="res://inventoryFunctionality/dialog_system.tscn" id="3_jxdos"]
@@ -12,6 +11,9 @@
 [ext_resource type="Texture2D" uid="uid://udygqk5cvcfm" path="res://assets/level3/explosion2.png" id="7_c0jxt"]
 [ext_resource type="Texture2D" uid="uid://ce4la231sj2kn" path="res://assets/level3/explosion3.png" id="8_yit6v"]
 [ext_resource type="PackedScene" uid="uid://b5itupxnie705" path="res://src/friendly_alien.tscn" id="14_g0j5u"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_oepab"]
+load_path = "res://.godot/imported/empty jail cells.jpeg-030ea8e8c4bb3ea423a35f689bb784d9.ctex"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w4imh"]
 size = Vector2(732.97845, 274.82758)
@@ -288,7 +290,7 @@ script = ExtResource("1_h5sda")
 [node name="SpaceshipInside" type="Sprite2D" parent="." unique_id=343297761]
 position = Vector2(1159.0001, 527.9999)
 scale = Vector2(11.028571, 11.02857)
-texture = ExtResource("1_lphvd")
+texture = SubResource("CompressedTexture2D_oepab")
 
 [node name="BlockPlayerMovement" type="StaticBody2D" parent="SpaceshipInside" unique_id=1821059262]
 show_behind_parent = true
