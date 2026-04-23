@@ -11,6 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://dpux7mjnmklvb" path="res://src/player.tscn" id="8_bv654"]
 [ext_resource type="PackedScene" uid="uid://daegyiygjpfmj" path="res://inventoryFunctionality/dialog_system.tscn" id="9_xbcwc"]
 [ext_resource type="PackedScene" uid="uid://vvg6sqaghsif" path="res://src/friendly_alien2.tscn" id="11_qulj4"]
+[ext_resource type="FontFile" uid="uid://bywhyuf8rbomy" path="res://assets/fonts/madspixel/madspixel.ttf" id="12_d80t1"]
+[ext_resource type="Texture2D" uid="uid://daq0t5rc58b6d" path="res://assets/titleScreen/button.png" id="13_bci6d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qulj4"]
 size = Vector2(1182, 53.000015)
@@ -364,6 +366,8 @@ _data = {
 &"leaveTheCells": SubResource("Animation_qulj4")
 }
 
+[sub_resource type="Theme" id="Theme_muh65"]
+
 [node name="Level5" type="Node2D" unique_id=2115329994]
 script = ExtResource("1_w8r6g")
 
@@ -460,3 +464,51 @@ scale = Vector2(2.3183014, 2.3183014)
 
 [node name="Friendly Alien2" parent="." unique_id=262141793 instance=ExtResource("11_qulj4")]
 position = Vector2(2095, 776)
+
+[node name="Decision" type="CanvasLayer" parent="." unique_id=551246472]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="Decision" unique_id=1838880461]
+offset_left = -271.0
+offset_right = 1962.0
+offset_bottom = 1103.0
+
+[node name="Doom Aliens" type="Button" parent="Decision" unique_id=1426369628]
+offset_left = 601.0
+offset_top = 140.0
+offset_right = 1818.0
+offset_bottom = 515.0
+theme = SubResource("Theme_muh65")
+theme_type_variation = &"FlatButton"
+theme_override_fonts/font = ExtResource("12_d80t1")
+theme_override_font_sizes/font_size = 50
+text = "Send to toxic planet
+If I do this, I would kill the entire alien race, including those that helped me. But it would ensure humanity is never threatened by them again."
+icon = ExtResource("13_bci6d")
+autowrap_mode = 2
+icon_alignment = 1
+expand_icon = true
+
+[node name="Save Aliens" type="Button" parent="Decision" unique_id=1433195226]
+offset_left = 601.0
+offset_top = 578.0
+offset_right = 1818.0
+offset_bottom = 957.0
+theme = SubResource("Theme_muh65")
+theme_type_variation = &"FlatButton"
+theme_override_fonts/font = ExtResource("12_d80t1")
+theme_override_font_sizes/font_size = 50
+text = "Send to Mars
+If I do this I would risk the aliens deciding to come back to Earth to kill us all. But maybe Kevin can convice them to go elsewhere..."
+icon = ExtResource("13_bci6d")
+autowrap_mode = 2
+icon_alignment = 1
+expand_icon = true
+
+[node name="Player (CharacterBody2D)2" parent="Decision" unique_id=894719854 instance=ExtResource("8_bv654")]
+z_index = 2
+position = Vector2(306, 504)
+scale = Vector2(6.145335, 6.145335)
+
+[connection signal="pressed" from="Decision/Doom Aliens" to="." method="_on_doom_aliens_pressed"]
+[connection signal="pressed" from="Decision/Save Aliens" to="." method="_on_save_aliens_pressed"]
