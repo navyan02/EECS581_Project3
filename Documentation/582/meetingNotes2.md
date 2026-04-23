@@ -1,3 +1,33 @@
+## **Meeting Title:** Team meeting 
+### **Date:** thursday, April 23th, 2026
+---
+#### 👥 Attendees
+
+- Kundana Dongala, Vivian Lara, Katie Nordberg and cristina 
+
+### 📒 Notes/ToDo
+-level 5v
+  
+Upcoming: 
+  - Sunday, April 26
+    - [X] Final Github Link
+
+updates:
+- Cristina: worked on cutscene
+- kundana: finished cutscene for team and intern interaction
+- Katie: Finished what needed to be done last week and is working on fixing level 4
+- vi: going to try and get the background done 
+
+Next Meeting 
+- TA Meeting: Monday, April 27th @ 11:30AM (2 left!)
+- Team Meeting: Thursday, April 30th @ 3PM
+---
+
+## **Meeting Title:** Team Meeting
+### **Date:** Thursday, April 16th, 2026
+---
+
+
 ## **Meeting Title:** TA Meeting
 ### **Date:** Monday, April 20th, 2026
 ---
