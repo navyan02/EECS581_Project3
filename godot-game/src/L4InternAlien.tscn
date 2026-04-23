@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://ctsskwkovt4th"]
 
+[ext_resource type="Script" uid="uid://n31ol41byqx1" path="res://src/l_4_intern_alien.gd" id="1_5rber"]
 [ext_resource type="Texture2D" uid="uid://q8mfu80gddpe" path="res://assets/level3/empty jail cells.jpeg" id="1_it1n8"]
 [ext_resource type="Texture2D" uid="uid://bqd63jx6if5vj" path="res://assets/level3/holographicPlanetSmall.png" id="2_f0u0i"]
 [ext_resource type="Texture2D" uid="uid://dit243kthug31" path="res://assets/level3/explosion1.png" id="3_a6s28"]
@@ -8,6 +9,10 @@
 [ext_resource type="PackedScene" uid="uid://daegyiygjpfmj" path="res://inventoryFunctionality/dialog_system.tscn" id="6_6lehc"]
 [ext_resource type="PackedScene" uid="uid://b5itupxnie705" path="res://src/friendly_alien.tscn" id="7_6lehc"]
 [ext_resource type="PackedScene" uid="uid://dpux7mjnmklvb" path="res://src/player.tscn" id="7_bftnl"]
+[ext_resource type="Texture2D" uid="uid://dfsmpwmru1got" path="res://assets/level4/escape_pod.png" id="10_ip5ri"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5rber"]
+size = Vector2(497, 563)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m86x5"]
 radius = 115.10864
@@ -210,7 +215,7 @@ _data = {
 
 [sub_resource type="Animation" id="Animation_m86x5"]
 resource_name = "alienInternConvo"
-length = 577.23334
+length = 99.0
 tracks/0/type = "method"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -218,8 +223,8 @@ tracks/0/path = NodePath("Friendly Alien")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.23333332, 4.4666667, 8, 13.366667, 17.933332, 24.4, 35.066666, 38.4, 41.466667, 45.633335, 50.633335, 56.566666, 62.2, 68.46667, 76.1, 83.2, 89.36667),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0.23333332, 3.4666667, 7, 11.566667, 15.4, 20.166666, 23.933332, 28.6, 32.433334, 37, 40.166668, 43.233334, 47.400005, 52.400005, 58.333332, 62.966667, 68.566666, 73.26667, 78.9, 82.3, 86.333336, 91.73333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "values": [{
 "args": ["Alien: Hey, YOU!"],
 "method": &"_show_dialog"
@@ -227,7 +232,7 @@ tracks/0/keys = {
 "args": ["Alien: Who are you? Why are are you here?!?"],
 "method": &"_show_dialog"
 }, {
-"args": ["Intern: I uhhhh I'm oh nooo please dont hurt me!"],
+"args": ["Intern: I uhhhh... I'm - oh nooo please dont hurt me!"],
 "method": &"_show_dialog"
 }, {
 "args": ["Alien: No no it's okay! Don't be scared!"],
@@ -236,7 +241,16 @@ tracks/0/keys = {
 "args": ["Alien: I'm not here to hurt you, I'm here to help! My name is Kevin."],
 "method": &"_show_dialog"
 }, {
-"args": ["My home planet was destroyed. My species needs a new home, and we found Earth as a the perfect candidate. They're planning on taking by killing all humans. I don't think that's right. I believe that we should find an uninhabited planet and not harm any other race.  "],
+"args": ["Kevin: My home planet was destroyed. "],
+"method": &"_show_dialog"
+}, {
+"args": ["Kevin: My species needs a new home, and we found Earth as a the perfect candidate."],
+"method": &"_show_dialog"
+}, {
+"args": ["Kevin: They're planning on taking it by killing all humans. I don't think that's right. "],
+"method": &"_show_dialog"
+}, {
+"args": ["Kevin: I believe that we should find an uninhabited planet and not harm any other race.  "],
 "method": &"_show_dialog"
 }, {
 "args": ["Intern: You want to help! How do you know English?"],
@@ -245,32 +259,66 @@ tracks/0/keys = {
 "args": ["Kevin: Of course! I love Earth!"],
 "method": &"_show_dialog"
 }, {
-"args": ["Humans are all so different from each other and yet they work so well together!"],
+"args": ["Kevin: Humans are all so different from each other and yet they work so well together!"],
 "method": &"_show_dialog"
 }, {
-"args": ["Unlike us...one difference, and well, that's what led to the destruction of our planet. "],
+"args": ["Kevin: Unlike us...one difference, and well, that's what led to the destruction of our planet. "],
 "method": &"_show_dialog"
 }, {
-"args": ["But that's why I speak English! I also know Mandarin, Hindi, Arabic, and Spanish! But what brings you here?"],
+"args": ["Kevin: But that's why I speak English! I also know Mandarin, Hindi, Arabic, and Spanish! But what brings you here?"],
 "method": &"_show_dialog"
 }, {
 "args": ["Intern: Oh wow, well I guess that explains some of it. "],
 "method": &"_show_dialog"
 }, {
-"args": ["Your people took the team that was stopping you from destroying our planet. They're the only ones that can save us and I'm here to save them. "],
+"args": ["Intern: Your people took my team who were preventing the destruction of our planet. "],
+"method": &"_show_dialog"
+}, {
+"args": ["Intern: They're the only ones that can save us and I'm here to save them. "],
 "method": &"_show_dialog"
 }, {
 "args": ["Kevin: Oh wow...I heard a rumor that some humans were captured. It saddens me that its true. "],
 "method": &"_show_dialog"
 }, {
-"args": ["They must be on the mothership.  "],
+"args": ["Kevin: They must be on the mothership.  "],
 "method": &"_show_dialog"
 }, {
 "args": ["Intern: This isn't the mothership!?!?"],
 "method": &"_show_dialog"
 }, {
-"args": ["Kevin: This is actually one of our smaller escape pods. I would help you, but I don't know how to drive. It'll be up to you to figure it out. Follow me!"],
+"args": ["Kevin: This is actually one of our smaller ships! I can help you get on an escape pod but I don't know how to drive. "],
 "method": &"_show_dialog"
+}, {
+"args": ["Kevin: It'll be up to you to figure it out. Follow me!"],
+"method": &"_show_dialog"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Friendly Alien")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(97.03333),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [Vector2(3326, 692)],
+"method": &"move_to_spot"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Player")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(96.4),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [Vector2(2826, 778)],
+"method": &"move_to_spot"
 }]
 }
 
@@ -279,12 +327,38 @@ _data = {
 &"alienInternConvo": SubResource("Animation_m86x5")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mo4qt"]
+size = Vector2(1182, 53.000015)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yu3p4"]
+size = Vector2(4116.375, 39)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ip5ri"]
+size = Vector2(4088, 842)
+
 [node name="L4InternAlien" type="Node2D" unique_id=874781622]
+script = ExtResource("1_5rber")
+
+[node name="Walls" type="Area2D" parent="." unique_id=470395575]
 
 [node name="EmptyJailCells" type="Sprite2D" parent="." unique_id=1665198629]
-position = Vector2(959.99994, 541.49994)
-scale = Vector2(9.095238, 10.2952385)
+position = Vector2(960.8399, 543)
+scale = Vector2(9.153905, 10.323811)
 texture = ExtResource("1_it1n8")
+
+[node name="EscapePod" type="Sprite2D" parent="." unique_id=12578389]
+position = Vector2(2998.9998, 541)
+scale = Vector2(10.342857, 10.342857)
+texture = ExtResource("10_ip5ri")
+flip_h = true
+
+[node name="Area2D" type="Area2D" parent="EscapePod" unique_id=1540080699]
+position = Vector2(-289.95853, -52.30663)
+scale = Vector2(0.09668508, 0.09668508)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EscapePod/Area2D" unique_id=1635936914]
+position = Vector2(2867.5, 550.5)
+shape = SubResource("RectangleShape2D_5rber")
 
 [node name="Holographic Planet" type="Area2D" parent="." unique_id=165860554]
 position = Vector2(-4.9870577, -36.088074)
@@ -334,7 +408,7 @@ autoplay = &"explosion"
 
 [node name="Player" parent="." unique_id=1588632530 instance=ExtResource("7_bftnl")]
 z_index = 4
-position = Vector2(289, 727)
+position = Vector2(243, 733)
 scale = Vector2(2.4080627, 2.4080627)
 floor_constant_speed = true
 stoppingDistance = 10
@@ -344,7 +418,7 @@ position = Vector2(-1.2458148, 2.0763578)
 remote_path = NodePath("../../Camera2D")
 
 [node name="Friendly Alien" parent="." unique_id=262141793 instance=ExtResource("7_6lehc")]
-position = Vector2(1047.0001, 659.00006)
+position = Vector2(1328, 726)
 
 [node name="Dialog System" parent="." unique_id=1527251034 instance=ExtResource("6_6lehc")]
 layer = 2
@@ -353,4 +427,40 @@ layer = 2
 libraries/ = SubResource("AnimationLibrary_mo4qt")
 autoplay = &"alienInternConvo"
 
+[node name="Camera2D" type="Camera2D" parent="." unique_id=200436273]
+position = Vector2(240, 738)
+scale = Vector2(2.4080627, 2.4080627)
+limit_left = 1
+limit_top = 1
+limit_right = 4069
+limit_bottom = 1078
+
+[node name="Level Border" type="StaticBody2D" parent="." unique_id=2013618391]
+position = Vector2(173.00012, 96)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Level Border" unique_id=1079733116]
+position = Vector2(-200.00012, 442)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_mo4qt")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Level Border" unique_id=424156637]
+position = Vector2(1867.625, 1009.99976)
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_yu3p4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level Border" unique_id=240067231]
+position = Vector2(1865.8124, -122)
+shape = SubResource("RectangleShape2D_yu3p4")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Level Border" unique_id=1923616285]
+position = Vector2(3931.5, 431)
+rotation = -1.5707963
+shape = SubResource("RectangleShape2D_mo4qt")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Level Border" unique_id=368001466]
+position = Vector2(1860.9999, 315)
+shape = SubResource("RectangleShape2D_ip5ri")
+
+[connection signal="input_event" from="EscapePod/Area2D" to="." method="_on_area_2d_input_event"]
 [connection signal="input_event" from="Holographic Planet" to="Holographic Planet" method="_on_input_event"]
+[connection signal="animation_finished" from="internAlienChat" to="." method="_on_intern_alien_chat_animation_finished"]
