@@ -1,5 +1,6 @@
 extends Node2D
 
+var saveAliensDecision = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -10,6 +11,8 @@ func _ready() -> void:
 	$AnimationPlayer.play("dialog")
 	await $AnimationPlayer.animation_finished
 	$AnimationPlayer.play("alienWalksIn")
+	await $AnimationPlayer.animation_finished
+	$Decision.visible = true
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -23,3 +26,9 @@ func _show_dialog(text: String, howLong: float):
 		dialog.show_message(text, howLong)
 	else:
 		print("Dialog: ", text)
+
+func _on_doom_aliens_pressed() -> void:
+	saveAliensDecision = false
+
+func _on_save_aliens_pressed() -> void:
+	saveAliensDecision = true
