@@ -9,7 +9,9 @@
 [ext_resource type="PackedScene" uid="uid://daegyiygjpfmj" path="res://inventoryFunctionality/dialog_system.tscn" id="6_6lehc"]
 [ext_resource type="PackedScene" uid="uid://b5itupxnie705" path="res://src/friendly_alien.tscn" id="7_6lehc"]
 [ext_resource type="PackedScene" uid="uid://dpux7mjnmklvb" path="res://src/player.tscn" id="7_bftnl"]
+[ext_resource type="PackedScene" uid="uid://bh37xqxsv8iow" path="res://src/inventory.tscn" id="9_mo4qt"]
 [ext_resource type="Texture2D" uid="uid://dfsmpwmru1got" path="res://assets/level4/escape_pod.png" id="10_ip5ri"]
+[ext_resource type="PackedScene" uid="uid://cdb1fb41lmrl3" path="res://src/Level4/translatorTablet.tscn" id="11_ip5ri"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5rber"]
 size = Vector2(497, 563)
@@ -406,6 +408,16 @@ autoplay = &"floating hologram"
 libraries/ = SubResource("AnimationLibrary_ip5ri")
 autoplay = &"explosion"
 
+[node name="TranslatorTablet" parent="." unique_id=1556968877 instance=ExtResource("11_ip5ri")]
+visible = false
+position = Vector2(2882, 957.00006)
+scale = Vector2(0.34752297, 0.34752297)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=437476986]
+
+[node name="Inventory" parent="CanvasLayer" unique_id=737690628 instance=ExtResource("9_mo4qt")]
+metadata/_edit_use_anchors_ = true
+
 [node name="Player" parent="." unique_id=1588632530 instance=ExtResource("7_bftnl")]
 z_index = 4
 position = Vector2(243, 733)
@@ -463,4 +475,5 @@ shape = SubResource("RectangleShape2D_ip5ri")
 
 [connection signal="input_event" from="EscapePod/Area2D" to="." method="_on_area_2d_input_event"]
 [connection signal="input_event" from="Holographic Planet" to="Holographic Planet" method="_on_input_event"]
+[connection signal="clicked" from="TranslatorTablet" to="." method="_on_translator_tablet_clicked"]
 [connection signal="animation_finished" from="internAlienChat" to="." method="_on_intern_alien_chat_animation_finished"]
