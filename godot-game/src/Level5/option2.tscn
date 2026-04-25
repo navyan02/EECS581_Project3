@@ -1,0 +1,302 @@
+[gd_scene format=3 uid="uid://c3vkiwjeoe08p"]
+
+[ext_resource type="Texture2D" uid="uid://dqlvk5j0v6uji" path="res://src/OpeningScene/black screen.jpg" id="1_wrk4m"]
+[ext_resource type="Texture2D" uid="uid://jk50gxya4paw" path="res://assets/level5/outside.png" id="2_31rr8"]
+[ext_resource type="PackedScene" uid="uid://daegyiygjpfmj" path="res://inventoryFunctionality/dialog_system.tscn" id="3_gpvri"]
+[ext_resource type="Texture2D" uid="uid://4sm6k38jhxgi" path="res://assets/level5/labBackground-1.png.png" id="4_lv8ck"]
+[ext_resource type="AudioStream" uid="uid://dufw26vi7wwm4" path="res://assets/music/end_song.mp3" id="5_l0qxv"]
+[ext_resource type="Script" uid="uid://dxmuiv1w0wk58" path="res://src/Level5/endscnene2.gd" id="6_wrk4m"]
+
+[sub_resource type="Animation" id="Animation_h1r3s"]
+length = 40.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("background:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("background:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_31rr8")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("background:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(-0.26666668, 0),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(9.715477, 10.607142), Vector2(9.715477, 10.607142)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("background:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(49.874954, 8.874987)]
+}
+
+[sub_resource type="Animation" id="Animation_27wag"]
+resource_name = "endscene"
+length = 40.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("background:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5.4, 6.4, 6.9, 7.366667, 15.466666, 15.966666),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("background:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.033333335, 6.533334, 6.8000007),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("2_31rr8"), ExtResource("2_31rr8"), ExtResource("4_lv8ck")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("background:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 6.583334, 6.8166676),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(9.715477, 10.607142), Vector2(9.715477, 10.607142), Vector2(14.672494, 16.321316)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("background:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(-0.03333333, 6.591667, 6.825001),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(49.874954, 8.874987), Vector2(49.874954, 8.874987), Vector2(-155, -29)]
+}
+tracks/4/type = "audio"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AudioStreamPlayer2D")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.675,
+"stream": ExtResource("5_l0qxv")
+}],
+"times": PackedFloat32Array(0.03333336)
+}
+tracks/4/use_blend = true
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Dialog System")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 7.233333, 10.633333, 16.266666, 21.866665, 25.699999, 28.866665, 31.266666),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": ["Intern: We made it back to Earth with the help of the human sympathizers.", 4.5, true],
+"method": &"show_message"
+}, {
+"args": ["Intern: We decided not to show the world what happened.", 2.0, true],
+"method": &"show_message"
+}, {
+"args": ["Intern: We made people think the alien video was a prank. The world would turn to chaos if people knew aliens were out there.", 3.0, true],
+"method": &"show_message"
+}, {
+"args": ["I still think back to this adventure...", 3.0, true],
+"method": &"show_message"
+}, {
+"args": ["I don't know if I made the right decision...", 3.0, true],
+"method": &"show_message"
+}, {
+"args": ["I killed the aliens that saved my life, but I probably saved humanity.", 3.0, true],
+"method": &"show_message"
+}, {
+"args": ["...", 3.0, true],
+"method": &"show_message"
+}, {
+"args": ["Was it worth it?", 3.0, true],
+"method": &"show_message"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_dneh3"]
+resource_name = "endscene_2"
+length = 45.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("background:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5.4, 6.4, 6.9, 7.366667, 15, 15.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("background:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.033333335, 6.533334, 6.8000007),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("2_31rr8"), ExtResource("2_31rr8"), ExtResource("4_lv8ck")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("background:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 6.583334, 6.8166676),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(9.715477, 10.607142), Vector2(9.715477, 10.607142), Vector2(14.672494, 16.321316)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("background:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(-0.03333333, 6.591667, 6.825001),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(49.874954, 8.874987), Vector2(49.874954, 8.874987), Vector2(-155, -29)]
+}
+tracks/4/type = "audio"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AudioStreamPlayer2D")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.675,
+"stream": ExtResource("5_l0qxv")
+}],
+"times": PackedFloat32Array(0.03333336)
+}
+tracks/4/use_blend = true
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Dialog System")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 7.366667, 10.866667, 15.766666, 19.433332, 22.8, 26.666666, 30.333334, 31.833334, 33.066666, 38.966667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": ["Intern: We made it back to Earth with the help of the human sympathizers.", 4.5, true],
+"method": &"show_message"
+}, {
+"args": ["Intern: We decided not to show the world what happened.", 2.0, true],
+"method": &"show_message"
+}, {
+"args": ["Intern: We made people think the alien video was a prank. The world would turn to chaos if people knew aliens were out there.", 3.0, true],
+"method": &"show_message"
+}, {
+"args": ["I still think back to this adventure...", 3.0, true],
+"method": &"show_message"
+}, {
+"args": ["I don't know if I made the right decision.", 3.0, true],
+"method": &"show_message"
+}, {
+"args": ["There's no blood on my hands, at least not yet.", 3.0, true],
+"method": &"show_message"
+}, {
+"args": ["I hope Kevin and his friend are doing okay and that they find another planet.", 3.0, true],
+"method": &"show_message"
+}, {
+"args": ["If not...", 3.0, true],
+"method": &"show_message"
+}, {
+"args": ["Well...", 3.0, true],
+"method": &"show_message"
+}, {
+"args": ["I'm responsible for the extinction of humanity.", 3.0, true],
+"method": &"show_message"
+}, {
+"args": ["NASA Scientist: Um... Dr. Henry? I'm detecting a strange signal from space.", 3.0, true],
+"method": &"show_message"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pgevn"]
+_data = {
+&"RESET": SubResource("Animation_h1r3s"),
+&"endscene": SubResource("Animation_27wag"),
+&"endscene_2": SubResource("Animation_dneh3")
+}
+
+[node name="Option2" type="Node2D" unique_id=51237469]
+
+[node name="black" type="Sprite2D" parent="." unique_id=34883287]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(2.0000076, -2.0000057)
+scale = Vector2(1.2604166, 1.262037)
+texture = ExtResource("1_wrk4m")
+
+[node name="background" type="Sprite2D" parent="." unique_id=1232614952]
+position = Vector2(49.874954, 8.874987)
+scale = Vector2(9.715477, 10.607142)
+texture = ExtResource("2_31rr8")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1786902524]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=2028386732]
+
+[node name="Dialog System" parent="." unique_id=2099351194 instance=ExtResource("3_gpvri")]
+
+[node name="endscnene" type="AnimationPlayer" parent="." unique_id=1030895732]
+libraries/ = SubResource("AnimationLibrary_pgevn")
+script = ExtResource("6_wrk4m")
