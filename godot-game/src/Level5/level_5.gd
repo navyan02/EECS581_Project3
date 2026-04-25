@@ -29,6 +29,11 @@ func _show_dialog(text: String, howLong: float):
 
 func _on_doom_aliens_pressed() -> void:
 	saveAliensDecision = false
+	await get_tree().create_timer(0.5).timeout
+	get_tree().change_scene_to_file("res://src/Level5/option1.tscn")
 
 func _on_save_aliens_pressed() -> void:
 	saveAliensDecision = true
+	await get_tree().create_timer(0.5).timeout
+	get_tree().change_scene_to_file("res://src/Level5/option2.tscn")
+		
