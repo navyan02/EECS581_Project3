@@ -8,6 +8,8 @@ func _on_exit_pressed() -> void:
 	print("Close game")
 	get_tree().quit()
 
-
 func _on_view_map_pressed() -> void:
 	get_tree().change_scene_to_file("res://src/levelSelection/LevelSelectionMap.tscn")
+
+func _on_credits_pressed() -> void:
+	get_tree().change_scene_to_file("res://src/credits/credits.tscn")

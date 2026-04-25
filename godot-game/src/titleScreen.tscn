@@ -14,10 +14,6 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_by23x"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2pvpr"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gb4bn"]
-
 [node name="titleScreen" type="Control" unique_id=2073142450]
 layout_mode = 3
 anchors_preset = 15
@@ -64,7 +60,7 @@ anchor_bottom = 0.5
 offset_left = -389.35718
 offset_top = 61.5
 offset_right = 389.35718
-offset_bottom = 280.5
+offset_bottom = 322.0
 grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
@@ -99,19 +95,37 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 
-[node name="exit" type="Button" parent="VBoxContainer" unique_id=1508492135]
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer" unique_id=1594391439]
 layout_mode = 2
 size_flags_vertical = 3
+alignment = 1
+
+[node name="exit" type="Button" parent="VBoxContainer/HBoxContainer2" unique_id=719022086]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_qaoob")
 theme_override_constants/outline_size = 3
-theme_override_styles/hover = SubResource("StyleBoxEmpty_2pvpr")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_gb4bn")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_wcofg")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_p4j7k")
 text = "EXIT"
 icon = ExtResource("4_kygfj")
 flat = true
-autowrap_mode = 3
+icon_alignment = 1
+expand_icon = true
+
+[node name="credits" type="Button" parent="VBoxContainer/HBoxContainer2" unique_id=1492682442]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 3
+theme_override_styles/hover = SubResource("StyleBoxEmpty_kygfj")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_by23x")
+text = "CREDITS"
+icon = ExtResource("4_kygfj")
+flat = true
 icon_alignment = 1
 expand_icon = true
 
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/startButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/viewMap" to="." method="_on_view_map_pressed"]
-[connection signal="pressed" from="VBoxContainer/exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer2/exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer2/credits" to="." method="_on_credits_pressed"]

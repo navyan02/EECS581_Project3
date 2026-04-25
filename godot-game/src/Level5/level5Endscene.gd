@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-@export var next_scene_path = "res://src/credits.tscn"
+@export var next_scene_path = "res://src/credits/credits.tscn"
 
 func _on_node_finish_level_1() -> void:
 	$AnimationPlayer.play("fade")
