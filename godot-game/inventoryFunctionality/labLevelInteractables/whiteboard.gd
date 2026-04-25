@@ -30,6 +30,7 @@ func handle_item_drop(dropped_item: ItemData, inventory: InventorySystem):
 			_reveal_message()
 			inventory.remove_item(dropped_item)
 			_show_dialog("The invisible writing is revealed!")
+			$Sprite2D.texture = load("res://assets/rooms/revealedWhiteboard.png")
 			if $AudioStreamPlayer2D != null:
 				$AudioStreamPlayer2D.play()
 		else:
