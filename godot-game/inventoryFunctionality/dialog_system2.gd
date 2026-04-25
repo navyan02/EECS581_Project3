@@ -1,5 +1,5 @@
 extends CanvasLayer
-#class_name DialogSystem
+class_name DialogSystem
 
 @export var typewriter_speed: float = 0.03  # seconds per character
 
