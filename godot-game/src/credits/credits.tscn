@@ -1,0 +1,93 @@
+[gd_scene format=3 uid="uid://c3un13ra1bwrg"]
+
+[ext_resource type="Script" uid="uid://c8rwsj2e1o76k" path="res://src/credits/credits.gd" id="1_0p4li"]
+[ext_resource type="Texture2D" uid="uid://de6xenlqpdc4i" path="res://assets/titleScreen/background.png" id="1_oahf6"]
+[ext_resource type="FontFile" uid="uid://ukbnmf8j0smr" path="res://assets/titleScreen/Pixle_Font.ttf" id="2_0p4li"]
+
+[sub_resource type="Animation" id="Animation_w4msl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-5, 1136)]
+}
+
+[sub_resource type="Animation" id="Animation_mrued"]
+resource_name = "Scroll"
+length = 20.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 19.833334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-5, 1136), Vector2(-5, -3718)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_epgp7"]
+_data = {
+&"RESET": SubResource("Animation_w4msl"),
+&"Scroll": SubResource("Animation_mrued")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_t426q"]
+font = ExtResource("2_0p4li")
+font_size = 150
+
+[node name="Credits" type="Node2D" unique_id=2085064348]
+script = ExtResource("1_0p4li")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1110871040]
+position = Vector2(956.75, 630.5)
+scale = Vector2(1.2626953, 1.2626953)
+texture = ExtResource("1_oahf6")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=595171484]
+libraries/ = SubResource("AnimationLibrary_epgp7")
+autoplay = &"Scroll"
+
+[node name="Label" type="Label" parent="." unique_id=1989932900]
+offset_left = -5.0
+offset_top = 1136.0
+offset_right = 1921.0
+offset_bottom = 4805.0
+text = "InternStellar
+
+
+
+
+Created by:
+
+
+Katie Nordberg
+
+
+Christina Sorensen
+
+
+Vi Lara
+
+
+Navya Nittala
+
+
+Kundana Dongola
+
+
+Thanks for playing!"
+label_settings = SubResource("LabelSettings_t426q")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
