@@ -4,7 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://de6xenlqpdc4i" path="res://assets/titleScreen/background.png" id="1_ng4qd"]
 [ext_resource type="Theme" uid="uid://d3v4iv3yxucyw" path="res://assets/titleScreen/customTheme.tres" id="2_vmh8k"]
 [ext_resource type="Texture2D" uid="uid://daq0t5rc58b6d" path="res://assets/titleScreen/button.png" id="3_h0k8u"]
+[ext_resource type="Texture2D" uid="uid://bv0avtepharyh" path="res://assets/ui/dottedWhiteLine.png" id="3_l1rbl"]
 [ext_resource type="Texture2D" uid="uid://bpvr0wecgrx07" path="res://src/Scene2/IMG_4070.PNG" id="4_lm277"]
+[ext_resource type="Texture2D" uid="uid://c3gg22ds5vdhs" path="res://assets/ui/singleDash.png" id="4_ovoa4"]
 [ext_resource type="Texture2D" uid="uid://db6snf3l1ny4j" path="res://src/Scene2/IMG_4069.PNG" id="5_h0k8u"]
 [ext_resource type="Texture2D" uid="uid://dlw2qcupmj024" path="res://assets/level2/rocket ship frame 1.png" id="6_lm277"]
 [ext_resource type="Texture2D" uid="uid://xj4ii5ex53ro" path="res://assets/level4/escapepod1.png" id="8_gf0vy"]
@@ -20,21 +22,59 @@ script = ExtResource("1_lm277")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -11.0
-offset_top = -221.0
-offset_right = 1943.7391
-offset_bottom = 1082.1594
+offset_left = -14.0
+offset_top = -34.0
+offset_right = 1940.7391
+offset_bottom = 1269.1594
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.0129229, 1.0129229)
 texture = ExtResource("1_ng4qd")
 flip_h = true
 
+[node name="DottedWhiteLine" type="Sprite2D" parent="." unique_id=1819034016]
+position = Vector2(683.99994, 515.0001)
+rotation = -0.18875153
+scale = Vector2(3.499999, 3.499999)
+texture = ExtResource("3_l1rbl")
+
+[node name="DottedWhiteLine2" type="Sprite2D" parent="." unique_id=951914912]
+position = Vector2(1215, 487.99997)
+rotation = 0.05865687
+scale = Vector2(3.499999, 3.499999)
+texture = ExtResource("3_l1rbl")
+
+[node name="SingleDash" type="Sprite2D" parent="." unique_id=571312530]
+position = Vector2(1484.0001, 616)
+rotation = 1.5707964
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("4_ovoa4")
+
+[node name="SingleDash2" type="Sprite2D" parent="." unique_id=948972266]
+position = Vector2(1484.0001, 776.00006)
+rotation = 1.5707964
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("4_ovoa4")
+
+[node name="Node2D" type="Node2D" parent="." unique_id=798815131]
+
+[node name="DottedWhiteLine3" type="Sprite2D" parent="Node2D" unique_id=909621074]
+position = Vector2(1178, 776)
+rotation = -2.9285069
+scale = Vector2(3.4999993, 3.4999993)
+texture = ExtResource("3_l1rbl")
+
+[node name="DottedWhiteLine4" type="Sprite2D" parent="Node2D" unique_id=1678557936]
+position = Vector2(631.9999, 660.0002)
+rotation = -2.9285069
+scale = Vector2(3.4999993, 3.4999993)
+texture = ExtResource("3_l1rbl")
+
 [node name="Level1" type="Button" parent="." unique_id=1947132233]
-offset_left = 196.0
-offset_top = 470.0
-offset_right = 502.0
-offset_bottom = 582.0
+offset_left = 203.0
+offset_top = 236.0
+offset_right = 509.0
+offset_bottom = 348.0
 size_flags_horizontal = 3
 theme = ExtResource("2_vmh8k")
 theme_override_constants/outline_size = 3
@@ -45,12 +85,13 @@ icon = ExtResource("3_h0k8u")
 flat = true
 icon_alignment = 1
 expand_icon = true
+metadata/_edit_use_anchors_ = true
 
 [node name="Level2" type="Button" parent="." unique_id=1980338975]
-offset_left = 488.0
-offset_top = 72.0
-offset_right = 794.0
-offset_bottom = 184.0
+offset_left = 793.0
+offset_top = 238.0
+offset_right = 1099.0
+offset_bottom = 350.0
 size_flags_horizontal = 3
 theme = ExtResource("2_vmh8k")
 theme_override_constants/outline_size = 3
@@ -61,12 +102,13 @@ icon = ExtResource("3_h0k8u")
 flat = true
 icon_alignment = 1
 expand_icon = true
+metadata/_edit_use_anchors_ = true
 
 [node name="Level3" type="Button" parent="." unique_id=1675408174]
-offset_left = 966.0
-offset_top = 288.68756
-offset_right = 1272.0
-offset_bottom = 400.68756
+offset_left = 1328.0
+offset_top = 240.0
+offset_right = 1634.0
+offset_bottom = 352.0
 size_flags_horizontal = 3
 theme = ExtResource("2_vmh8k")
 theme_override_constants/outline_size = 3
@@ -77,28 +119,30 @@ icon = ExtResource("3_h0k8u")
 flat = true
 icon_alignment = 1
 expand_icon = true
+metadata/_edit_use_anchors_ = true
 
 [node name="Earth2" type="Sprite2D" parent="." unique_id=1683619891]
-position = Vector2(349, 803.99994)
-scale = Vector2(5.9411936, 6.1073112)
+position = Vector2(356, 516.00006)
+scale = Vector2(3.783097, 3.8888736)
 texture = ExtResource("4_lm277")
 
 [node name="Rocket Ship" type="Sprite2D" parent="." unique_id=614495724]
-position = Vector2(644, 313)
+position = Vector2(938, 453.99994)
+rotation = 0.6236763
 scale = Vector2(3.6562498, 3.6562495)
 texture = ExtResource("5_h0k8u")
 flip_h = true
 
 [node name="Alien Spaceship" type="Sprite2D" parent="." unique_id=1111824671]
-position = Vector2(1116, 140.68753)
+position = Vector2(1481, 472.6875)
 scale = Vector2(3.7524517, 3.7524517)
 texture = ExtResource("6_lm277")
 
 [node name="Level4" type="Button" parent="." unique_id=455479051]
-offset_left = 1440.0
-offset_top = 83.0
-offset_right = 1746.0
-offset_bottom = 195.0
+offset_left = 1330.0
+offset_top = 656.0
+offset_right = 1636.0
+offset_bottom = 768.0
 size_flags_horizontal = 3
 theme = ExtResource("2_vmh8k")
 theme_override_constants/outline_size = 3
@@ -109,15 +153,34 @@ icon = ExtResource("3_h0k8u")
 flat = true
 icon_alignment = 1
 expand_icon = true
+metadata/_edit_use_anchors_ = true
 
 [node name="Escape Pod" type="Sprite2D" parent="." unique_id=15687255]
-position = Vector2(1596, 324)
-rotation = -1.5707964
-scale = Vector2(6.1674995, 6.167499)
+position = Vector2(1510, 881.99994)
+rotation = 0.32903147
+scale = Vector2(8.85496, 8.8549595)
 texture = ExtResource("8_gf0vy")
 flip_h = true
+
+[node name="Level5" type="Button" parent="." unique_id=1433450150]
+offset_left = 211.0
+offset_top = 666.0
+offset_right = 517.0
+offset_bottom = 778.0
+size_flags_horizontal = 3
+theme = ExtResource("2_vmh8k")
+theme_override_constants/outline_size = 3
+theme_override_styles/hover = SubResource("StyleBoxEmpty_gf0vy")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_i4bka")
+text = "Level 5"
+icon = ExtResource("3_h0k8u")
+flat = true
+icon_alignment = 1
+expand_icon = true
+metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="Level1" to="." method="_on_level_1_pressed"]
 [connection signal="pressed" from="Level2" to="." method="_on_level_2_pressed"]
 [connection signal="pressed" from="Level3" to="." method="_on_level_3_pressed"]
 [connection signal="pressed" from="Level4" to="." method="_on_level_4_pressed"]
+[connection signal="pressed" from="Level5" to="." method="_on_level_5_pressed"]
