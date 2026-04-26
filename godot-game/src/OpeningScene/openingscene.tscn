@@ -17,7 +17,6 @@
 [ext_resource type="Texture2D" uid="uid://u22a4nt8ca6a" path="res://src/OpeningScene/green screen.jpg" id="12_613f1"]
 [ext_resource type="Texture2D" uid="uid://dvi66k3hpkvdw" path="res://src/OpeningScene/Henry1-1.png.png" id="12_npopg"]
 [ext_resource type="Texture2D" uid="uid://dqlvk5j0v6uji" path="res://src/OpeningScene/black screen.jpg" id="12_wrnp1"]
-[ext_resource type="AudioStream" uid="uid://lo02tdtqkv4c" path="res://src/OpeningScene/At All Costs - The Grey Room _ Golden Palms.mp3" id="14_1mnex"]
 [ext_resource type="Texture2D" uid="uid://7r25gb0qnbrq" path="res://src/OpeningScene/BGGuy.png" id="14_5jmxm"]
 [ext_resource type="PackedScene" uid="uid://daegyiygjpfmj" path="res://inventoryFunctionality/dialog_system.tscn" id="15_1mnex"]
 [ext_resource type="AudioStream" uid="uid://de6if7e257lb4" path="res://src/OpeningScene/Digital Watch Alarm Long.mp3" id="15_8e0t2"]
@@ -27,6 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://ciw4d8jw7qhml" path="res://src/OpeningScene/DSOHNO.png" id="20_c85pf"]
 [ext_resource type="Texture2D" uid="uid://b4axof75h2qfv" path="res://src/OpeningScene/BlondeGirl2.png" id="23_dvfkr"]
 [ext_resource type="Texture2D" uid="uid://daygd4fnimrnn" path="res://src/OpeningScene/girl2OhNo.png" id="25_umjtj"]
+[ext_resource type="AudioStream" uid="uid://dvde0aiecg5gq" path="res://assets/music/opening_scene_music.mp3" id="27_wyetc"]
 
 [sub_resource type="Animation" id="Animation_5qnxw"]
 length = 25.0
@@ -155,7 +155,7 @@ tracks/9/keys = {
 tracks/10/type = "value"
 tracks/10/imported = false
 tracks/10/enabled = true
-tracks/10/path = NodePath("OpeningScene/alieninvasion:playing")
+tracks/10/path = NodePath("OpeningScene/alarm:playing")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
@@ -167,70 +167,46 @@ tracks/10/keys = {
 tracks/11/type = "value"
 tracks/11/imported = false
 tracks/11/enabled = true
-tracks/11/path = NodePath("OpeningScene/alieninvasion:volume_db")
+tracks/11/path = NodePath("OpeningScene/Henry:texture")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [-19.467]
+"update": 1,
+"values": [ExtResource("12_npopg")]
 }
 tracks/12/type = "value"
 tracks/12/imported = false
 tracks/12/enabled = true
-tracks/12/path = NodePath("OpeningScene/alarm:playing")
+tracks/12/path = NodePath("OpeningScene/DataScientist:texture")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [false]
+"values": [ExtResource("8_1socx")]
 }
 tracks/13/type = "value"
 tracks/13/imported = false
 tracks/13/enabled = true
-tracks/13/path = NodePath("OpeningScene/Henry:texture")
+tracks/13/path = NodePath("OpeningScene/BlondeGirl:texture")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("12_npopg")]
+"values": [ExtResource("9_ik1q6")]
 }
 tracks/14/type = "value"
 tracks/14/imported = false
 tracks/14/enabled = true
-tracks/14/path = NodePath("OpeningScene/DataScientist:texture")
+tracks/14/path = NodePath("OpeningScene/BGGal:texture")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("8_1socx")]
-}
-tracks/15/type = "value"
-tracks/15/imported = false
-tracks/15/enabled = true
-tracks/15/path = NodePath("OpeningScene/BlondeGirl:texture")
-tracks/15/interp = 1
-tracks/15/loop_wrap = true
-tracks/15/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("9_ik1q6")]
-}
-tracks/16/type = "value"
-tracks/16/imported = false
-tracks/16/enabled = true
-tracks/16/path = NodePath("OpeningScene/BGGal:texture")
-tracks/16/interp = 1
-tracks/16/loop_wrap = true
-tracks/16/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
@@ -405,82 +381,58 @@ tracks/11/keys = {
 tracks/12/type = "value"
 tracks/12/imported = false
 tracks/12/enabled = true
-tracks/12/path = NodePath("OpeningScene/alieninvasion:playing")
+tracks/12/path = NodePath("OpeningScene/alarm:playing")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
-"times": PackedFloat32Array(0, 0.1, 25.966667),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [false, true, false]
-}
-tracks/13/type = "value"
-tracks/13/imported = false
-tracks/13/enabled = true
-tracks/13/path = NodePath("OpeningScene/alieninvasion:volume_db")
-tracks/13/interp = 1
-tracks/13/loop_wrap = true
-tracks/13/keys = {
-"times": PackedFloat32Array(23.133333, 25.766666),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [-19.467, -80.0]
-}
-tracks/14/type = "value"
-tracks/14/imported = false
-tracks/14/enabled = true
-tracks/14/path = NodePath("OpeningScene/alarm:playing")
-tracks/14/interp = 1
-tracks/14/loop_wrap = true
-tracks/14/keys = {
 "times": PackedFloat32Array(25.933332, 32.066666),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, false]
 }
-tracks/15/type = "value"
-tracks/15/imported = false
-tracks/15/enabled = true
-tracks/15/path = NodePath("OpeningScene/Henry:texture")
-tracks/15/interp = 1
-tracks/15/loop_wrap = true
-tracks/15/keys = {
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("OpeningScene/Henry:texture")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
 "times": PackedFloat32Array(0, 12.5851145, 18.072824),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [ExtResource("12_npopg"), ExtResource("17_s7j1o"), ExtResource("18_i8dwv")]
 }
-tracks/16/type = "value"
-tracks/16/imported = false
-tracks/16/enabled = true
-tracks/16/path = NodePath("OpeningScene/DataScientist:texture")
-tracks/16/interp = 1
-tracks/16/loop_wrap = true
-tracks/16/keys = {
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("OpeningScene/DataScientist:texture")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
 "times": PackedFloat32Array(0, 15.047252),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [ExtResource("8_1socx"), ExtResource("20_c85pf")]
 }
-tracks/17/type = "value"
-tracks/17/imported = false
-tracks/17/enabled = true
-tracks/17/path = NodePath("OpeningScene/BlondeGirl:texture")
-tracks/17/interp = 1
-tracks/17/loop_wrap = true
-tracks/17/keys = {
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("OpeningScene/BlondeGirl:texture")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
 "times": PackedFloat32Array(0, 17.633333, 17.977787, 18.247786, 18.507786, 18.733334, 18.997786, 19.347786, 19.627787, 19.99565, 20.297787, 20.6, 21.017786, 21.49565, 21.887787, 22.300001, 22.82565, 23.300001, 23.765648, 24.233335, 24.555649, 24.900002, 25.266668, 25.566668, 25.900002),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [ExtResource("9_ik1q6"), ExtResource("23_dvfkr"), ExtResource("9_ik1q6"), ExtResource("23_dvfkr"), ExtResource("9_ik1q6"), ExtResource("23_dvfkr"), ExtResource("9_ik1q6"), ExtResource("23_dvfkr"), ExtResource("9_ik1q6"), ExtResource("23_dvfkr"), ExtResource("9_ik1q6"), ExtResource("23_dvfkr"), ExtResource("9_ik1q6"), ExtResource("23_dvfkr"), ExtResource("9_ik1q6"), ExtResource("23_dvfkr"), ExtResource("9_ik1q6"), ExtResource("23_dvfkr"), ExtResource("9_ik1q6"), ExtResource("23_dvfkr"), ExtResource("9_ik1q6"), ExtResource("23_dvfkr"), ExtResource("9_ik1q6"), ExtResource("23_dvfkr"), ExtResource("9_ik1q6")]
 }
-tracks/18/type = "value"
-tracks/18/imported = false
-tracks/18/enabled = true
-tracks/18/path = NodePath("OpeningScene/BGGal:texture")
-tracks/18/interp = 1
-tracks/18/loop_wrap = true
-tracks/18/keys = {
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("OpeningScene/BGGal:texture")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
 "times": PackedFloat32Array(0, 18.056946),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
@@ -613,10 +565,6 @@ offset_right = 1232.0
 offset_bottom = 727.0
 color = Color(0, 0, 0, 1)
 
-[node name="alieninvasion" type="AudioStreamPlayer" parent="OpeningScene" unique_id=488576728]
-stream = ExtResource("14_1mnex")
-volume_db = -19.467
-
 [node name="alarm" type="AudioStreamPlayer" parent="OpeningScene" unique_id=1077158651]
 stream = ExtResource("15_8e0t2")
 volume_db = 24.0
@@ -633,3 +581,8 @@ libraries/ = SubResource("AnimationLibrary_4xbu1")
 script = ExtResource("1_5qnxw")
 
 [node name="Dialog System" parent="OpeningScene" unique_id=636189843 instance=ExtResource("15_1mnex")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1241448758]
+stream = ExtResource("27_wyetc")
+volume_db = -1.351
+autoplay = true
