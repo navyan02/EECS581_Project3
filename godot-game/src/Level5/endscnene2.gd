@@ -10,7 +10,7 @@ func _ready() -> void:
 	play("endscene_2")
 	await animation_finished
 	MusicPlayer.play()
-	#get_tree().change_scene_to_file("res://src/Office.tscn")
+	get_tree().change_scene_to_file("res://src/Level5/level5Endscene.tscn")
 
 func show_message(text: String):
 	message_label.text = text
