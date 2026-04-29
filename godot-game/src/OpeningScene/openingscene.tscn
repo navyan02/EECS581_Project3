@@ -476,7 +476,7 @@ texture = ExtResource("5_1mnex")
 [node name="Whiteboard" type="Sprite2D" parent="OpeningScene" unique_id=988152278]
 texture_filter = 1
 position = Vector2(331.1953, -232.50012)
-scale = Vector2(10.880677, 10.455672)
+scale = Vector2(1.2722998, 1.2226037)
 texture = ExtResource("6_8e0t2")
 
 [node name="Scanner" type="Sprite2D" parent="OpeningScene" unique_id=516388825]
